@@ -4,9 +4,9 @@ const Header = () => {
   return (
     <header className='container mx-auto my-10'>
       <ThickLine />
-      <IconText icon='wave'>My name is Debbie Melgarejo, but call me</IconText>
+      <IconText icon='wave'>My name is Joshua Salazar, but call me</IconText>
       <h1 className='text-clamp-9xl font-bold tracking-tighter leading-none'>
-        Debbie
+        Joshua
       </h1>
     </header>
   );

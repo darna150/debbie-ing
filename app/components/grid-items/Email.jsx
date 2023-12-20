@@ -12,7 +12,7 @@ const Email = () => {
         href={'/'}
         className='text-3xl md:text-4xl font-bold tracking-tight hover:text-purple-500'
       >
-        debbie@email.com
+        joshua@email.com
       </Link>
     </>
   );

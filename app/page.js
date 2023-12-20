@@ -1,6 +1,6 @@
 import Header from "./components/Header"
 import Details from "./components/Details"
-import Company1 from "./components/Works/Company1"
+import Company1 from "./components/Works/Company1/Company1"
 
 export default function Home() {
   return (
