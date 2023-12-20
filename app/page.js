@@ -1,11 +1,19 @@
 import Header from "./components/Header"
-import Work from "./components/Work"
+import Details from "./components/Details"
+import Company1 from "./components/Works/Company1"
 
 export default function Home() {
   return (
-    <main className='my-20 overflow-hidden px-5'>
-      <Header />
-      <Work />
+    <main>
+      <div className="px-5">
+        <Header />
+        <Details />
+      </div>
+      <Company1 />
+      <div className="px-5">
+        <Header />
+        <Details />
+      </div>
     </main>
   )
 }

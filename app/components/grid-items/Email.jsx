@@ -1,15 +1,16 @@
 import React from 'react';
 import IconText from '../ui/IconText';
 import Link from 'next/link';
+import { ThinLine } from '../ui/Lines';
 
 const Email = () => {
   return (
     <>
-      <div className='bg-black w-full mb-5 h-[1px]'>{/* LINE */}</div>
+      <ThinLine />
       <IconText icon={'email'}>Email</IconText>
       <Link
         href={'/'}
-        className='text-3xl font-bold tracking-tight hover:text-purple-500'
+        className='text-3xl md:text-4xl font-bold tracking-tight hover:text-purple-500'
       >
         debbie@email.com
       </Link>

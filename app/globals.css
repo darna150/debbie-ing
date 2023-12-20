@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 html {
-    @apply antialiased
+    @apply antialiased scroll-smooth
 }
+
+/* * {
+    @apply break-words
+} */
 
 body {
     @apply text-neutral-950 bg-white box-border

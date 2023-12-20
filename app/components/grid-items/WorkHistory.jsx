@@ -1,15 +1,16 @@
 import React from 'react';
 import IconText from '../ui/IconText';
 import Link from 'next/link';
+import { ThinLine } from '../ui/Lines';
 
 const WorkHistory = () => {
   return (
     <>
-      <div className='bg-black w-full mb-5 h-[1px]'>{/* LINE */}</div>
+      <ThinLine />
       <IconText icon='arrowRight'>I&apos;ve worked at</IconText>
-      <ul className='text-5xl font-bold flex flex-col gap-1 tracking-tight'>
+      <ul className='text-clamp-5xl leading-none font-bold flex flex-col gap-1 tracking-tight'>
         <li>
-          <Link href={'/'} className='hover:text-blue-500'>
+          <Link href={'#company1'} className='hover:text-blue-500'>
             Company 1
           </Link>
           ,

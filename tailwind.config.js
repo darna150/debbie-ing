@@ -7,10 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontSize: {
+        'clamp-9xl': "clamp(5rem, 20vw, 8rem)",
+        'clamp-5xl': "clamp(2rem, 10vw, 3rem)",
       },
     },
   },
