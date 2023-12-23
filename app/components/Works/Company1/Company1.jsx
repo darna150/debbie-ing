@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ThickLine, ThinLine } from '../../ui/Lines';
 import EyebrowHeadingParagraph from '../../ui/EyebrowHeadingParagraph';
 import Campaigns from './Campaigns';
+import SplitText from '../../ui/SplitText';
 
 const Company1 = () => {
   return (
@@ -13,14 +14,14 @@ const Company1 = () => {
             className='sticky top-20 h-fit z-10'
             style={{ containerType: 'inline-size' }}
           >
-            <h2 className='text-[15cqw] leading-none text-center font-bold'>
+            <h2 className='text-[15cqw] leading-none text-center font-bold uppercase'>
               Company 1
             </h2>
           </div>
           {/* CONTENT */}
-          <div className='relative z-20 bg-black mt-20 grid md:grid-cols-6 md:gap-y-40 gap-20 pb-20'>
+          <div className='relative z-20 bg-black grid md:grid-cols-6 md:gap-y-40 gap-20 py-20'>
             {/* IMAGE WITH PARAGRAPH */}
-            <div className='col-span-full'>
+            <div className='col-span-full '>
               <Image
                 src={'/works/company1/picsum.jpeg'}
                 alt=''
@@ -29,9 +30,11 @@ const Company1 = () => {
                 className='w-full mb-20'
               />
               <ThickLine color='bg-white' />
-              <p className='text-clamp-5xl leading-none font-bold'>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dolorem, et.
+              <p className='text-clamp-5xl leading-none font-bold pb-1.5 -mb-1.5'>
+                <SplitText>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Dolorem, et.
+                </SplitText>
               </p>
             </div>
 

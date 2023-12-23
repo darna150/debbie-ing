@@ -51,25 +51,49 @@ const Campaigns = () => {
       <div className='col-span-full'>
         <ThickLine color='bg-white' />
       </div>
-      <div className='col-span-full sticky top-0 md:col-span-4 bg-black/90 backdrop-blur-xl py-5'>
-        <h3 className='text-2xl md:text-3xl leading-none font-bold mb-4 sticky top-10 text-neutral-600'>
+      <div className='col-span-full sticky top-0 md:col-span-4 bg-black/[85%] h-fit backdrop-blur-xl py-5'>
+        <h3 className='text-2xl md:text-3xl leading-none font-bold text-neutral-600 '>
           <span className='text-white'>I worked on</span>{' '}
-          <span className={`${socialContentView ? 'text-red-500' : null}`}>
+          <span
+            className={`${
+              socialContentView ? 'text-red-500' : null
+            } transition-colors duration-500`}
+          >
             social content,
           </span>{' '}
-          <span className={`${productLaunchesView ? 'text-green-500' : null}`}>
+          <span
+            className={`${
+              productLaunchesView ? 'text-green-500' : null
+            } transition-colors duration-500`}
+          >
             product launches,
           </span>{' '}
-          <span className={`${socialAssetsView ? 'text-pink-500' : null}`}>
+          <span
+            className={`${
+              socialAssetsView ? 'text-pink-500' : null
+            } transition-colors duration-500`}
+          >
             social assets,
           </span>{' '}
-          <span className={`${emailsView ? 'text-blue-500' : null}`}>
+          <span
+            className={`${
+              emailsView ? 'text-blue-500' : null
+            } transition-colors duration-500`}
+          >
             emails,
           </span>{' '}
-          <span className={`${printAndDigitalView ? 'text-lime-500' : null}`}>
+          <span
+            className={`${
+              printAndDigitalView ? 'text-lime-500' : null
+            } transition-colors duration-500`}
+          >
             print & digital ads,
           </span>{' '}
-          <span className={`${moreView ? 'text-purple-500' : null}`}>
+          <span
+            className={`${
+              moreView ? 'text-purple-500' : null
+            } transition-colors duration-500`}
+          >
             out-of-home and more.
           </span>
         </h3>
