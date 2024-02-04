@@ -14,10 +14,10 @@ const About = () => {
             height={700}
             alt='Drawing of Debbie'
             placeholder='blur'
-            className='w-full max-w-[500px] mx-auto mb-8'
+            className='w-full max-w-[400px] mx-auto mb-8 z-10'
           />
         </div>
-        <div className='relative z-20 bg-black'>
+        <div className='relative z-20 bg-black fix-3d'>
           <ThinLine color='bg-white' />
           <h2 className='text-xl md:text-2xl font-bold leading-1 text-white/75'>
             Origin Story

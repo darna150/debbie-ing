@@ -17,3 +17,9 @@ body {
 p + p {
     @apply mt-4
 }
+
+/* SAFARI BUGS */
+
+.fix-3d {
+    transform: translate3d(0,0,0);
+}
