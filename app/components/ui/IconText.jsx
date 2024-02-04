@@ -15,9 +15,11 @@ const IconText = ({ icon, children }) => {
   const selectedIcon = iconComponents[icon] || null;
 
   return (
-    <div className='flex gap-1 items-center text-neutral-400 mb-2'>
-      <div className='w-4'>{selectedIcon}</div>
-      <span className=' text-sm font-medium leading-1'>{children}</span>
+    <div className='flex gap-1 md:gap-2 items-center text-neutral-400 mb-4'>
+      <div className='w-3.5 md:w-5'>{selectedIcon}</div>
+      <span className='text-sm md:text-xl font-semibold leading-1'>
+        {children}
+      </span>
     </div>
   );
 };

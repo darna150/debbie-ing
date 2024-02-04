@@ -6,11 +6,11 @@ const Skills = () => {
   return (
     <>
       <ThinLine />
-      <IconText icon={'barbell'}>I do</IconText>
-      <ul className='text-clamp-5xl leading-none font-bold flex flex-col gap-1 tracking-tight'>
-        <li>Art direction,</li>
-        <li>content design,</li>
-        <li>& strategy</li>
+      <IconText icon={'barbell'}>Superpowers</IconText>
+      <ul className='text-2xl md:text-4xl leading-none font-bold flex flex-col gap-1 tracking-tight'>
+        <li>Creative Direction,</li>
+        <li>Content Development,</li>
+        <li>& Strategic Execution</li>
       </ul>
     </>
   );

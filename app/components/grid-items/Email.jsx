@@ -9,10 +9,10 @@ const Email = () => {
       <ThinLine />
       <IconText icon={'email'}>Email</IconText>
       <Link
-        href={'/'}
-        className='text-3xl md:text-4xl font-bold tracking-tight hover:text-purple-500'
+        href={'mailto:dvmelgarejo@up.edu.ph'}
+        className='text-2xl md:text-4xl font-bold tracking-tight hover:text-purple-500'
       >
-        debbie@email.com
+        dvmelgarejo@up.edu.ph
       </Link>
     </>
   );
