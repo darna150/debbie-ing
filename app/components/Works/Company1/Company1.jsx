@@ -7,7 +7,7 @@ import SplitText from '../../ui/SplitText';
 const Company1 = () => {
   return (
     <>
-      <section className='bg-black text-white' id='company1'>
+      <section className='bg-[#113661] text-white relative' id='company1'>
         <div className='container mx-auto pt-20 px-5'>
           {/* HEADER */}
           <div
@@ -19,7 +19,7 @@ const Company1 = () => {
             </h2>
           </div>
           {/* CONTENT */}
-          <div className='relative z-20 bg-black grid md:grid-cols-6 md:gap-y-40 gap-20 py-20'>
+          <div className='relative z-20 bg-[#113661] grid md:grid-cols-6 md:gap-y-40 gap-20 py-20'>
             {/* IMAGE WITH PARAGRAPH */}
             <div className='col-span-full '>
               <Image
