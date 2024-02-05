@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ThinLine } from '@/app/components/ui/Lines';
-import aboutImage from '../../../public/debbie-drawing.png';
+import aboutImage from '@/public/debbie-drawing.png';
 
 const About = () => {
   return (
@@ -13,7 +13,6 @@ const About = () => {
             width={700}
             height={700}
             alt='Drawing of Debbie'
-            placeholder='blur'
             className='w-full max-w-[400px] mx-auto z-10'
           />
         </div>
