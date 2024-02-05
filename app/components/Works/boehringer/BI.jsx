@@ -41,10 +41,10 @@ const BI = () => {
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
               <div className='mt-12'>
-                <h2 className='text-3xl md:text-7xl font-bold'>
+                <h2 className='text-4xl md:text-5xl font-bold'>
                   Our goal was clear:
                 </h2>
-                <p className='mt-2 md:mt-6'>
+                <p className='mt-2 md:mt-4'>
                   devise a digital strategy that could effectively combat the
                   inaccuracies circulating in the public sphere.
                 </p>
@@ -91,10 +91,10 @@ const BI = () => {
                 className='w-full max-w-[1080px] mx-auto'
               />
               <div className='mt-12'>
-                <h2 className='text-3xl md:text-7xl font-bold'>
+                <h2 className='text-4xl md:text-5xl font-bold'>
                   Their mission?
                 </h2>
-                <p className='mt-2 md:mt-6'>
+                <p className='mt-2 md:mt-4'>
                   To demystify the technical intricacies surrounding pet care,
                   offering invaluable insights and cutting through the
                   confusion.
