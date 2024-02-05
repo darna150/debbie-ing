@@ -16,7 +16,9 @@ const IconText = ({ icon, children }) => {
 
   return (
     <div className='flex gap-1 md:gap-2 items-center text-neutral-400 mb-4'>
-      <div className='w-3.5 md:w-5'>{selectedIcon}</div>
+      {selectedIcon === null ? null : (
+        <div className='w-3.5 md:w-5'>{selectedIcon}</div>
+      )}
       <span className='text-sm md:text-xl font-semibold leading-1'>
         {children}
       </span>

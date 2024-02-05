@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        'clamp-9xl': "clamp(5rem, 20vw, 8rem)",
+        'clamp-9xl': "clamp(1rem, 20vw, 8rem)",
         'clamp-5xl': "clamp(2rem, 10vw, 3rem)",
       },
     },
