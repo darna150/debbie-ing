@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { ThinLine } from '@/app/components/ui/Lines';
-import aboutImage from '@/public/debbie-drawing.png';
 
 const About = () => {
   return (
@@ -9,7 +8,7 @@ const About = () => {
       <div className='container mx-auto py-16 px-5'>
         <div className='sticky top-0 h-fit z-10'>
           <Image
-            src={aboutImage}
+            src={'/debbie_blink.gif'}
             width={700}
             height={700}
             alt='Drawing of Debbie'
