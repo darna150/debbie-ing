@@ -1,7 +1,9 @@
 export const ThickLine = (props) => {
   return (
     <div
-      className={`${props.color ? props.color : 'bg-black'} w-full mb-5 h-1`}
+      className={`${
+        props.color ? props.color : 'bg-black'
+      } w-full mt-12 mb-5 h-1`}
     >
       {/* LINE */}
     </div>

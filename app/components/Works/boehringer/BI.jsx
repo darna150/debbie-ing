@@ -19,9 +19,9 @@ const BI = () => {
               className='w-full max-w-[500px] mx-auto'
             />
           </div>
-          <div className='relative bg-gradient-to-t from-[#113661] w-full h-20 col-span-full z-20 fix-3d'></div>
+          <div className='relative bg-gradient-to-t from-[#113661] w-full h-14 col-span-full z-20 fix-3d'></div>
           {/* CONTENT */}
-          <div className='relative bg-[#113661] z-20 grid md:grid-cols-6 gap-20 pb-20 fix-3d'>
+          <div className='relative bg-[#113661] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* IMAGE WITH PARAGRAPH */}
             <div className='col-span-full'>
               <Image
@@ -31,7 +31,7 @@ const BI = () => {
                 height={601}
                 className='w-full'
               />
-              <p className='!text-white !font-bold mt-6 mb-0 md:mb-12'>
+              <p className='!text-white !font-bold mt-6'>
                 As the Frontline brand grappled with the challenge of countering
                 misinformation about veterinary products, I found myself at the
                 helm, guiding a team of creatives towards a solution.{' '}
@@ -51,7 +51,7 @@ const BI = () => {
               </div>
             </div>
             <div className='col-span-full'>
-              <div className='flex flex-col md:flex-row gap-20'>
+              <div className='flex flex-col md:flex-row gap-16'>
                 <div className='h-fit w-full md:w-2/5'>
                   <Image
                     src={'/works/boehringer/BI_FB_AD.png'}
@@ -101,7 +101,7 @@ const BI = () => {
                 </p>
               </div>
             </div>
-            <div className='col-span-full md:mt-12'>
+            <div className='col-span-full'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20'>
                 <p className='w-full md:w-5/12'>
                   With determination, we set out to create a new narrative. It
@@ -122,11 +122,11 @@ const BI = () => {
               </div>
             </div>
             {/* Video Highlight */}
-            <div className='col-span-full bg-[#69B9D3] aspect-video flex items-center justify-center md:mt-12'>
+            <div className='col-span-full bg-[#69B9D3] aspect-video flex items-center justify-center'>
               <p className='text-3xl font-bold'>VIDEO HIGHLIGHT</p>
             </div>
 
-            <div className='col-span-full md:mt-12'>
+            <div className='col-span-full'>
               <p>
                 In addition, my involvement in crafting a compelling short film,
                 &quot;Ben en Biko vs. Da 3 Marites,&quot; became a pivotal
@@ -143,7 +143,7 @@ const BI = () => {
                 vet.
               </p>
             </div>
-            <div className='col-span-full md:mt-12'>
+            <div className='col-span-full'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20'>
                 <p className='w-full md:w-5/12'>
                   &quot;Ben en Biko vs. Da 3 Marites&quot; wasn&apos;t just a
