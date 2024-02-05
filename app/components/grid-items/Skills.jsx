@@ -1,6 +1,15 @@
+'use client';
 import React from 'react';
 import IconText from '../ui/IconText';
 import { ThinLine } from '../ui/Lines';
+import { fadeIn } from './WorkHistory';
+import { motion } from 'framer-motion';
+
+const skills = [
+  { id: 1, skill: 'Creative Direction' },
+  { id: 2, skill: 'Content Development' },
+  { id: 3, skill: 'Strategic Execution' },
+];
 
 const Skills = () => {
   return (
@@ -8,9 +17,18 @@ const Skills = () => {
       <ThinLine />
       <IconText icon={'barbell'}>Superpowers</IconText>
       <ul className='text-2xl md:text-4xl leading-none font-bold flex flex-col gap-1 tracking-tight'>
-        <li>Creative Direction,</li>
-        <li>Content Development,</li>
-        <li>& Strategic Execution</li>
+        {skills.map((skill, index) => (
+          <motion.li
+            key={index}
+            variants={fadeIn}
+            initial='initial'
+            animate='animate'
+          >
+            {index !== skills.length - 1
+              ? `${skill.skill},`
+              : `& ${skill.skill}`}
+          </motion.li>
+        ))}
       </ul>
     </>
   );

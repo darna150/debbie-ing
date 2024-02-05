@@ -1,7 +1,10 @@
+'use client';
 import React from 'react';
 import IconText from '../ui/IconText';
 import Link from 'next/link';
 import { ThinLine } from '../ui/Lines';
+import { fadeIn } from './WorkHistory';
+import { motion } from 'framer-motion';
 
 const Email = () => {
   return (
@@ -9,10 +12,17 @@ const Email = () => {
       <ThinLine />
       <IconText icon={'email'}>Email</IconText>
       <Link
-        href={'mailto:dvmelgarejo@up.edu.ph'}
+        href={'mailto:hello@debbie.ing'}
         className='text-2xl md:text-4xl font-bold tracking-tight hover:text-purple-500'
       >
-        dvmelgarejo@up.edu.ph
+        <motion.span
+          variants={fadeIn}
+          initial='initial'
+          animate='animate'
+          className='inline-block'
+        >
+          hello@debbie.ing
+        </motion.span>
       </Link>
     </>
   );

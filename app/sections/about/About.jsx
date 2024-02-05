@@ -5,7 +5,7 @@ import aboutImage from '../../../public/debbie-drawing.png';
 
 const About = () => {
   return (
-    <section className='bg-black text-white' id='company1'>
+    <section className='bg-black text-white'>
       <div className='container mx-auto py-16 px-5'>
         <div className='sticky top-0 h-fit z-10'>
           <Image
@@ -14,23 +14,24 @@ const About = () => {
             height={700}
             alt='Drawing of Debbie'
             placeholder='blur'
-            className='w-full max-w-[400px] mx-auto mb-8 z-10'
+            className='w-full max-w-[400px] mx-auto z-10'
           />
         </div>
+        <div className='relative bg-gradient-to-t from-[black] w-full h-12 col-span-full z-20 fix-3d'></div>
         <div className='relative z-20 bg-black fix-3d'>
           <ThinLine color='bg-white' />
-          <h2 className='text-xl md:text-2xl font-bold leading-1 text-white/75'>
+          <h2 className='text-xl md:text-4xl font-bold leading-1 text-white'>
             Origin Story
           </h2>
-          <div className='text-xl md:text-2xl mt-4'>
-            <p>
+          <div className='text-xl md:text-2xl mt-6'>
+            <p className='text-2xl md:text-3xl font-medium text-white/75'>
               In a world where innovation reigns supreme, there&apos;s a
               development communicator with a knack for sparking change.
               She&apos;s all about creativity, startups, and the latest in tech,
               armed with a degree and a boatload of experience in shaping ideas
               and spreading messages.
             </p>
-            <p>
+            <p className='text-2xl md:text-3xl font-medium text-white/75'>
               This hero isn&apos;t just words and ideas—she&apos;s a wizard with
               software like Adobe Creative Suite, crafting visions that come to
               life. But what sets them apart isn&apos;t just their skills;
@@ -38,7 +39,7 @@ const About = () => {
               bringing together people from different sectors, making amazing
               things happen.
             </p>
-            <p>
+            <p className='text-2xl md:text-3xl font-medium text-white/75'>
               Her goal isn&apos;t just a job—it&apos;s a mission to make the
               world better, bit by bit, leaving behind a trail of awesome
               projects that bring big changes to people&apos;s lives.

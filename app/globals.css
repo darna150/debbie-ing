@@ -23,3 +23,11 @@ p + p {
 .fix-3d {
     transform: translate3d(0,0,0);
 }
+
+.boehringer-container p {
+    @apply text-2xl md:text-3xl font-medium text-[#BDCCE9]
+}
+
+.boehringer-container p + p {
+    @apply mt-12
+}

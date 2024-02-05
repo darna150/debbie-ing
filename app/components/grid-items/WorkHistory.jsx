@@ -1,7 +1,21 @@
+'use client';
 import React from 'react';
 import IconText from '../ui/IconText';
 import Link from 'next/link';
 import { ThinLine } from '../ui/Lines';
+import { motion } from 'framer-motion';
+
+export const fadeIn = {
+  initial: {
+    opacity: 0,
+    y: '100%',
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.2, ease: 'circOut', delay: 0.1 },
+  },
+};
 
 const works = [
   { id: 1, link: '#boehringer', work: 'Boehringer Ingelheim Philippines' },
@@ -38,11 +52,16 @@ const WorkHistory = () => {
       <IconText icon='arrowRight'>Mission Accomplished</IconText>
       <ul className='text-2xl md:text-4xl leading-none font-bold flex flex-col gap-1 tracking-tight'>
         {works.map((work, index) => (
-          <li key={work.id}>
+          <motion.li
+            key={work.id}
+            variants={fadeIn}
+            initial='initial'
+            animate='animate'
+          >
             <Link href={`${work.link}`} className={`${workColors[index]}`}>
               {index !== works.length - 1 ? `${work.work},` : `& ${work.work}`}
             </Link>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </>

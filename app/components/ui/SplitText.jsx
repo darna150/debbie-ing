@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const goUp = {
   initial: {
-    y: '100%',
+    y: '105%',
   },
   animate: {
     y: 0,
@@ -19,7 +19,7 @@ const SplitText = ({ children }) => {
       {splitText.map((char, index) => (
         <span
           key={index}
-          className='inline-block overflow-hidden pb-1 -mb-1 pr-1 -mr-1'
+          className='inline-block overflow-hidden pb-4 -mb-4 pr-1 -mr-1'
         >
           <motion.span
             className='inline-block'
