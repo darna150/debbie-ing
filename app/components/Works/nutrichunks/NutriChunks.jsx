@@ -13,7 +13,7 @@ const NutriChunks = () => {
               alt=''
               width={556}
               height={501}
-              className='w-full max-w-[300px] mx-auto'
+              className='w-3/5 max-w-[300px] mx-auto'
             />
           </div>
           {/* GRADIENT */}
@@ -81,7 +81,7 @@ const NutriChunks = () => {
               </div>
             </div>
             <div className='col-span-full'>
-              <div className='flex flex-col gap-6 md:gap-12'>
+              <div className='flex flex-col gap-4 md:gap-12'>
                 <div className='flex flex-col md:flex-row gap-6 md:gap-12'>
                   <div className='h-fit w-full md:w-9/12'>
                     <Image
@@ -92,7 +92,7 @@ const NutriChunks = () => {
                       className='w-full'
                     />
                   </div>
-                  <div className='h-fit w-3/12 aspect-square ml-auto -mt-12 md:mt-auto'>
+                  <div className='h-fit w-3/12 aspect-square ml-auto -mt-20 md:mt-auto'>
                     <Image
                       src={'/works/nutrichunks/CHUNKY_MOTOR.png'}
                       alt=''
@@ -125,7 +125,7 @@ const NutriChunks = () => {
             </div>
             {/* TEXT LEFT IMAGE RIGHT  */}
             <div className='col-span-full'>
-              <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20'>
+              <div className='flex flex-col md:flex-row gap-y-12 gap-x-20'>
                 <p className='w-full md:w-6/12'>
                   Understanding the vitality of loyalty in fostering enduring
                   relationships, we unveiled an enchanting rewards program. This
@@ -139,7 +139,7 @@ const NutriChunks = () => {
                     alt=''
                     width={602}
                     height={1229}
-                    className='w-3/5 m-auto'
+                    className='w-full md:w-3/5 m-auto'
                   />
                 </div>
               </div>
