@@ -20,10 +20,17 @@ p + p {
     transform: translate3d(0,0,0);
 }
 
-.boehringer-container p {
+.boehringer-container p
+ {
     @apply text-xl md:text-2xl font-medium text-[#BDCCE9]
 }
 
-.boehringer-container p + p {
+.nutrichunks-container p
+ {
+    @apply text-xl md:text-2xl font-medium text-[#D4DAEC]
+}
+
+.boehringer-container p + p,
+.nutrichunks-container p + p {
     @apply mt-12
 }

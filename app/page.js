@@ -2,6 +2,7 @@ import Header from "./components/Header"
 import Details from "./components/Details"
 import About from "./sections/about/About"
 import BI from "./components/Works/boehringer/BI"
+import NutriChunks from "./components/Works/nutrichunks/NutriChunks"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </div>
       <About />
       <BI />
+      <NutriChunks />
     </main>
   )
 }
