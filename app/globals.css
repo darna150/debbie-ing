@@ -35,6 +35,11 @@ p + p {
     @apply text-xl md:text-2xl font-medium text-[#FDE8EB]
 }
 
+.kemin-container p
+ {
+    @apply text-xl md:text-2xl font-medium text-black
+}
+
 .boehringer-container p + p,
 .nutrichunks-container p + p {
     @apply mt-12
