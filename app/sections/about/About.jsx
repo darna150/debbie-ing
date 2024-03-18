@@ -8,7 +8,7 @@ const About = () => {
       <div className='container mx-auto py-16 px-5'>
         <div className='sticky top-0 h-fit z-10'>
           <Image
-            src={'/debbie_blink.gif'}
+            src={'/debbie/debbie_blink.gif'}
             width={700}
             height={700}
             alt='Drawing of Debbie'

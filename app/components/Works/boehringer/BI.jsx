@@ -25,7 +25,7 @@ const BI = () => {
             {/* IMAGE WITH PARAGRAPH */}
             <div className='col-span-full'>
               <Image
-                src={'/works/company1/picsum.jpeg'}
+                src={'/works/boehringer/BI_HEADER.png'}
                 alt=''
                 width={1365}
                 height={601}
@@ -51,23 +51,26 @@ const BI = () => {
               </div>
             </div>
             <div className='col-span-full'>
-              <div className='flex flex-col md:flex-row gap-16'>
-                <div className='h-fit w-full md:w-2/5'>
+              <div
+                className='grid md:grid-cols-3 md:grid-rows-2 gap-y-16 gap-x-8 md:max-w-[75%] m-auto'
+                // style={{ gridTemplateColumn: '16px auto auto auto 16px' }}
+              >
+                <div className='md:row-span-2'>
                   <Image
                     src={'/works/boehringer/BI_FB_AD.png'}
                     alt=''
-                    width={413}
-                    height={842}
-                    className='w-full'
+                    width={426}
+                    height={869}
+                    className='w-full md:w-auto md:h-full object-contain'
                   />
                 </div>
-                <div className='h-fit w-full md:w-3/5 aspect-square'>
+                <div className='md:col-span-2 md:row-span-2'>
                   <Image
                     src={'/works/boehringer/BI_TICK.png'}
                     alt=''
                     width={869}
                     height={869}
-                    className='w-full'
+                    className='w-full md:w-auto md:h-full object-contain'
                   />
                 </div>
               </div>
@@ -102,21 +105,21 @@ const BI = () => {
               </div>
             </div>
             <div className='col-span-full'>
-              <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20'>
-                <p className='w-full md:w-5/12'>
+              <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20 items-center'>
+                <p className='w-full md:w-8/12'>
                   With determination, we set out to create a new narrative. It
                   wasn’t just about selling products; it was about empowering
                   and educating pet owners. These live broadcasts became our
                   canvas, where experts unpacked complex medical jargon,
                   offering a digestible version for the curious public.
                 </p>
-                <div className='w-full md:w-7/12'>
+                <div className='w-full md:w-4/12'>
                   <Image
-                    src={'/works/boehringer/BI_VID_MockUp.jpg'}
+                    src={'/debbie/debbie-thinking.png'}
                     alt=''
                     width={832}
                     height={960}
-                    className='w-full'
+                    className='w-full max-w-[300px] m-auto'
                   />
                 </div>
               </div>
@@ -125,7 +128,7 @@ const BI = () => {
             <div className='col-span-full bg-[#69B9D3] aspect-video flex items-center justify-center'>
               <p className='text-3xl font-bold'>VIDEO HIGHLIGHT</p>
             </div>
-
+            {/* 
             <div className='col-span-full'>
               <p>
                 In addition, my involvement in crafting a compelling short film,
@@ -142,10 +145,25 @@ const BI = () => {
                 one&apos;s pet extends to prioritizing regular visits to the
                 vet.
               </p>
-            </div>
+            </div> */}
             <div className='col-span-full'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20'>
-                <p className='w-full md:w-5/12'>
+                <p className='w-full md:w-6/12'>
+                  In addition, my involvement in crafting a compelling short
+                  film, &quot;Ben en Biko vs. Da 3 Marites,&quot; became a
+                  pivotal endeavor in our mission to tackle widespread
+                  misconceptions in pet healthcare. This cinematic venture aimed
+                  to deliver a potent message wrapped in humor and relatability,
+                  a story that resonated deeply with pet owners.
+                  <br />
+                  <br />
+                  As the project unfolded, we meticulously carved a narrative
+                  that went beyond entertainment. It was a tale that tugged at
+                  heartstrings while imparting a crucial lesson: true love for
+                  one&apos;s pet extends to prioritizing regular visits to the
+                  vet.
+                  <br />
+                  <br />
                   &quot;Ben en Biko vs. Da 3 Marites&quot; wasn&apos;t just a
                   short film; it was a vehicle for dispelling myths. Through a
                   blend of wit and charm, it artfully dismantled misconceptions
@@ -153,7 +171,7 @@ const BI = () => {
                   tapestry woven with care, threading the importance of
                   professional veterinary care into every scene.
                 </p>
-                <div className='w-full md:w-7/12'>
+                <div className='w-full md:w-6/12'>
                   <Image
                     src={'/works/boehringer/BI_VID_MockUp.jpg'}
                     alt=''
