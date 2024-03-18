@@ -64,7 +64,7 @@ const NutriChunks = () => {
               <ThickLine color='bg-white' />
               <div className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold'>
-                  <span className='text-2xl md:text-3xl block mb-4'>
+                  <span className='text-2xl md:text-3xl font-medium block mb-4'>
                     Yet, it wasn&apos;t solely about crafting the perfect
                     message
                   </span>
@@ -165,11 +165,13 @@ const NutriChunks = () => {
                 seamless, gratifying journey that resonated deeply with the
                 hearts of our customers.
               </p>
-            </div>
-
-            {/* Video Highlight */}
-            <div className='col-span-full bg-[#69B9D3] aspect-video flex items-center justify-center'>
-              <p className='text-3xl font-bold'>VIDEO HIGHLIGHT</p>
+              <Image
+                src={'/works/boehringer/LAPTOP_MOCK.png'}
+                alt=''
+                width={1684}
+                height={1123}
+                className='w-full max-w-[1080px] mx-auto'
+              />
             </div>
           </div>
         </div>

@@ -1,8 +1,9 @@
 import Header from "./components/Header"
 import Details from "./components/Details"
 import About from "./sections/about/About"
-import BI from "./components/Works/boehringer/BI"
-import NutriChunks from "./components/Works/nutrichunks/NutriChunks"
+import BI from "./components/Works/01_boehringer/BI"
+import NutriChunks from "./components/Works/02_nutrichunks/NutriChunks"
+import JFC from "./components/Works/03_jfc/JFC"
 
 export const metadata = {
   metadataBase: new URL('https://debbie.ing/'),
@@ -44,6 +45,7 @@ export default function Home() {
       <About />
       <BI />
       <NutriChunks />
+      <JFC />
     </main>
   )
 }
