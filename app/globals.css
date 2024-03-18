@@ -40,6 +40,11 @@ p + p {
     @apply text-xl md:text-2xl font-medium text-black
 }
 
+.dost-container p
+ {
+    @apply text-xl md:text-2xl font-medium text-white/90
+}
+
 .boehringer-container p + p,
 .nutrichunks-container p + p {
     @apply mt-12

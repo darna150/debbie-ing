@@ -5,6 +5,7 @@ import BI from "./components/Works/01_boehringer/BI"
 import NutriChunks from "./components/Works/02_nutrichunks/NutriChunks"
 import JFC from "./components/Works/03_jfc/JFC"
 import Kemin from "./components/Works/04_kemin/Kemin"
+import DOST from "./components/Works/05_dost/DOST"
 
 export const metadata = {
   metadataBase: new URL('https://debbie.ing/'),
@@ -48,6 +49,7 @@ export default function Home() {
       <NutriChunks />
       <JFC />
       <Kemin />
+      <DOST />
     </main>
   )
 }

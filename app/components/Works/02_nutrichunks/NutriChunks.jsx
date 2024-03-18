@@ -114,32 +114,29 @@ const NutriChunks = () => {
               </div>
             </div>
 
-            {/* Loyalty Program */}
-            <div className='col-span-full'>
-              <ThickLine color='bg-white' />
-              <div className='mt-12'>
-                <h2 className='text-4xl md:text-5xl font-bold'>
-                  But our efforts didn&apos;t cease there.
-                </h2>
-              </div>
-            </div>
             {/* TEXT LEFT IMAGE RIGHT  */}
             <div className='col-span-full'>
-              <div className='flex flex-col md:flex-row gap-y-12 gap-x-20'>
-                <p className='w-full md:w-6/12'>
-                  Understanding the vitality of loyalty in fostering enduring
-                  relationships, we unveiled an enchanting rewards program. This
-                  initiative not only gratified our customers but also tethered
-                  them to the Nutri Chunks brand, fostering a bond beyond mere
-                  transactions.
-                </p>
+              <ThickLine color='bg-white' />
+              <div className='flex flex-col md:flex-row gap-y-12 gap-x-20 mt-12'>
+                <div className='w-full md:w-6/12'>
+                  <h2 className='text-4xl md:text-5xl font-bold mb-8'>
+                    But our efforts didn&apos;t cease there.
+                  </h2>
+                  <p>
+                    Understanding the vitality of loyalty in fostering enduring
+                    relationships, we unveiled an enchanting rewards program.
+                    This initiative not only gratified our customers but also
+                    tethered them to the Nutri Chunks brand, fostering a bond
+                    beyond mere transactions.
+                  </p>
+                </div>
                 <div className='w-full md:w-6/12'>
                   <Image
                     src={'/works/nutrichunks/MOCK-UP-PHONE_1.png'}
                     alt=''
                     width={602}
                     height={1229}
-                    className='w-full md:w-3/5 m-auto'
+                    className='w-full md:w-3/5 m-auto max-w-[300px]'
                   />
                 </div>
               </div>

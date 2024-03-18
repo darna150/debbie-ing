@@ -13,7 +13,7 @@ const JFC = () => {
               alt=''
               width={556}
               height={501}
-              className='w-3/5 mx-auto'
+              className='md:w-3/5 mx-auto'
             />
           </div>
           {/* GRADIENT */}
@@ -37,7 +37,7 @@ const JFC = () => {
           {/* CONTENT */}
           <div className='relative bg-[#EA1B3B] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* Intro  */}
-            <div className='col-span-full max-w-[85%] m-auto'>
+            <div className='col-span-full md:max-w-[85%] m-auto'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20 items-center'>
                 <p className='w-full md:w-8/12'>
                   I led a team of creative minds and tech wizards to build an

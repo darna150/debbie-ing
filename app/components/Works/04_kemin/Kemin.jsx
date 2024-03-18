@@ -19,7 +19,7 @@ const Kemin = () => {
           {/* GRADIENT */}
           <div className='relative bg-gradient-to-t from-white w-full h-14 col-span-full z-20 fix-3d'></div>
           {/* IMAGE HEADER */}
-          <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 pb-10 fix-3d'>
+          <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
               <Image
                 src={'/works/kemin/KEMIN_FULL_PANEL.gif'}
