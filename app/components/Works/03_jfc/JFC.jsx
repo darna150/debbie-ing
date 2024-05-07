@@ -49,7 +49,7 @@ const JFC = () => {
                     alt=''
                     width={832}
                     height={960}
-                    className='w-full max-w-[300px] m-auto'
+                    className='w-full max-w-[150px] md:max-w-[300px] m-auto'
                   />
                 </div>
               </div>

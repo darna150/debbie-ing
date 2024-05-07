@@ -6,6 +6,7 @@ import NutriChunks from "./components/Works/02_nutrichunks/NutriChunks"
 import JFC from "./components/Works/03_jfc/JFC"
 import Kemin from "./components/Works/04_kemin/Kemin"
 import DOST from "./components/Works/05_dost/DOST"
+import DOST_PCAARD from "./components/Works/06_dost-pcaard/DOST_PCAARD"
 
 export const metadata = {
   metadataBase: new URL('https://debbie.ing/'),
@@ -50,6 +51,7 @@ export default function Home() {
       <JFC />
       <Kemin />
       <DOST />
+      <DOST_PCAARD />
     </main>
   )
 }

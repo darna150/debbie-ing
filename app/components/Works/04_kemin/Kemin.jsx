@@ -38,7 +38,7 @@ const Kemin = () => {
           <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* Intro  */}
             <div className='col-span-full m-auto'>
-              <p className='w-full md:!text-4xl !font-bold'>
+              <p className='w-full md:text-4xl !font-bold'>
                 Amidst the glitz and glamor of Dubai&apos;s bustling landscape,
                 I found myself at the heart of a pivotal moment in the global
                 launch of Kemin Industries&apos; revolutionary product,
@@ -103,7 +103,7 @@ const Kemin = () => {
 
             {/* Video Highlight */}
             <div className='col-span-full bg-[#D43020] aspect-video flex items-center justify-center'>
-              <p className='text-3xl font-bold !text-white'>VIDEO HIGHLIGHT</p>
+              <p className='text-3xl font-bold text-white'>VIDEO HIGHLIGHT</p>
             </div>
           </div>
         </div>

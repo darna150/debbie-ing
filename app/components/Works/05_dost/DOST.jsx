@@ -52,7 +52,7 @@ const DOST = () => {
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
               <div className='mt-12'>
-                <h2 className='text-4xl md:text-5xl font-bold !text-white'>
+                <h2 className='text-4xl md:text-5xl font-bold text-white'>
                   As fate would have it, I found myself leading a team of
                   dynamic multimedia specialists entrusted with the pivotal task
                   of bringing the program&apos;s essence to life.

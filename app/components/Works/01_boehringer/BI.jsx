@@ -31,7 +31,7 @@ const BI = () => {
                 height={601}
                 className='w-full'
               />
-              <p className='!text-white !font-bold mt-6'>
+              <p className='text-white !font-bold mt-6'>
                 As the Frontline brand grappled with the challenge of countering
                 misinformation about veterinary products, I found myself at the
                 helm, guiding a team of creatives towards a solution.{' '}
@@ -119,7 +119,7 @@ const BI = () => {
                     alt=''
                     width={832}
                     height={960}
-                    className='w-full max-w-[300px] m-auto'
+                    className='w-full max-w-[150px] md:max-w-[300px] m-auto'
                   />
                 </div>
               </div>
