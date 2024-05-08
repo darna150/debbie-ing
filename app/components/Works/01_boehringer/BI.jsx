@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { ThickLine, ThinLine } from '../../ui/Lines';
+import { ThickLine } from '../../ui/Lines';
+import VideoFrame from '../../ui/VideoFrame';
 
 const BI = () => {
   return (
@@ -124,28 +125,14 @@ const BI = () => {
                 </div>
               </div>
             </div>
-            {/* Video Highlight */}
-            <div className='col-span-full bg-[#69B9D3] aspect-video flex items-center justify-center'>
-              <p className='text-3xl font-bold'>VIDEO HIGHLIGHT</p>
-            </div>
-            {/* 
+
             <div className='col-span-full'>
-              <p>
-                In addition, my involvement in crafting a compelling short film,
-                &quot;Ben en Biko vs. Da 3 Marites,&quot; became a pivotal
-                endeavor in our mission to tackle widespread misconceptions in
-                pet healthcare. This cinematic venture aimed to deliver a potent
-                message wrapped in humor and relatability, a story that
-                resonated deeply with pet owners.
-              </p>
-              <p>
-                As the project unfolded, we meticulously carved a narrative that
-                went beyond entertainment. It was a tale that tugged at
-                heartstrings while imparting a crucial lesson: true love for
-                one&apos;s pet extends to prioritizing regular visits to the
-                vet.
-              </p>
-            </div> */}
+              <VideoFrame
+                videoID='925738739'
+                title='Boehringer Ingelheim XPERT Series'
+              />
+            </div>
+
             <div className='col-span-full'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20'>
                 <p className='w-full md:w-6/12'>

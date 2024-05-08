@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
+import VideoFrame from '../../ui/VideoFrame';
 
 const DOST_PCAARD = () => {
   return (
@@ -62,13 +63,12 @@ const DOST_PCAARD = () => {
 
             {/* VIDEO */}
             <div className='col-span-full'>
-              <Image
-                src={'/works/boehringer/LAPTOP_MOCK.png'}
-                alt=''
-                width={1684}
-                height={1123}
-                className='w-full max-w-[1080px] mx-auto'
-              />
+              <div className='w-full my-16'>
+                <VideoFrame
+                  videoID='925741540'
+                  title='Agribusiness Masterclass'
+                />
+              </div>
               <ThickLine color='bg-white' />
               <div className='mt-12'>
                 <p className=''>

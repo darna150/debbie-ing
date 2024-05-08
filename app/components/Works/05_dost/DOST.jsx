@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
+import VideoFrame from '../../ui/VideoFrame';
 
 const DOST = () => {
   return (
@@ -67,12 +68,9 @@ const DOST = () => {
             </div>
 
             <div className='col-span-full'>
-              <Image
-                src={'/works/dost/white.gif'}
-                alt=''
-                width={1600}
-                height={900}
-                className='w-full h-auto max-w-[1080px] bg-white m-auto'
+              <VideoFrame
+                videoID='925739821'
+                title='DOST Science for Change Program Culminating Event'
               />
             </div>
 

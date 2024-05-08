@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { ThickLine, ThinLine } from '../../ui/Lines';
+import VideoFrame from '../../ui/VideoFrame';
 
 const Kemin = () => {
   return (
@@ -46,15 +47,8 @@ const Kemin = () => {
               </p>
             </div>
 
-            {/* Website */}
             <div className='col-span-full'>
-              <Image
-                src={'/works/boehringer/LAPTOP_MOCK.png'}
-                alt=''
-                width={1684}
-                height={1123}
-                className='w-full max-w-[1080px] mx-auto'
-              />
+              <VideoFrame videoID='925741081' title='Kemin Enterosure Launch' />
             </div>
 
             <div className='col-span-full'>
@@ -101,9 +95,8 @@ const Kemin = () => {
               </div>
             </div>
 
-            {/* Video Highlight */}
-            <div className='col-span-full bg-[#D43020] aspect-video flex items-center justify-center'>
-              <p className='text-3xl font-bold text-white'>VIDEO HIGHLIGHT</p>
+            <div className='col-span-full'>
+              <VideoFrame videoID='925741081' title='Kemin Enterosure Launch' />
             </div>
           </div>
         </div>

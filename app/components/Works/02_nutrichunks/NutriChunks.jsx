@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { ThickLine, ThinLine } from '../../ui/Lines';
+import { ThickLine } from '../../ui/Lines';
+import VideoFrame from '../../ui/VideoFrame';
 
 const NutriChunks = () => {
   return (
@@ -162,13 +163,12 @@ const NutriChunks = () => {
                 seamless, gratifying journey that resonated deeply with the
                 hearts of our customers.
               </p>
-              <Image
-                src={'/works/boehringer/LAPTOP_MOCK.png'}
-                alt=''
-                width={1684}
-                height={1123}
-                className='w-full max-w-[1080px] mx-auto'
-              />
+              <div className='w-full my-16'>
+                <VideoFrame
+                  videoID='925741617'
+                  title='Nutri Chunks Listo Ganado'
+                />
+              </div>
             </div>
           </div>
         </div>
