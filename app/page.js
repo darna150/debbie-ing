@@ -9,6 +9,7 @@ import DOST from "./components/Works/05_dost/DOST"
 import DOST_PCAARD from "./components/Works/06_dost-pcaard/DOST_PCAARD"
 import GIZ from "./components/Works/07_giz/GIZ"
 import SEARCA from "./components/Works/08_searca/SEARCA"
+import ChickenEssentials from "./components/Works/09_ce/ChickenEssentials"
 
 export const metadata = {
   metadataBase: new URL('https://debbie.ing/'),
@@ -56,6 +57,7 @@ export default function Home() {
       <DOST_PCAARD />
       <GIZ />
       <SEARCA />
+      <ChickenEssentials />
     </main>
   )
 }

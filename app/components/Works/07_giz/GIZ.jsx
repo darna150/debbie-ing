@@ -84,15 +84,13 @@ const GIZ = () => {
             </div>
 
             <div className='col-span-full'>
-              <div className='col-span-full'>
-                <Image
-                  src={'/works/giz/collection.png'}
-                  alt=''
-                  width={1530}
-                  height={1290}
-                  className='w-full'
-                />
-              </div>
+              <Image
+                src={'/works/giz/collection.png'}
+                alt=''
+                width={1530}
+                height={1290}
+                className='w-full'
+              />
             </div>
 
             <div className='col-span-full'>

@@ -69,8 +69,8 @@ const SEARCA = () => {
                 captivating backgrounds, seamlessly integrated bumpers, and
                 carefully curated visual elements.
               </p>
-              <div className='w-full flex flex-col md:flex-row my-16 gap-4'>
-                <div className='w-1/2'>
+              <div className='w-full flex flex-col sm:flex-row my-16 gap-4'>
+                <div className='sm:w-1/2'>
                   <Image
                     src={'/works/searca/greenscreen-1.png'}
                     alt=''
@@ -79,7 +79,7 @@ const SEARCA = () => {
                     className='w-full'
                   />
                 </div>
-                <div className='w-1/2'>
+                <div className='sm:w-1/2'>
                   <Image
                     src={'/works/searca/greenscreen-2.png'}
                     alt=''
