@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
+import VideoFrame from '../../ui/VideoFrame';
 
 const GIZ = () => {
   return (
@@ -103,13 +104,10 @@ const GIZ = () => {
             </div>
 
             <div className='col-span-full'>
-              <iframe
-                src='https://player.vimeo.com/video/925740123?autoplay=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;muted=1&amp;player_id=0&amp;app_id=58479'
-                frameborder='0'
-                allow='autoplay; fullscreen;'
+              <VideoFrame
+                videoID='925740123'
                 title='Climate Information System - GIZ'
-                className='w-full aspect-video'
-              ></iframe>
+              />
             </div>
           </div>
         </div>

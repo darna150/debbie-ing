@@ -8,6 +8,7 @@ import Kemin from "./components/Works/04_kemin/Kemin"
 import DOST from "./components/Works/05_dost/DOST"
 import DOST_PCAARD from "./components/Works/06_dost-pcaard/DOST_PCAARD"
 import GIZ from "./components/Works/07_giz/GIZ"
+import SEARCA from "./components/Works/08_searca/SEARCA"
 
 export const metadata = {
   metadataBase: new URL('https://debbie.ing/'),
@@ -54,6 +55,7 @@ export default function Home() {
       <DOST />
       <DOST_PCAARD />
       <GIZ />
+      <SEARCA />
     </main>
   )
 }
