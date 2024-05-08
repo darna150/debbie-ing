@@ -12,33 +12,32 @@ import SEARCA from "./components/Works/08_searca/SEARCA"
 import ChickenEssentials from "./components/Works/09_ce/ChickenEssentials"
 
 export const metadata = {
-  metadataBase: new URL('https://debbie.ing/'),
-  title: 'Debbie Melgarejo',
-  description: "Hey, I'm Debbie, here to sprinkle some creativity and fun in your day— all while just debbie-ing!",
-  authors: [{ name: 'Debbie Melgarejo', url: '/' }],
-  creator: 'Debbie Melgarejo',
-  publisher: 'Debbie Melgarejo',
+  metadataBase: new URL('https://www.justdebbie.ing/'),
+  title: 'Just Debbie',
+  description: "Her goal isn't just a job—it's a mission to make the world better, bit by bit, leaving behind a trail of awesome projects that bring big changes to people's lives.",
+  authors: [{ name: 'Just Debbie', url: '/' }],
+  creator: 'Just Debbie',
+  publisher: 'Just Debbie',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Debbie Melgarejo',
-    description: "Hey, I'm Debbie, here to sprinkle some creativity and fun in your day— all while just debbie-ing!",
+    title: 'Just Debbie',
+    description: "Her goal isn't just a job—it's a mission to make the world better, bit by bit, leaving behind a trail of awesome projects that bring big changes to people's lives.",
     type: 'website',
     url: '/',
     locale: 'en_us',
-    // images: [
-    //   {
-    //     url: '/cover.jpg',
-    //     width: 1200,
-    //     height: 600,
-    //   }
-    // ]
+    images: [
+      {
+        url: '/cover.jpg',
+        width: 1200,
+        height: 600,
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
   }
-
 }
 
 export default function Home() {
