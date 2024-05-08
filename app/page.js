@@ -14,7 +14,7 @@ import ChickenEssentials from "./components/Works/09_ce/ChickenEssentials"
 export const metadata = {
   metadataBase: new URL('https://www.justdebbie.ing/'),
   title: 'Just Debbie',
-  description: "Her goal isn't just a job—it's a mission to make the world better, bit by bit, leaving behind a trail of awesome projects that bring big changes to people's lives.",
+  description: "Hey, I'm Debbie, here to sprinkle some creativity and fun in your day— all while just debbie-ing!",
   authors: [{ name: 'Just Debbie', url: '/' }],
   creator: 'Just Debbie',
   publisher: 'Just Debbie',
@@ -23,7 +23,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Just Debbie',
-    description: "Her goal isn't just a job—it's a mission to make the world better, bit by bit, leaving behind a trail of awesome projects that bring big changes to people's lives.",
+    description: "Hey, I'm Debbie, here to sprinkle some creativity and fun in your day— all while just debbie-ing!",
     type: 'website',
     url: '/',
     locale: 'en_us',
