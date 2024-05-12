@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VideoFrame from '../../ui/VideoFrame';
+import VideoLocal from '../../ui/VideoLocal';
 
 const DOST_PCAARD = () => {
   return (
@@ -95,41 +96,21 @@ const DOST_PCAARD = () => {
                 className='w-full w-full md:max-w-[70%]'
               />
               <div className='flex flex-col gap-3 md:gap-10 px-3 md:px-10'>
-                <Image
-                  src={'/works/dost-pcaard/gif-1.gif'}
-                  width={400}
-                  height={250}
-                  alt=''
-                  className='w-full max-w-[80%] md:max-w-[60%]'
-                />
-                <Image
-                  src={'/works/dost-pcaard/gif-2.gif'}
-                  width={400}
-                  height={250}
-                  alt=''
-                  className='w-full max-w-[80%] md:max-w-[60%] ml-auto'
-                />
-                <Image
-                  src={'/works/dost-pcaard/gif-3.gif'}
-                  width={400}
-                  height={250}
-                  alt=''
-                  className='w-full max-w-[80%] md:max-w-[60%]'
-                />
-                <Image
-                  src={'/works/dost-pcaard/gif-4.gif'}
-                  width={400}
-                  height={250}
-                  alt=''
-                  className='w-full max-w-[80%] md:max-w-[60%] ml-auto'
-                />
-                <Image
-                  src={'/works/dost-pcaard/gif-5.gif'}
-                  width={400}
-                  height={250}
-                  alt=''
-                  className='w-full max-w-[80%] md:max-w-[60%]'
-                />
+                <div className='w-full max-w-[80%] md:max-w-[60%]'>
+                  <VideoLocal src={'/works/dost-pcaard/gif-1.mp4'} />
+                </div>
+                <div className='w-full max-w-[80%] md:max-w-[60%] ml-auto'>
+                  <VideoLocal src={'/works/dost-pcaard/gif-2.mp4'} />
+                </div>
+                <div className='w-full max-w-[80%] md:max-w-[60%]'>
+                  <VideoLocal src={'/works/dost-pcaard/gif-3.mp4'} />
+                </div>
+                <div className='w-full max-w-[80%] md:max-w-[60%] ml-auto'>
+                  <VideoLocal src={'/works/dost-pcaard/gif-4.mp4'} />
+                </div>
+                <div className='w-full max-w-[80%] md:max-w-[60%]'>
+                  <VideoLocal src={'/works/dost-pcaard/gif-5.mp4'} />
+                </div>
               </div>
             </div>
 

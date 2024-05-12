@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { ThickLine, ThinLine } from '../../ui/Lines';
+import { ThickLine } from '../../ui/Lines';
+import VideoFrame from '../../ui/VideoFrame';
 
 const JFC = () => {
   return (
@@ -67,13 +68,9 @@ const JFC = () => {
                   This website wasn&apos;t just a site—it was an adventure.
                 </h2>
               </div>
-              <Image
-                src={'/works/boehringer/LAPTOP_MOCK.png'}
-                alt=''
-                width={1684}
-                height={1123}
-                className='w-full max-w-[1080px] mx-auto'
-              />
+              <div className='mt-16'>
+                <VideoFrame videoID='925740654' title='JFC Universe' />
+              </div>
             </div>
 
             <div className='col-span-full'>
@@ -82,14 +79,35 @@ const JFC = () => {
                 interactive way. We designed it like a universe with different
                 Jollibee brands as floating islands.
               </p>
-              <div className='w-full my-16'>
-                <Image
-                  src={'/works/jfc/JFC-placeholder.png'}
-                  alt=''
-                  width={1395}
-                  height={844}
-                  className='w-full md:w-4/5 m-auto'
-                />
+              <div className='grid md:grid-cols-2 gap-4 mt-16'>
+                <div>
+                  <VideoFrame
+                    videoID='925740708'
+                    title='JFC Universe - Chapter 1'
+                    background={true}
+                  />
+                </div>
+                <div>
+                  <VideoFrame
+                    videoID='925740746'
+                    title='JFC Universe - Chapter 2'
+                    background={true}
+                  />
+                </div>
+                <div>
+                  <VideoFrame
+                    videoID='925740802'
+                    title='JFC Universe - Chapter 3'
+                    background={true}
+                  />
+                </div>
+                <div>
+                  <VideoFrame
+                    videoID='925740825'
+                    title='JFC Universe - Chapter 4'
+                    background={true}
+                  />
+                </div>
               </div>
             </div>
 
@@ -116,16 +134,6 @@ const JFC = () => {
                   />
                 </div>
               </div>
-            </div>
-
-            <div className='col-span-full'>
-              <Image
-                src={'/works/boehringer/LAPTOP_MOCK.png'}
-                alt=''
-                width={1684}
-                height={1123}
-                className='w-full max-w-[1080px] mx-auto'
-              />
             </div>
           </div>
         </div>

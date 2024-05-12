@@ -87,13 +87,12 @@ const BI = () => {
             {/* MISSION */}
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
-              <Image
-                src={'/works/boehringer/LAPTOP_MOCK.png'}
-                alt=''
-                width={1684}
-                height={1123}
-                className='w-full max-w-[1080px] mx-auto'
-              />
+              <div className='my-16'>
+                <VideoFrame
+                  videoID='925738739'
+                  title='Boehringer Ingelheim XPERT Series'
+                />
+              </div>
               <div className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold'>
                   Their mission?
@@ -127,10 +126,7 @@ const BI = () => {
             </div>
 
             <div className='col-span-full'>
-              <VideoFrame
-                videoID='925738739'
-                title='Boehringer Ingelheim XPERT Series'
-              />
+              <VideoFrame videoID='925738673' title='Ben En Biko' />
             </div>
 
             <div className='col-span-full'>

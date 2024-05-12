@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import { ThickLine, ThinLine } from '../../ui/Lines';
+import { ThickLine } from '../../ui/Lines';
 import VideoFrame from '../../ui/VideoFrame';
+import VideoLocal from '../../ui/VideoLocal';
 
 const Kemin = () => {
   return (
@@ -22,13 +23,7 @@ const Kemin = () => {
           {/* IMAGE HEADER */}
           <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
-              <Image
-                src={'/works/kemin/KEMIN_FULL_PANEL.gif'}
-                alt=''
-                width={1200}
-                height={300}
-                className='w-full'
-              />
+              <VideoLocal src='/works/kemin/KEMIN_FULL_PANEL.mp4' />
             </div>
           </div>
         </div>
@@ -59,26 +54,13 @@ const Kemin = () => {
               </p>
               <div className='flex flex-col sm:flex-row gap-8 sm:w-3/4 mx-auto mt-16'>
                 <div className='sm:w-1/2'>
-                  <Image
-                    src={'/works/kemin/KEMIN_PANEL1.gif'}
-                    alt=''
-                    width={600}
-                    height={773}
-                    className='w-full h-auto'
-                  />
+                  <VideoLocal src='/works/kemin/KEMIN_PANEL1.mp4' />
                 </div>
                 <div className='sm:w-1/2'>
-                  <Image
-                    src={'/works/kemin/KEMIN_PANEL2.gif'}
-                    alt=''
-                    width={600}
-                    height={773}
-                    className='w-full h-auto'
-                  />
+                  <VideoLocal src='/works/kemin/KEMIN_PANEL2.mp4' />
                 </div>
               </div>
             </div>
-
             <div className='col-span-full'>
               <ThickLine color='bg-black' />
               <div className='mt-12'>
