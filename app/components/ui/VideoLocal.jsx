@@ -3,9 +3,14 @@ import React from 'react';
 const VideoLocal = (props) => {
   return (
     <>
-      <video autoPlay muted loop controls={false}>
-        <source src={props.src} type='video/mp4' />
-      </video>
+      <video
+        autoPlay
+        muted
+        playsInline
+        loop
+        type='video/mp4'
+        src={props.src}
+      ></video>
     </>
   );
 };

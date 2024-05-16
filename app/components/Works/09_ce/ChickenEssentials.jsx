@@ -17,7 +17,7 @@ const ChickenEssentials = () => {
               alt=''
               width={871}
               height={259}
-              className='w-full max-w-[500px] mx-auto'
+              className='w-3/5 max-w-[500px] mx-auto'
             />
           </div>
           <div className='relative bg-gradient-to-t from-white w-full h-14 col-span-full z-20 fix-3d'></div>

@@ -9,8 +9,8 @@ const About = () => {
         <div className='sticky top-0 h-fit z-10'>
           <Image
             src={'/debbie/debbie_blink.gif'}
-            width={700}
-            height={700}
+            width={400}
+            height={400}
             alt='Drawing of Debbie'
             className='w-full max-w-[400px] mx-auto z-10'
           />

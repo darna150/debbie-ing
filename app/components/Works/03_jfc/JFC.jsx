@@ -113,7 +113,7 @@ const JFC = () => {
 
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
-              <div className='flex flex-col md:flex-row gap-y-12 gap-x-20 mt-12'>
+              <div className='flex flex-col md:flex-row gap-y-12 mt-12'>
                 <div className='w-full md:w-6/12'>
                   <h2 className='text-4xl md:text-5xl font-bold mb-8'>
                     Our goal was simple:
@@ -126,11 +126,10 @@ const JFC = () => {
                 </div>
                 <div className='w-full md:w-6/12'>
                   <Image
-                    src={'/works/nutrichunks/MOCK-UP-PHONE_1.png'}
+                    src={'/works/jfc/joy-waving.gif'}
                     alt=''
-                    width={602}
-                    height={1229}
-                    className='w-full md:w-3/5 m-auto'
+                    width={800}
+                    height={800}
                   />
                 </div>
               </div>
