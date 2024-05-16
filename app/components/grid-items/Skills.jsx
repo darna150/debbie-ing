@@ -2,7 +2,7 @@
 import React from 'react';
 import IconText from '../ui/IconText';
 import { ThinLine } from '../ui/Lines';
-import { fadeIn } from './WorkHistory';
+import { fadeUp } from '../animation/motion';
 import { motion } from 'framer-motion';
 
 const skills = [
@@ -20,7 +20,7 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <motion.li
             key={index}
-            variants={fadeIn}
+            variants={fadeUp}
             initial='initial'
             animate='animate'
           >

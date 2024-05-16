@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
+import { MotionFade } from '../../animation/motion';
 
 const BI = () => {
   return (
@@ -52,29 +53,31 @@ const BI = () => {
               </div>
             </div>
             <div className='col-span-full'>
-              <div
-                className='grid md:grid-cols-3 md:grid-rows-2 gap-y-16 gap-x-8 md:max-w-[75%] m-auto'
-                // style={{ gridTemplateColumn: '16px auto auto auto 16px' }}
-              >
-                <div className='md:row-span-2'>
-                  <Image
-                    src={'/works/boehringer/BI_FB_AD.png'}
-                    alt=''
-                    width={426}
-                    height={869}
-                    className='w-full md:w-auto md:h-full object-contain'
-                  />
+              <MotionFade image>
+                <div
+                  className='grid md:grid-cols-3 md:grid-rows-2 gap-y-16 gap-x-8 md:max-w-[75%] m-auto'
+                  // style={{ gridTemplateColumn: '16px auto auto auto 16px' }}
+                >
+                  <div className='md:row-span-2'>
+                    <Image
+                      src={'/works/boehringer/BI_FB_AD.png'}
+                      alt=''
+                      width={426}
+                      height={869}
+                      className='w-full md:w-auto md:h-full object-contain'
+                    />
+                  </div>
+                  <div className='md:col-span-2 md:row-span-2'>
+                    <Image
+                      src={'/works/boehringer/BI_TICK.png'}
+                      alt=''
+                      width={869}
+                      height={869}
+                      className='w-full md:w-auto md:h-full object-contain'
+                    />
+                  </div>
                 </div>
-                <div className='md:col-span-2 md:row-span-2'>
-                  <Image
-                    src={'/works/boehringer/BI_TICK.png'}
-                    alt=''
-                    width={869}
-                    height={869}
-                    className='w-full md:w-auto md:h-full object-contain'
-                  />
-                </div>
-              </div>
+              </MotionFade>
             </div>
             <div className='col-span-full'>
               <p>
@@ -131,37 +134,45 @@ const BI = () => {
 
             <div className='col-span-full'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20'>
-                <p className='w-full md:w-6/12'>
-                  In addition, my involvement in crafting a compelling short
-                  film, &quot;Ben en Biko vs. Da 3 Marites,&quot; became a
-                  pivotal endeavor in our mission to tackle widespread
-                  misconceptions in pet healthcare. This cinematic venture aimed
-                  to deliver a potent message wrapped in humor and relatability,
-                  a story that resonated deeply with pet owners.
-                  <br />
-                  <br />
-                  As the project unfolded, we meticulously carved a narrative
-                  that went beyond entertainment. It was a tale that tugged at
-                  heartstrings while imparting a crucial lesson: true love for
-                  one&apos;s pet extends to prioritizing regular visits to the
-                  vet.
-                  <br />
-                  <br />
-                  &quot;Ben en Biko vs. Da 3 Marites&quot; wasn&apos;t just a
-                  short film; it was a vehicle for dispelling myths. Through a
-                  blend of wit and charm, it artfully dismantled misconceptions
-                  that lingered in the minds of pet owners. The storyline was a
-                  tapestry woven with care, threading the importance of
-                  professional veterinary care into every scene.
-                </p>
                 <div className='w-full md:w-6/12'>
-                  <Image
-                    src={'/works/boehringer/BI_VID_MockUp.jpg'}
-                    alt=''
-                    width={832}
-                    height={960}
-                    className='w-full'
-                  />
+                  <MotionFade>
+                    <p>
+                      In addition, my involvement in crafting a compelling short
+                      film, &quot;Ben en Biko vs. Da 3 Marites,&quot; became a
+                      pivotal endeavor in our mission to tackle widespread
+                      misconceptions in pet healthcare. This cinematic venture
+                      aimed to deliver a potent message wrapped in humor and
+                      relatability, a story that resonated deeply with pet
+                      owners.
+                      <br />
+                      <br />
+                      As the project unfolded, we meticulously carved a
+                      narrative that went beyond entertainment. It was a tale
+                      that tugged at heartstrings while imparting a crucial
+                      lesson: true love for one&apos;s pet extends to
+                      prioritizing regular visits to the vet.
+                      <br />
+                      <br />
+                      &quot;Ben en Biko vs. Da 3 Marites&quot; wasn&apos;t just
+                      a short film; it was a vehicle for dispelling myths.
+                      Through a blend of wit and charm, it artfully dismantled
+                      misconceptions that lingered in the minds of pet owners.
+                      The storyline was a tapestry woven with care, threading
+                      the importance of professional veterinary care into every
+                      scene.
+                    </p>
+                  </MotionFade>
+                </div>
+                <div className='w-full md:w-6/12'>
+                  <MotionFade image>
+                    <Image
+                      src={'/works/boehringer/BI_VID_MockUp.jpg'}
+                      alt=''
+                      width={832}
+                      height={960}
+                      className='w-full'
+                    />
+                  </MotionFade>
                 </div>
               </div>
             </div>

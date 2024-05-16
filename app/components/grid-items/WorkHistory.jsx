@@ -4,18 +4,7 @@ import IconText from '../ui/IconText';
 import Link from 'next/link';
 import { ThinLine } from '../ui/Lines';
 import { motion } from 'framer-motion';
-
-export const fadeIn = {
-  initial: {
-    opacity: 0,
-    y: '100%',
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.2, ease: 'circOut', delay: 0.1 },
-  },
-};
+import { fadeUp } from '../animation/motion';
 
 const works = [
   { id: 1, link: '#boehringer', work: 'Boehringer Ingelheim Philippines' },
@@ -54,7 +43,7 @@ const WorkHistory = () => {
         {works.map((work, index) => (
           <motion.li
             key={work.id}
-            variants={fadeIn}
+            variants={fadeUp}
             initial='initial'
             animate='animate'
           >
