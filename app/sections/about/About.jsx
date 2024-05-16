@@ -12,6 +12,7 @@ const About = () => {
             width={400}
             height={400}
             alt='Drawing of Debbie'
+            loading='lazy'
             className='w-full max-w-[400px] mx-auto z-10'
           />
         </div>

@@ -38,6 +38,7 @@ const VimeoVideo = (props) => {
   return (
     <iframe
       ref={iframeRef}
+      loading='lazy'
       src={`https://player.vimeo.com/video/${
         props.videoID
       }?autoplay=1&loop=1&badge=0&autopause=0&${
