@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
-import VideoFrame from '../../ui/VideoFrame';
+import VimeoVideo from '../../ui/VimeoVideo';
 
 const NutriChunks = () => {
   return (
@@ -164,7 +164,7 @@ const NutriChunks = () => {
                 hearts of our customers.
               </p>
               <div className='w-full my-16'>
-                <VideoFrame
+                <VimeoVideo
                   videoID='925741617'
                   title='Nutri Chunks Listo Ganado'
                 />

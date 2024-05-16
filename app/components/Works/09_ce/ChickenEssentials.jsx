@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
-import VideoFrame from '../../ui/VideoFrame';
+import VimeoVideo from '../../ui/VimeoVideo';
 
 const ChickenEssentials = () => {
   return (
@@ -119,7 +119,7 @@ const ChickenEssentials = () => {
             </div>
 
             <div className='col-span-full'>
-              <VideoFrame
+              <VimeoVideo
                 videoID='925739533'
                 title='Alagang Mapagmahal - Chicken Essentials Highlights'
               />

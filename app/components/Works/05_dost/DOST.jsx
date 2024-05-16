@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
-import VideoFrame from '../../ui/VideoFrame';
+import VimeoVideo from '../../ui/VimeoVideo';
 
 const DOST = () => {
   return (
@@ -68,7 +68,7 @@ const DOST = () => {
             </div>
 
             <div className='col-span-full'>
-              <VideoFrame
+              <VimeoVideo
                 videoID='925739821'
                 title='DOST Science for Change Program Culminating Event'
               />

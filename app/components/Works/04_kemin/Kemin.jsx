@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
-import VideoFrame from '../../ui/VideoFrame';
+import VimeoVideo from '../../ui/VimeoVideo';
 import VideoLocal from '../../ui/VideoLocal';
 
 const Kemin = () => {
@@ -43,7 +43,7 @@ const Kemin = () => {
             </div>
 
             <div className='col-span-full'>
-              <VideoFrame videoID='925741081' title='Kemin Enterosure Launch' />
+              <VimeoVideo videoID='925741081' title='Kemin Enterosure Launch' />
             </div>
 
             <div className='col-span-full'>
@@ -78,7 +78,7 @@ const Kemin = () => {
             </div>
 
             <div className='col-span-full'>
-              <VideoFrame videoID='925741081' title='Kemin Enterosure Launch' />
+              <VimeoVideo videoID='925741081' title='Kemin Enterosure Launch' />
             </div>
           </div>
         </div>

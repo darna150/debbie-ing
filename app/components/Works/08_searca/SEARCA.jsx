@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
-import VideoFrame from '../../ui/VideoFrame';
+import VimeoVideo from '../../ui/VimeoVideo';
 
 const SEARCA = () => {
   return (
@@ -58,7 +58,7 @@ const SEARCA = () => {
 
             {/* Video Highlight */}
             <div className='col-span-full'>
-              <VideoFrame videoID='925741649' title='Youth in Agri Talk Show' />
+              <VimeoVideo videoID='925741649' title='Youth in Agri Talk Show' />
             </div>
 
             <div className='col-span-full'>

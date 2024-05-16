@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
-import VideoFrame from '../../ui/VideoFrame';
+import VimeoVideo from '../../ui/VimeoVideo';
 
 const GIZ = () => {
   return (
@@ -102,7 +102,7 @@ const GIZ = () => {
             </div>
 
             <div className='col-span-full'>
-              <VideoFrame
+              <VimeoVideo
                 videoID='925740123'
                 title='Climate Information System - GIZ'
               />

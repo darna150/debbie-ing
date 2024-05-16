@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
-import VideoFrame from '../../ui/VideoFrame';
+import VimeoVideo from '../../ui/VimeoVideo';
 import VideoLocal from '../../ui/VideoLocal';
 
 const DOST_PCAARD = () => {
@@ -65,7 +65,7 @@ const DOST_PCAARD = () => {
             {/* VIDEO */}
             <div className='col-span-full'>
               <div className='w-full my-16'>
-                <VideoFrame
+                <VimeoVideo
                   videoID='925741540'
                   title='Agribusiness Masterclass'
                 />

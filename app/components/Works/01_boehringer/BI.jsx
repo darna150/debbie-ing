@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
-import VideoFrame from '../../ui/VideoFrame';
+import VimeoVideo from '../../ui/VimeoVideo';
 
 const BI = () => {
   return (
@@ -88,7 +88,7 @@ const BI = () => {
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
               <div className='my-16'>
-                <VideoFrame
+                <VimeoVideo
                   videoID='925738739'
                   title='Boehringer Ingelheim XPERT Series'
                 />
@@ -126,7 +126,7 @@ const BI = () => {
             </div>
 
             <div className='col-span-full'>
-              <VideoFrame videoID='925738673' title='Ben En Biko' />
+              <VimeoVideo videoID='925738673' title='Ben En Biko' />
             </div>
 
             <div className='col-span-full'>

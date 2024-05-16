@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
-import VideoFrame from '../../ui/VideoFrame';
+import VimeoVideo from '../../ui/VimeoVideo';
 
 const JFC = () => {
   return (
@@ -69,7 +69,7 @@ const JFC = () => {
                 </h2>
               </div>
               <div className='mt-16'>
-                <VideoFrame videoID='925740654' title='JFC Universe' />
+                <VimeoVideo videoID='925740654' title='JFC Universe' />
               </div>
             </div>
 
@@ -81,28 +81,28 @@ const JFC = () => {
               </p>
               <div className='grid md:grid-cols-2 gap-4 mt-16'>
                 <div>
-                  <VideoFrame
+                  <VimeoVideo
                     videoID='925740708'
                     title='JFC Universe - Chapter 1'
                     background={true}
                   />
                 </div>
                 <div>
-                  <VideoFrame
+                  <VimeoVideo
                     videoID='925740746'
                     title='JFC Universe - Chapter 2'
                     background={true}
                   />
                 </div>
                 <div>
-                  <VideoFrame
+                  <VimeoVideo
                     videoID='925740802'
                     title='JFC Universe - Chapter 3'
                     background={true}
                   />
                 </div>
                 <div>
-                  <VideoFrame
+                  <VimeoVideo
                     videoID='925740825'
                     title='JFC Universe - Chapter 4'
                     background={true}
