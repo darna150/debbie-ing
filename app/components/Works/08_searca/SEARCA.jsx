@@ -14,7 +14,7 @@ const SEARCA = () => {
               alt=''
               width={480}
               height={480}
-              className='w-2/5 mx-auto max-w-[300px]'
+              className='w-2/5 mx-auto max-w-[600px]'
             />
           </div>
           {/* GRADIENT */}
