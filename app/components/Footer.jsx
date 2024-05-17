@@ -9,14 +9,7 @@ const Footer = () => {
 
   const copyEmail = () => {
     navigator.clipboard.writeText('hol@justdebbie.ing');
-    const copyEmailText = document.getElementById('copyEmailText');
-    let originalText = copyEmailText.innerHTML;
-    copyEmailText.innerHTML = 'Copied 🎉';
     setIsCopied(true);
-    setTimeout(function () {
-      setIsCopied(false);
-      copyEmailText.innerHTML = originalText;
-    }, 3000);
   };
 
   return (
@@ -42,15 +35,17 @@ const Footer = () => {
         <motion.button
           className='
           sm:text-xl py-2 px-4 sm:py-4 sm:px-6 flex gap-12 bg-neutral-100 rounded-md sm:rounded-2xl
-          relative group
-          hover:bg-neutral-200 transition-colors
+          relative group transition-all
+          hover:bg-neutral-200 hover:scale-[1.05]
           '
-          onClick={copyEmail}
           variants={fadeIn}
           initial='initial'
           whileInView='animate'
           delay={0.8}
           viewport={{ once: true }}
+          onClick={copyEmail}
+          onMouseLeave={() => setIsCopied(false)}
+          onBlur={() => setIsCopied(false)}
         >
           <div>Email</div>
           <div className='text-neutral-500 font-medium'>hol@justdebbie.ing</div>
@@ -63,10 +58,12 @@ const Footer = () => {
               isCopied ? 'text-green-600' : 'text-neutral-500'
             }
             px-2.5 py-1.5
-          invisible group-hover:visible
+          invisible 
+          group-hover:visible
+          group-focus:visible
           `}
           >
-            Copy Email
+            {isCopied ? 'Copied 🎉' : 'Copy Email'}
           </span>
         </motion.button>
       </div>
