@@ -5,7 +5,7 @@ import VimeoVideo from '../../ui/VimeoVideo';
 const DOST = () => {
   return (
     <>
-      <div className='relative dost-container -mb-40' id='dost'>
+      <div className='relative dost-container' id='dost'>
         <div className='container mx-auto pt-20 px-5'>
           {/* HEADER */}
           <div className='sticky top-20 h-fit z-10'>
@@ -18,7 +18,7 @@ const DOST = () => {
             />
           </div>
           {/* GRADIENT */}
-          <div className='relative bg-gradient-to-t from-white w-full h-14 col-span-full z-20 fix-3d -mb-4'></div>
+          <div className='relative bg-gradient-to-t from-white w-full h-14 col-span-full z-20 fix-3d -mb-8'></div>
           {/* IMAGE HEADER */}
           <div className='relative z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
@@ -32,11 +32,11 @@ const DOST = () => {
             </div>
           </div>
           {/* GRADIENT */}
-          <div className='relative bg-[#48C4D3] w-full h-14 col-span-full z-10 fix-3d -mt-14'></div>
+          <div className='relative bg-[#48C4D3] w-full h-16 md:h-40 col-span-full z-10 fix-3d -mt-16 md:-mt-40'></div>
         </div>
       </div>
-      <section className='bg-[#48C4D3] text-black relative dost-container'>
-        <div className='container mx-auto pt-60 px-5'>
+      <section className='bg-[#48C4D3] text-black relative dost-container -mt-16 md:-mt-40'>
+        <div className='container mx-auto pt-32 md:pt-60 px-5'>
           {/* CONTENT */}
           <div className='relative bg-[#48C4D3] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* Intro  */}

@@ -6,7 +6,7 @@ import VideoLocal from '../../ui/VideoLocal';
 const DOST_PCAARD = () => {
   return (
     <>
-      <div className='relative dost-pcaard-container -mb-60' id='dost-pcaard'>
+      <div className='relative dost-pcaard-container' id='dost-pcaard'>
         <div className='container mx-auto pt-20 px-5'>
           {/* HEADER */}
           <div className='sticky top-20 h-fit z-10'>
@@ -29,19 +29,16 @@ const DOST_PCAARD = () => {
                 width={1080}
                 height={600}
                 className='w-full max-w-[1080px] mx-auto'
-                style={{
-                  background:
-                    'linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, #0097D7 30%)',
-                }}
               />
             </div>
           </div>
           {/* GRADIENT */}
-          <div className='relative bg-[#0097D7] w-full h-14 col-span-full z-10 fix-3d -mt-14'></div>
+          <div className='relative bg-[#0097D7] w-full h-16 md:h-40 col-span-full z-10 fix-3d -mt-16 md:-mt-40'></div>
         </div>
       </div>
-      <section className='bg-[#0097D7] text-black relative dost-pcaard-container'>
-        <div className='container mx-auto pt-60 px-5'>
+
+      <section className='bg-[#0097D7] text-black relative dost-pcaard-container -mt-16 md:-mt-40'>
+        <div className='container mx-auto pt-12 md:pt-32 px-5'>
           {/* CONTENT */}
           <div className='relative bg-[#0097D7] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* GOAL */}
@@ -93,7 +90,7 @@ const DOST_PCAARD = () => {
                 width={892}
                 height={513}
                 alt=''
-                className='w-full w-full md:max-w-[70%]'
+                className='w-full md:max-w-[70%]'
               />
               <div className='flex flex-col gap-3 md:gap-10 px-3 md:px-10'>
                 <div className='w-full max-w-[80%] md:max-w-[60%]'>

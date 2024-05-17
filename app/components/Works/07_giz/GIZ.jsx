@@ -5,7 +5,7 @@ import VimeoVideo from '../../ui/VimeoVideo';
 const GIZ = () => {
   return (
     <>
-      <div className='relative giz-container -mb-40' id='giz'>
+      <div className='relative giz-container' id='giz'>
         <div className='container mx-auto pt-20 px-5'>
           {/* HEADER */}
           <div className='sticky top-20 h-fit z-10'>
@@ -14,29 +14,25 @@ const GIZ = () => {
               alt=''
               width={480}
               height={480}
-              className='w-full mx-auto max-w-[800px]'
+              className='w-[90%] mx-auto max-w-[600px]'
             />
           </div>
-          {/* GRADIENT */}
-          <div className='relative bg-gradient-to-t from-white w-full h-14 col-span-full z-20 fix-3d -mb-4'></div>
           {/* IMAGE HEADER */}
           <div className='relative z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
               <Image
                 src={'/works/giz/giz-header.png'}
                 alt=''
-                width={1322}
-                height={779}
+                width={1080}
+                height={432}
                 className='w-full max-w-[1080px] mx-auto'
               />
             </div>
           </div>
-          {/* GRADIENT */}
-          <div className='relative bg-[#D40E14] w-full h-14 col-span-full z-10 fix-3d -mt-14'></div>
         </div>
       </div>
-      <section className='bg-[#D40E14] text-black relative giz-container'>
-        <div className='container mx-auto pt-60 px-5'>
+      <section className='bg-[#D40E14] text-black relative giz-container -mt-16 md:-mt-40'>
+        <div className='container mx-auto pt-40 md:pt-60 px-5'>
           {/* CONTENT */}
           <div className='relative bg-[#D40E14] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* GOAL */}

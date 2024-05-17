@@ -176,15 +176,6 @@ const BI = () => {
                 </div>
               </div>
             </div>
-
-            <div className='col-span-full'>
-              <Image
-                src='https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/a20955b2-ea95-4099-8109-4683dcd2a3ae.gif?ClientID=sulu&Date=1715928873&Signature=4f47671d1bded2e8dbde6e2c182ac0cca202a7b1'
-                alt=''
-                width={749}
-                height={352}
-              />
-            </div>
           </div>
         </div>
       </section>

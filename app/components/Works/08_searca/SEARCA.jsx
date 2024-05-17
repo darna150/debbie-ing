@@ -12,36 +12,41 @@ const SEARCA = () => {
             <Image
               src={'/works/searca/searca-logo.svg'}
               alt=''
-              width={556}
-              height={501}
-              className='w-3/5 max-w-[800px] mx-auto'
+              width={480}
+              height={480}
+              className='w-2/5 mx-auto max-w-[300px]'
             />
           </div>
           {/* GRADIENT */}
-          <div className='relative bg-gradient-to-t from-white w-full h-14 col-span-full z-20 fix-3d'></div>
+          <div className='relative bg-gradient-to-t from-white w-full h-40 col-span-full z-20 fix-3d -mb-24'></div>
           {/* IMAGE HEADER */}
-          <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 pb-10 fix-3d'>
+          <div className='relative z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
               <Image
-                src={'/works/searca/chunky.gif'}
+                src={'/works/searca/searca-header.png'}
                 alt=''
-                width={760}
-                height={570}
-                className='w-full max-w-[500px] m-auto'
+                width={1080}
+                height={600}
+                className='w-full max-w-[1080px] mx-auto'
               />
-              <p className='text-white !font-bold mt-6'>
+            </div>
+          </div>
+          {/* GRADIENT */}
+          <div className='relative bg-[#096936] w-full h-8 md:h-24 col-span-full z-10 fix-3d -mt-8 md:-mt-24'></div>
+        </div>
+      </div>
+      <section className='bg-[#096936] text-white relative searca-container -mt-8 md:-mt-24'>
+        <div className='container mx-auto pt-12 md:pt-32 px-5'>
+          {/* CONTENT */}
+          <div className='relative bg-[#096936] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
+            <div className='col-span-full'>
+              <p className='text-white !font-bold'>
                 In the bustling world of virtual production, I found myself at
                 the forefront of the Youth in Agri Talk show&apos;s pilot
                 episode for SEARCA.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-      <section className='bg-[#096936] text-white relative searca-container'>
-        <div className='container mx-auto pt-20 px-5'>
-          {/* CONTENT */}
-          <div className='relative bg-[#096936] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
+
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
               <div className='mt-12'>
