@@ -23,7 +23,12 @@ const Kemin = () => {
           {/* IMAGE HEADER */}
           <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
-              <VideoLocal src='/works/kemin/KEMIN_FULL_PANEL.mp4' />
+              <VimeoVideo
+                videoID='947281816'
+                title='SIDEPANEL FULL'
+                background={true}
+                aspectRatio='aspect-[1200/362]'
+              />
             </div>
           </div>
         </div>
@@ -54,10 +59,22 @@ const Kemin = () => {
               </p>
               <div className='flex flex-col sm:flex-row gap-8 sm:w-3/4 mx-auto mt-16'>
                 <div className='sm:w-1/2'>
-                  <VideoLocal src='/works/kemin/KEMIN_PANEL1.mp4' />
+                  {/* <VideoLocal src='/works/kemin/KEMIN_PANEL1.mp4' /> */}
+                  <VimeoVideo
+                    videoID='947281801'
+                    title='SIDEPANEL LEFT'
+                    background={true}
+                    aspectRatio='aspect-[541/701]'
+                  />
                 </div>
                 <div className='sm:w-1/2'>
-                  <VideoLocal src='/works/kemin/KEMIN_PANEL2.mp4' />
+                  {/* <VideoLocal src='/works/kemin/KEMIN_PANEL2.mp4' /> */}
+                  <VimeoVideo
+                    videoID='947281776'
+                    title='SIDEPANEL RIGHT'
+                    background={true}
+                    aspectRatio='aspect-[541/701]'
+                  />
                 </div>
               </div>
             </div>
@@ -78,7 +95,7 @@ const Kemin = () => {
             </div>
 
             <div className='col-span-full'>
-              <VimeoVideo videoID='925741081' title='Kemin Enterosure Launch' />
+              <VimeoVideo videoID='947284511' title='Kemin Short 1' />
             </div>
           </div>
         </div>

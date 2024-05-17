@@ -97,19 +97,39 @@ const DOST_PCAARD = () => {
               />
               <div className='flex flex-col gap-3 md:gap-10 px-3 md:px-10'>
                 <div className='w-full max-w-[80%] md:max-w-[60%]'>
-                  <VideoLocal src={'/works/dost-pcaard/gif-1.mp4'} />
+                  <VimeoVideo
+                    videoID='945696727'
+                    title='Video 1'
+                    background={true}
+                  />
                 </div>
                 <div className='w-full max-w-[80%] md:max-w-[60%] ml-auto'>
-                  <VideoLocal src={'/works/dost-pcaard/gif-2.mp4'} />
+                  <VimeoVideo
+                    videoID='945696442'
+                    title='Video 2'
+                    background={true}
+                  />
                 </div>
                 <div className='w-full max-w-[80%] md:max-w-[60%]'>
-                  <VideoLocal src={'/works/dost-pcaard/gif-3.mp4'} />
+                  <VimeoVideo
+                    videoID='945696647'
+                    title='Video 3'
+                    background={true}
+                  />
                 </div>
                 <div className='w-full max-w-[80%] md:max-w-[60%] ml-auto'>
-                  <VideoLocal src={'/works/dost-pcaard/gif-4.mp4'} />
+                  <VimeoVideo
+                    videoID='945696578'
+                    title='Video 4'
+                    background={true}
+                  />
                 </div>
                 <div className='w-full max-w-[80%] md:max-w-[60%]'>
-                  <VideoLocal src={'/works/dost-pcaard/gif-5.mp4'} />
+                  <VimeoVideo
+                    videoID='945696542'
+                    title='Video 5'
+                    background={true}
+                  />
                 </div>
               </div>
             </div>

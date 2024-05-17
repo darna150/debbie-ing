@@ -69,3 +69,15 @@ p + p {
 .nutrichunks-container p + p {
     @apply mt-12
 }
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+  

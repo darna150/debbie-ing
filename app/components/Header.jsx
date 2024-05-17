@@ -12,7 +12,7 @@ const Header = () => {
         className='text-[3.25rem] sm:text-8xl md:text-9xl font-bold tracking-tighter leading-none overflow-hidden'
         aria-label='Debbie'
       >
-        <SplitText>debbie-ing!</SplitText>
+        <SplitText>debbie-ing</SplitText>
       </h1>
     </header>
   );

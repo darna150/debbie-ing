@@ -52,18 +52,11 @@ const GIZ = () => {
               <ThickLine color='bg-white' />
             </div>
 
-            {/* Video Highlight */}
             <div className='col-span-full'>
-              <div className='w-full bg-[#D9D9D9] aspect-video flex items-center justify-center'>
-                <p className='text-3xl font-bold !text-black'>
-                  VIDEO HIGHLIGHT
-                </p>
-              </div>
-              <p className='mt-6'>
-                The heart of this video lay in championing the cause of women in
-                agriculture and the environment, within a society predominantly
-                led by men.
-              </p>
+              <VimeoVideo
+                videoID='925740123'
+                title='Climate Information System - GIZ'
+              />
             </div>
 
             <div className='col-span-full'>
@@ -102,10 +95,7 @@ const GIZ = () => {
             </div>
 
             <div className='col-span-full'>
-              <VimeoVideo
-                videoID='925740123'
-                title='Climate Information System - GIZ'
-              />
+              <VimeoVideo videoID='925740071' title='GIZ Highlights' />
             </div>
           </div>
         </div>
