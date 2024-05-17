@@ -4,7 +4,7 @@ import { MotionFade } from '@/app/components/animation/motion';
 
 const About = () => {
   return (
-    <section className='bg-black text-white'>
+    <section className='bg-black text-white' id='about'>
       <div className='container mx-auto py-16 px-5'>
         <div className='sticky top-0 h-fit z-10'>
           <Image

@@ -1,3 +1,4 @@
+import { Dock } from "./components/Nav/Dock"
 import Header from "./components/Header"
 import Details from "./components/Details"
 import About from "./sections/about/About"
@@ -43,22 +44,25 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <div className="px-5">
-        <Header />
-        <Details />
-      </div>
-      <About />
-      <BI />
-      <NutriChunks />
-      <JFC />
-      <Kemin />
-      <DOST />
-      <DOST_PCAARD />
-      <GIZ />
-      <SEARCA />
-      <ChickenEssentials />
-      <Footer />
-    </main>
+    <>
+      <Dock />
+      <main>
+        <div className="px-5">
+          <Header />
+          <Details />
+        </div>
+        <About />
+        <BI />
+        <NutriChunks />
+        <JFC />
+        <Kemin />
+        <DOST />
+        <DOST_PCAARD />
+        <GIZ />
+        <SEARCA />
+        <ChickenEssentials />
+        <Footer />
+      </main>
+    </>
   )
 }
