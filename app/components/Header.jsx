@@ -3,7 +3,7 @@ import SplitText from './ui/SplitText';
 
 const Header = () => {
   return (
-    <header className='container mx-auto my-10'>
+    <header className='container mx-auto my-10' id='header'>
       <IconText>
         👋🏻 Hey, I&apos;m Debbie, here to sprinkle some creativity and fun in
         your day— all while just

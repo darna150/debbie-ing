@@ -51,16 +51,12 @@ const Footer = () => {
           <div className='text-neutral-500 font-medium'>hol@justdebbie.ing</div>
 
           <span
-            id='copyEmailText'
             className={`tooltiptext 
             absolute z-10 bg-white drop-shadow-md rounded-md bottom-[120%] left-1/2 -translate-x-1/2 
-            text-sm font-medium ${
-              isCopied ? 'text-green-600' : 'text-neutral-500'
-            }
+            text-sm font-medium 
             px-2.5 py-1.5
-          invisible 
-          group-hover:visible
-          group-focus:visible
+            invisible group-hover:visible group-focus-visible:visible
+            ${isCopied ? 'text-green-600' : 'text-neutral-500'}
           `}
           >
             {isCopied ? 'Copied 🎉' : 'Copy Email'}

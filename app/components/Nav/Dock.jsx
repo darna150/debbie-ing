@@ -1,6 +1,6 @@
 'use client';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import debbie from '../../../public/icons/debbie-icon.png';
 import bi from '../../../public/icons/bi-icon.svg';
@@ -13,84 +13,100 @@ import giz from '../../../public/icons/giz-icon.svg';
 import searca from '../../../public/icons/searca-icon.svg';
 import ce from '../../../public/icons/ce-icon.svg';
 
-const images = {
-  debbie: debbie,
-  bi: bi,
-  jfc: jfc,
-  smc: smc,
-  kemin: kemin,
-  dost: dost,
-  dost_pcaard: dost_pcaard,
-  giz: giz,
-  searca: searca,
-  ce: ce,
-};
-
 const dock = {
   data: [
     {
-      image: 'debbie',
+      image: debbie,
       href: '#about',
     },
     {
-      image: 'bi',
+      image: bi,
       href: '#boehringer',
     },
     {
-      image: 'jfc',
+      image: smc,
       href: '#sanmiguelcorp',
     },
     {
-      image: 'smc',
+      image: jfc,
       href: '#jfc',
     },
     {
-      image: 'kemin',
+      image: kemin,
       href: '#kemin',
     },
     {
-      image: 'dost',
+      image: dost,
       href: '#dost',
     },
     {
-      image: 'dost_pcaard',
-      href: '#dost',
+      image: dost_pcaard,
+      href: '#dost_pcaard',
     },
     {
-      image: 'giz',
+      image: giz,
       href: '#giz',
     },
     {
-      image: 'searca',
+      image: searca,
       href: '#searca',
     },
     {
-      image: 'ce',
+      image: ce,
       href: '#chicken-essentials',
     },
   ],
 };
 
+const showDockAnim = {
+  initial: {
+    y: '150%',
+    x: '-50%',
+  },
+  animate: {
+    y: 0,
+  },
+};
+
 export const Dock = () => {
+  const [showDock, setShowDock] = useState(false);
   const mouseX = useMotionValue(Infinity);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const headerHeight = document.getElementById('header').offsetHeight;
+      const aboutHeight = document.getElementById('about').offsetHeight;
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition > headerHeight + aboutHeight / 2) {
+        setShowDock(true);
+      } else {
+        setShowDock(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <motion.div
+      className='mx-auto flex h-16 items-end gap-4 rounded-2xl 
+    bg-neutral-200/40 backdrop-blur-sm
+    px-4 pb-3 
+    fixed left-1/2 bottom-2 z-[99]
+    '
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
-      className='mx-auto flex h-16 items-end gap-4 rounded-2xl 
-          bg-neutral-200/80 backdrop-blur-sm
-          px-4 pb-3 
-      fixed left-1/2 -translate-x-1/2 bottom-4 z-[99]
-      '
+      variants={showDockAnim}
+      initial='initial'
+      animate={showDock ? 'animate' : 'initial'}
+      transition={{ duration: 0.4, ease: 'circOut' }}
     >
       {dock.data.map((data, i) => (
-        <AppIcon
-          mouseX={mouseX}
-          key={i}
-          image={images[data.image]}
-          href={data.href}
-        />
+        <AppIcon mouseX={mouseX} key={i} image={data.image} href={data.href} />
       ))}
     </motion.div>
   );
@@ -117,7 +133,7 @@ const AppIcon = ({ mouseX, image, href }) => {
       ref={ref}
       href={href}
       style={{ width }}
-      className='aspect-square w-10 overflow-hidden block drop-shadow-[0_2px_1px_rgba(0,0,0,0.2)]'
+      className='aspect-square w-10 block drop-shadow-[0_2px_1px_rgba(0,0,0,0.2)]'
     >
       <Image src={image} alt='' />
     </motion.a>
