@@ -34,7 +34,7 @@ const Footer = () => {
 
         <motion.button
           className='
-          sm:text-xl py-2 px-4 sm:py-4 sm:px-6 flex gap-12 bg-neutral-100 rounded-md sm:rounded-2xl
+          text-sm sm:text-xl py-2 px-4 sm:py-4 sm:px-6 flex gap-12 bg-neutral-100 rounded-md sm:rounded-2xl
           relative group transition-all
           hover:bg-neutral-200 hover:scale-[1.05]
           '
@@ -52,7 +52,7 @@ const Footer = () => {
 
           <span
             className={`tooltiptext 
-            absolute z-10 bg-white drop-shadow-md rounded-md bottom-[120%] left-1/2 -translate-x-1/2 
+            absolute z-10 bg-white drop-shadow-md rounded-md bottom-[140%] md:bottom-[120%] left-1/2 -translate-x-1/2 
             text-sm font-medium 
             px-2.5 py-1.5
             invisible group-hover:visible group-focus-visible:visible

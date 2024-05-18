@@ -43,7 +43,7 @@ const dock = {
     },
     {
       image: dost_pcaard,
-      href: '#dost_pcaard',
+      href: '#dost-pcaard',
     },
     {
       image: giz,

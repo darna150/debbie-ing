@@ -12,9 +12,9 @@ const SEARCA = () => {
             <Image
               src={'/works/searca/searca-logo.svg'}
               alt=''
-              width={480}
-              height={480}
-              className='w-2/5 mx-auto max-w-[600px]'
+              width={1411}
+              height={314}
+              className='w-3/5 mx-auto max-w-[600px]'
             />
           </div>
           {/* GRADIENT */}

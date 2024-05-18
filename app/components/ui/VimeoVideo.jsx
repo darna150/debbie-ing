@@ -46,9 +46,8 @@ const VimeoVideo = (props) => {
       }&dnt=1&muted=1&player_id=0&app_id=58479`}
       allow='autoplay; fullscreen;'
       title={props.title}
-      className={`w-full  ${
-        props.aspectRatio ? props.aspectRatio : 'aspect-video'
-      }`}
+      className={`w-full touch-pan-y
+      ${props.aspectRatio ? props.aspectRatio : 'aspect-video'}`}
     ></iframe>
   );
 };
