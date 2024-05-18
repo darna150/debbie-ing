@@ -2,6 +2,8 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useMediaQuery } from '@react-hook/media-query';
+
 import debbie from '../../../public/icons/debbie-icon.png';
 import bi from '../../../public/icons/bi-icon.svg';
 import jfc from '../../../public/icons/jfc-icon.svg';
@@ -93,10 +95,14 @@ export const Dock = () => {
 
   return (
     <motion.div
-      className='mx-auto flex h-16 items-end gap-4 rounded-2xl 
-    bg-neutral-200/40 backdrop-blur-sm
-    px-4 pb-3 
-    fixed left-1/2 bottom-2 z-[99]
+      className='
+      max-w-[95%] 
+      mx-auto h-16 
+      flex items-end gap-4 
+      overflow-x-scroll md:overflow-visible snap-x
+    bg-neutral-200/40 backdrop-blur-sm rounded-2xl 
+      px-4 pb-3 
+      fixed left-1/2 bottom-2 z-[99]
     '
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
@@ -114,6 +120,7 @@ export const Dock = () => {
 
 const AppIcon = ({ mouseX, image, href }) => {
   const ref = useRef(null);
+  const isLargeScreen = useMediaQuery('(min-width: 768px)');
 
   const distance = useTransform(mouseX, (val) => {
     const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
@@ -132,8 +139,8 @@ const AppIcon = ({ mouseX, image, href }) => {
     <motion.a
       ref={ref}
       href={href}
-      style={{ width }}
-      className='aspect-square w-10 block drop-shadow-[0_2px_1px_rgba(0,0,0,0.2)]'
+      style={{ width: isLargeScreen ? width : 'auto' }}
+      className='aspect-square min-w-10 block drop-shadow-[0_2px_1px_rgba(0,0,0,0.2)]'
     >
       <Image src={image} alt='' />
     </motion.a>
