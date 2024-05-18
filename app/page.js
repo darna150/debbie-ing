@@ -53,13 +53,13 @@ export default function Home() {
         <About />
         <BI />
         <NutriChunks />
-        {/* <JFC />
+        <JFC />
         <Kemin />
         <DOST />
         <DOST_PCAARD />
         <GIZ />
         <SEARCA />
-        <ChickenEssentials /> */}
+        <ChickenEssentials />
         <Footer />
       </main>
       <Dock />
