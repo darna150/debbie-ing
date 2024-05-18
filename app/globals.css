@@ -70,6 +70,13 @@ p + p {
     @apply mt-12
 }
 
+:focus-visible {
+    @apply 
+    focus-visible:outline-none focus-visible:ring-offset-purple-300
+    focus-visible:ring 
+    /* focus-visible:ring-purple-300  */
+  }
+
 .tooltiptext::after {
     content: "";
     position: absolute;
@@ -80,4 +87,3 @@ p + p {
     border-style: solid;
     border-color: white transparent transparent transparent;
   }
-  

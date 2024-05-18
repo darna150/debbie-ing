@@ -45,6 +45,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
+      <Dock />
       <main>
         <div className="px-5">
           <Header />
@@ -62,7 +63,6 @@ export default function Home() {
         <ChickenEssentials />
         <Footer />
       </main>
-      <Dock />
 
     </>
   )

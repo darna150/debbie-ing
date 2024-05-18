@@ -48,7 +48,7 @@ const Footer = () => {
     >
       <div className='flex flex-col items-center gap-6 sm:gap-8 opacity-0 startAnim'>
         <h2
-          className='text-[1.5rem] sm:text-5xl md:text-6xl font-bold tracking-tighter leading-none overflow-hidden'
+          className='text-center text-[2rem] sm:text-5xl md:text-6xl font-bold tracking-tighter leading-none overflow-hidden'
           aria-label='Ready when you are'
         >
           {splitText.map((char, index) => (
@@ -68,7 +68,7 @@ const Footer = () => {
 
         <button
           className='
-          text-sm sm:text-xl py-2 px-4 sm:py-4 sm:px-6 flex gap-12 bg-neutral-100 rounded-md sm:rounded-2xl
+           sm:text-xl py-2 px-4 sm:py-4 sm:px-6 flex gap-12 bg-neutral-100 rounded-md sm:rounded-2xl
           relative group transition-all
           hover:bg-neutral-200 hover:scale-[1.05]
           fadeIn-button
