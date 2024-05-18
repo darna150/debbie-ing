@@ -3,6 +3,13 @@ import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
 import { MotionFade } from '../../animation/motion';
 
+import logo from '../../../../public/works/boehringer/BI_LOGO.png';
+import header from '../../../../public/works/boehringer/BI_HEADER.png';
+import fb_ad from '../../../../public//works/boehringer/BI_FB_AD.png';
+import tick from '../../../../public//works/boehringer/BI_TICK.png';
+import debbie_thinking from '../../../../public//debbie/debbie-thinking.png';
+import vid_moockup from '../../../../public//works/boehringer/BI_VID_MockUp.jpg';
+
 const BI = () => {
   return (
     <>
@@ -14,10 +21,9 @@ const BI = () => {
           {/* HEADER */}
           <div className='sticky top-20 h-fit z-10'>
             <Image
-              src={'/works/boehringer/BI_LOGO.png'}
+              src={logo}
               alt=''
-              width={871}
-              height={259}
+              placeholder='blur'
               className='w-full max-w-[500px] mx-auto'
             />
           </div>
@@ -27,10 +33,9 @@ const BI = () => {
             {/* IMAGE WITH PARAGRAPH */}
             <div className='col-span-full'>
               <Image
-                src={'/works/boehringer/BI_HEADER.png'}
+                src={header}
                 alt=''
-                width={1365}
-                height={601}
+                placeholder='blur'
                 className='w-full'
               />
               <p className='text-white !font-bold mt-6'>
@@ -60,19 +65,17 @@ const BI = () => {
                 >
                   <div className='md:row-span-2'>
                     <Image
-                      src={'/works/boehringer/BI_FB_AD.png'}
+                      src={fb_ad}
                       alt=''
-                      width={426}
-                      height={869}
+                      placeholder='blur'
                       className='w-full md:w-auto md:h-full object-contain'
                     />
                   </div>
                   <div className='md:col-span-2 md:row-span-2'>
                     <Image
-                      src={'/works/boehringer/BI_TICK.png'}
+                      src={tick}
                       alt=''
-                      width={869}
-                      height={869}
+                      placeholder='blur'
                       className='w-full md:w-auto md:h-full object-contain'
                     />
                   </div>
@@ -118,10 +121,9 @@ const BI = () => {
                 </p>
                 <div className='w-full md:w-4/12'>
                   <Image
-                    src={'/debbie/debbie-thinking.png'}
+                    src={debbie_thinking}
                     alt=''
-                    width={832}
-                    height={960}
+                    placeholder='blur'
                     className='w-full max-w-[150px] md:max-w-[300px] m-auto'
                   />
                 </div>
@@ -166,10 +168,9 @@ const BI = () => {
                 <div className='w-full md:w-6/12'>
                   <MotionFade image>
                     <Image
-                      src={'/works/boehringer/BI_VID_MockUp.jpg'}
+                      src={vid_moockup}
                       alt=''
-                      width={832}
-                      height={960}
+                      placeholder='blur'
                       className='w-full'
                     />
                   </MotionFade>
