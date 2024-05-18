@@ -1,10 +1,38 @@
 'use client';
-import { useState } from 'react';
-import SplitText from './ui/SplitText';
-import { motion } from 'framer-motion';
-import { fadeIn } from './animation/motion';
+import { useState, useEffect } from 'react';
+import { useAnimate, useInView, stagger } from 'framer-motion';
 
 const Footer = () => {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, {
+    once: true,
+    margin: '0px 0px -40% 0px',
+  });
+  useEffect(() => {
+    if (isInView) {
+      animate([
+        ['.startAnim', { opacity: 1 }],
+        [
+          '.splitSpan',
+          { y: ['105%', '0%'] },
+          { delay: stagger(0.02) },
+          { ease: 'circOut' },
+        ],
+        [
+          ['.fadeIn-span', '.fadeIn-button'],
+          { opacity: [0, 1] },
+          { ease: 'circOut' },
+          { duration: '0.1' },
+        ],
+      ]);
+    }
+  }, [isInView, animate]);
+
+  // Split text
+  const copy = 'Ready when you are. ';
+  const splitText = copy.split('');
+
+  // Copy email button
   const [isCopied, setIsCopied] = useState(false);
 
   const copyEmail = () => {
@@ -13,36 +41,38 @@ const Footer = () => {
   };
 
   return (
-    <footer className='h-screen flex items-center justify-center'>
-      <div className='flex flex-col items-center gap-6 sm:gap-8'>
+    <footer
+      className='h-screen flex items-center justify-center'
+      ref={scope}
+      id='footer'
+    >
+      <div className='flex flex-col items-center gap-6 sm:gap-8 opacity-0 startAnim'>
         <h2
           className='text-[1.5rem] sm:text-5xl md:text-6xl font-bold tracking-tighter leading-none overflow-hidden'
           aria-label='Ready when you are'
         >
-          <SplitText>Ready when you are. </SplitText>
-          <motion.span
-            variants={fadeIn}
-            initial='initial'
-            whileInView='animate'
-            delay={0.8}
-            viewport={{ once: true }}
-            className='inline-block overflow-hidden pb-4 -mb-4 pr-1 -mr-1'
-          >
+          {splitText.map((char, index) => (
+            <span
+              key={index}
+              className='inline-block overflow-hidden pb-4 -mb-4 pr-1 -mr-1'
+            >
+              <span className='inline-block splitSpan'>
+                {char === ' ' ? '\u00A0' : char}
+              </span>
+            </span>
+          ))}
+          <span className='inline-block overflow-hidden pb-4 -mb-4 pr-1 -mr-1 fadeIn-span'>
             💪
-          </motion.span>
+          </span>
         </h2>
 
-        <motion.button
+        <button
           className='
           text-sm sm:text-xl py-2 px-4 sm:py-4 sm:px-6 flex gap-12 bg-neutral-100 rounded-md sm:rounded-2xl
           relative group transition-all
           hover:bg-neutral-200 hover:scale-[1.05]
+          fadeIn-button
           '
-          variants={fadeIn}
-          initial='initial'
-          whileInView='animate'
-          delay={0.8}
-          viewport={{ once: true }}
           onClick={copyEmail}
           onMouseLeave={() => setIsCopied(false)}
           onBlur={() => setIsCopied(false)}
@@ -61,7 +91,7 @@ const Footer = () => {
           >
             {isCopied ? 'Copied 🎉' : 'Copy Email'}
           </span>
-        </motion.button>
+        </button>
       </div>
     </footer>
   );
