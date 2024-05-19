@@ -2,6 +2,15 @@ import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
 
+import logo from '../../../../public/works/nutrichunks/smc-logo.svg';
+import header from '../../../../public/works/nutrichunks/chunky.gif';
+import mockup1 from '../../../../public/works/nutrichunks/MOCK-UP-WEBSITE_1.png';
+import mockup2 from '../../../../public/works/nutrichunks/MOCK-UP-WEBSITE_2.png';
+import mockup3 from '../../../../public/works/nutrichunks/MOCK-UP-WEBSITE-3.png';
+import chunkyMotor from '../../../../public/works/nutrichunks/CHUNKY_MOTOR.png';
+import mockupAd1 from '../../../../public/works/nutrichunks/MOCK-UP-PHONE_1.png';
+import mockupAd2 from '../../../../public/works/nutrichunks/MOCK-UP-FB_AD.png';
+
 const NutriChunks = () => {
   return (
     <>
@@ -9,13 +18,7 @@ const NutriChunks = () => {
         <div className='container mx-auto pt-20 px-5'>
           {/* HEADER */}
           <div className='sticky top-20 h-fit z-10'>
-            <Image
-              src={'/works/nutrichunks/smc-logo.svg'}
-              alt=''
-              width={556}
-              height={501}
-              className='w-3/5 max-w-[300px] mx-auto'
-            />
+            <Image src={logo} alt='' className='w-3/5 max-w-[300px] mx-auto' />
           </div>
           {/* GRADIENT */}
           <div className='relative bg-gradient-to-t from-white w-full h-14 col-span-full z-20 fix-3d'></div>
@@ -23,10 +26,8 @@ const NutriChunks = () => {
           <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 pb-10 fix-3d'>
             <div className='col-span-full'>
               <Image
-                src={'/works/nutrichunks/chunky.gif'}
+                src={header}
                 alt=''
-                width={760}
-                height={570}
                 className='w-full max-w-[500px] m-auto'
               />
             </div>
@@ -50,11 +51,10 @@ const NutriChunks = () => {
                 </p>
                 <div className='w-full md:w-6/12'>
                   <Image
-                    src={'/works/nutrichunks/MOCK-UP-WEBSITE-3.png'}
+                    src={mockup3}
                     alt=''
-                    width={805}
-                    height={839}
                     className='w-full'
+                    placeholder='blur'
                   />
                 </div>
               </div>
@@ -86,30 +86,27 @@ const NutriChunks = () => {
                 <div className='flex flex-col md:flex-row gap-6 md:gap-12'>
                   <div className='h-fit w-full md:w-9/12'>
                     <Image
-                      src={'/works/nutrichunks/MOCK-UP-WEBSITE_1.png'}
+                      src={mockup1}
                       alt=''
-                      width={1115}
-                      height={813}
                       className='w-full'
+                      placeholder='blur'
                     />
                   </div>
                   <div className='h-fit w-3/12 aspect-square ml-auto -mt-20 md:mt-auto'>
                     <Image
-                      src={'/works/nutrichunks/CHUNKY_MOTOR.png'}
+                      src={chunkyMotor}
                       alt=''
-                      width={376}
-                      height={647}
                       className='w-full'
+                      placeholder='blur'
                     />
                   </div>
                 </div>
                 <div className='h-fit w-full md:w-9/12 ml-auto'>
                   <Image
-                    src={'/works/nutrichunks/MOCK-UP-WEBSITE_2.png'}
+                    src={mockup2}
                     alt=''
-                    width={1115}
-                    height={814}
                     className='w-full'
+                    placeholder='blur'
                   />
                 </div>
               </div>
@@ -133,11 +130,10 @@ const NutriChunks = () => {
                 </div>
                 <div className='w-full md:w-6/12'>
                   <Image
-                    src={'/works/nutrichunks/MOCK-UP-PHONE_1.png'}
+                    src={mockupAd1}
                     alt=''
-                    width={602}
-                    height={1229}
                     className='w-full md:w-3/5 m-auto max-w-[300px]'
+                    placeholder='blur'
                   />
                 </div>
               </div>
@@ -151,11 +147,10 @@ const NutriChunks = () => {
               </p>
               <div className='w-full my-16'>
                 <Image
-                  src={'/works/nutrichunks/MOCK-UP-FB_AD.png'}
+                  src={mockupAd2}
                   alt=''
-                  width={1395}
-                  height={844}
                   className='w-full md:w-4/5 m-auto'
+                  placeholder='blur'
                 />
               </div>
               <p>
