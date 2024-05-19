@@ -2,6 +2,11 @@ import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
 
+import header from '../../../../public/works/searca/searca-header.png';
+import greenScreen1 from '../../../../public/works/searca/greenscreen-1.png';
+import greenScreen2 from '../../../../public/works/searca/greenscreen-2.png';
+import mockup from '../../../../public/works/searca/SEARCA_MOCKUP.png';
+
 const SEARCA = () => {
   return (
     <>
@@ -23,11 +28,10 @@ const SEARCA = () => {
           <div className='relative z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
               <Image
-                src={'/works/searca/searca-header.png'}
+                src={header}
                 alt=''
-                width={1080}
-                height={600}
                 className='w-full max-w-[1080px] mx-auto'
+                placeholder='blur'
               />
             </div>
           </div>
@@ -77,20 +81,18 @@ const SEARCA = () => {
               <div className='w-full flex flex-col sm:flex-row my-16 gap-4'>
                 <div className='sm:w-1/2'>
                   <Image
-                    src={'/works/searca/greenscreen-1.png'}
+                    src={greenScreen1}
                     alt=''
-                    width={740}
-                    height={415}
                     className='w-full'
+                    placeholder='blur'
                   />
                 </div>
                 <div className='sm:w-1/2'>
                   <Image
-                    src={'/works/searca/greenscreen-2.png'}
+                    src={greenScreen2}
                     alt=''
-                    width={740}
-                    height={415}
                     className='w-full'
+                    placeholder='blur'
                   />
                 </div>
               </div>
@@ -99,10 +101,9 @@ const SEARCA = () => {
 
             <div className='col-span-full'>
               <Image
-                src={'/works/searca/SEARCA_MOCKUP.png'}
+                src={mockup}
                 alt=''
-                width={1496}
-                height={731}
+                placeholder='blur'
                 className='w-full'
               />
             </div>

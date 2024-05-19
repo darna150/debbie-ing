@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
 
+import debbiePumped from '../../../../public//debbie/debbie-pumped.png';
+
 const JFC = () => {
   return (
     <>
@@ -46,10 +48,9 @@ const JFC = () => {
                 </p>
                 <div className='w-full md:w-4/12'>
                   <Image
-                    src={'/debbie/debbie-pumped.png'}
+                    src={debbiePumped}
                     alt=''
-                    width={832}
-                    height={960}
+                    placeholder='blur'
                     className='w-full max-w-[150px] md:max-w-[300px] m-auto'
                   />
                 </div>

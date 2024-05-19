@@ -2,6 +2,9 @@ import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
 
+import header from '../../../../public/works/giz/giz-header.png';
+import collection from '../../../../public/works/giz/collection.png';
+
 const GIZ = () => {
   return (
     <>
@@ -21,11 +24,10 @@ const GIZ = () => {
           <div className='relative z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
               <Image
-                src={'/works/giz/giz-header.png'}
+                src={header}
                 alt=''
-                width={1080}
-                height={432}
                 className='w-full max-w-[1080px] mx-auto'
+                placeholder='blur'
               />
             </div>
           </div>
@@ -74,10 +76,9 @@ const GIZ = () => {
 
             <div className='col-span-full'>
               <Image
-                src={'/works/giz/collection.png'}
+                src={collection}
                 alt=''
-                width={1530}
-                height={1290}
+                placeholder='blur'
                 className='w-full'
               />
             </div>

@@ -2,6 +2,10 @@ import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
 
+import header from '../../../../public/works/chicken-essentials/header.png';
+import debbieDirector from '../../../../public/debbie/debbie-director.png';
+import collection from '../../../../public/works/chicken-essentials/collection.png';
+
 const ChickenEssentials = () => {
   return (
     <>
@@ -26,10 +30,9 @@ const ChickenEssentials = () => {
             {/* IMAGE WITH PARAGRAPH */}
             <div className='col-span-full'>
               <Image
-                src={'/works/chicken-essentials/header.png'}
+                src={header}
                 alt=''
-                width={1365}
-                height={601}
+                placeholder='blur'
                 className='w-full'
               />
               <p className='text-black !font-bold mt-6'>
@@ -62,11 +65,10 @@ const ChickenEssentials = () => {
                 </p>
                 <div className='w-full md:w-4/12'>
                   <Image
-                    src={'/debbie/debbie-director.png'}
+                    src={debbieDirector}
                     alt=''
-                    width={510}
-                    height={542}
                     className='w-full max-w-[150px] md:max-w-[300px] m-auto'
+                    placeholder='blur'
                   />
                 </div>
               </div>
@@ -90,11 +92,10 @@ const ChickenEssentials = () => {
 
             <div className='col-span-full'>
               <Image
-                src={'/works/chicken-essentials/collection.png'}
+                src={collection}
                 alt=''
-                width={1589}
-                height={1787}
                 className='w-full'
+                placeholder='blur'
               />
             </div>
 

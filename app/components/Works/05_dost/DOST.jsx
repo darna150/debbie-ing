@@ -2,6 +2,11 @@ import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
 
+import header from '../../../../public/works/dost/dost-header.png';
+import snap1 from '../../../../public/works/dost/DOST-SNAP-1.png';
+import snap2 from '../../../../public/works/dost/DOST-SNAP-2.png';
+import snap3 from '../../../../public/works/dost/DOST-SNAP-3.png';
+
 const DOST = () => {
   return (
     <>
@@ -23,11 +28,10 @@ const DOST = () => {
           <div className='relative z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
               <Image
-                src={'/works/dost/dost-header.png'}
+                src={header}
                 alt=''
-                width={1322}
-                height={779}
                 className='w-full max-w-[1080px] mx-auto'
+                placeholder='blur'
               />
             </div>
           </div>
@@ -87,24 +91,21 @@ const DOST = () => {
                 </p>
                 <div className='w-full md:w-5/12 flex flex-col gap-4 md:gap-8'>
                   <Image
-                    src={'/works/dost/DOST-SNAP-1.png'}
+                    src={snap1}
                     alt=''
-                    width={682}
-                    height={384}
+                    placeholder='blur'
                     className='w-full h-auto'
                   />
                   <Image
-                    src={'/works/dost/DOST-SNAP-2.png'}
+                    src={snap2}
                     alt=''
-                    width={682}
-                    height={384}
+                    placeholder='blur'
                     className='w-full h-auto'
                   />
                   <Image
-                    src={'/works/dost/DOST-SNAP-3.png'}
+                    src={snap3}
                     alt=''
-                    width={682}
-                    height={384}
+                    placeholder='blur'
                     className='w-full h-auto'
                   />
                 </div>

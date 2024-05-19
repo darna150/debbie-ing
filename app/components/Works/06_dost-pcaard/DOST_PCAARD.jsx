@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
-import VideoLocal from '../../ui/VideoLocal';
+
+import header from '../../../../public/works/dost-pcaard/dost-pcaard-header.png';
+import content from '../../../../public/works/dost-pcaard/content.png';
+import debbieYes from '../../../../public/debbie/debbie-yes.png';
 
 const DOST_PCAARD = () => {
   return (
@@ -24,11 +27,10 @@ const DOST_PCAARD = () => {
           <div className='relative z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
               <Image
-                src={'/works/dost-pcaard/dost-pcaard-header.png'}
+                src={header}
                 alt=''
-                width={1080}
-                height={600}
                 className='w-full max-w-[1080px] mx-auto'
+                placeholder='blur'
               />
             </div>
           </div>
@@ -86,11 +88,10 @@ const DOST_PCAARD = () => {
             {/* CONTENT */}
             <div className='col-span-full'>
               <Image
-                src={'/works/dost-pcaard/content.png'}
-                width={892}
-                height={513}
+                src={content}
                 alt=''
                 className='w-full md:max-w-[70%]'
+                placeholder='blur'
               />
               <div className='flex flex-col gap-3 md:gap-10 px-3 md:px-10'>
                 <div className='w-full max-w-[80%] md:max-w-[60%]'>
@@ -143,11 +144,10 @@ const DOST_PCAARD = () => {
                 </p>
                 <div className='w-full md:w-4/12'>
                   <Image
-                    src={'/debbie/debbie-yes.png'}
+                    src={debbieYes}
                     alt=''
-                    width={906}
-                    height={1036}
                     className='w-full max-w-[150px] md:max-w-[300px] m-auto'
+                    placeholder='blur'
                   />
                 </div>
               </div>
