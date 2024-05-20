@@ -1,5 +1,29 @@
 'use client';
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+export const ScrollFadeIn = ({ children, className }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['0 1', '40vh 1'],
+  });
+
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.1, 1]);
+
+  return (
+    <motion.div
+      ref={ref}
+      style={{
+        opacity: opacityProgress,
+      }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
 export const fadeUp = {
   initial: {
     opacity: 0,

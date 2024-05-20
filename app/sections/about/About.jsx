@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ThinLine } from '@/app/components/ui/Lines';
-import { MotionFade } from '@/app/components/animation/motion';
+import { ScrollFadeIn } from '@/app/components/animation/motion';
 
 const About = () => {
   return (
@@ -19,7 +19,7 @@ const About = () => {
         <div className='relative bg-gradient-to-t from-[black] w-full h-12 col-span-full z-20 fix-3d'></div>
         <div className='relative z-20 bg-black fix-3d'>
           <ThinLine color='bg-white' />
-          <MotionFade>
+          <ScrollFadeIn>
             <h2 className='text-2xl md:text-3xl font-bold leading-1 text-white'>
               Origin Story
             </h2>
@@ -45,7 +45,7 @@ const About = () => {
                 projects that bring big changes to people&apos;s lives.
               </p>
             </div>
-          </MotionFade>
+          </ScrollFadeIn>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
-import { MotionFade } from '../../animation/motion';
+import { ScrollFadeIn } from '../../animation/motion';
 
 import logo from '../../../../public/works/boehringer/BI_LOGO.png';
 import header from '../../../../public/works/boehringer/BI_HEADER.png';
@@ -38,16 +38,19 @@ const BI = () => {
                 placeholder='blur'
                 className='w-full'
               />
-              <p className='text-white !font-bold mt-6'>
-                As the Frontline brand grappled with the challenge of countering
-                misinformation about veterinary products, I found myself at the
-                helm, guiding a team of creatives towards a solution.{' '}
-              </p>
+              <ScrollFadeIn>
+                <p className='text-white !font-bold mt-6'>
+                  As the Frontline brand grappled with the challenge of
+                  countering misinformation about veterinary products, I found
+                  myself at the helm, guiding a team of creatives towards a
+                  solution.{' '}
+                </p>
+              </ScrollFadeIn>
             </div>
             {/* GOAL */}
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold'>
                   Our goal was clear:
                 </h2>
@@ -55,41 +58,36 @@ const BI = () => {
                   devise a digital strategy that could effectively combat the
                   inaccuracies circulating in the public sphere.
                 </p>
+              </ScrollFadeIn>
+            </div>
+            <div className='col-span-full'>
+              <div className='grid md:grid-cols-3 md:grid-rows-2 gap-y-16 gap-x-8 md:max-w-[75%] m-auto'>
+                <div className='md:row-span-2'>
+                  <Image
+                    src={fb_ad}
+                    alt=''
+                    placeholder='blur'
+                    className='w-full md:w-auto md:h-full object-contain'
+                  />
+                </div>
+                <div className='md:col-span-2 md:row-span-2'>
+                  <Image
+                    src={tick}
+                    alt=''
+                    placeholder='blur'
+                    className='w-full md:w-auto md:h-full object-contain'
+                  />
+                </div>
               </div>
             </div>
-            <div className='col-span-full'>
-              <MotionFade image>
-                <div
-                  className='grid md:grid-cols-3 md:grid-rows-2 gap-y-16 gap-x-8 md:max-w-[75%] m-auto'
-                  // style={{ gridTemplateColumn: '16px auto auto auto 16px' }}
-                >
-                  <div className='md:row-span-2'>
-                    <Image
-                      src={fb_ad}
-                      alt=''
-                      placeholder='blur'
-                      className='w-full md:w-auto md:h-full object-contain'
-                    />
-                  </div>
-                  <div className='md:col-span-2 md:row-span-2'>
-                    <Image
-                      src={tick}
-                      alt=''
-                      placeholder='blur'
-                      className='w-full md:w-auto md:h-full object-contain'
-                    />
-                  </div>
-                </div>
-              </MotionFade>
-            </div>
-            <div className='col-span-full'>
+            <ScrollFadeIn className='col-span-full'>
               <p>
                 Our brainstorming sessions crackled with energy as we conceived
                 an ingenious plan. We envisioned leveraging the power of live
                 social media broadcasts, transforming them into a stage where
                 experts could shine.
               </p>
-            </div>
+            </ScrollFadeIn>
             {/* MISSION */}
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
@@ -99,7 +97,7 @@ const BI = () => {
                   title='Boehringer Ingelheim XPERT Series'
                 />
               </div>
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold'>
                   Their mission?
                 </h2>
@@ -108,16 +106,16 @@ const BI = () => {
                   offering invaluable insights and cutting through the
                   confusion.
                 </p>
-              </div>
+              </ScrollFadeIn>
             </div>
             <div className='col-span-full'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20 items-center'>
                 <p className='w-full md:w-8/12'>
                   With determination, we set out to create a new narrative. It
-                  wasn’t just about selling products; it was about empowering
-                  and educating pet owners. These live broadcasts became our
-                  canvas, where experts unpacked complex medical jargon,
-                  offering a digestible version for the curious public.
+                  wasn&apos;t just about selling products; it was about
+                  empowering and educating pet owners. These live broadcasts
+                  became our canvas, where experts unpacked complex medical
+                  jargon, offering a digestible version for the curious public.
                 </p>
                 <div className='w-full md:w-4/12'>
                   <Image
@@ -134,49 +132,43 @@ const BI = () => {
               <VimeoVideo videoID='925738673' title='Ben En Biko' />
             </div>
 
-            <div className='col-span-full'>
+            <ScrollFadeIn className='col-span-full'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20'>
                 <div className='w-full md:w-6/12'>
-                  <MotionFade>
-                    <p>
-                      In addition, my involvement in crafting a compelling short
-                      film, &quot;Ben en Biko vs. Da 3 Marites,&quot; became a
-                      pivotal endeavor in our mission to tackle widespread
-                      misconceptions in pet healthcare. This cinematic venture
-                      aimed to deliver a potent message wrapped in humor and
-                      relatability, a story that resonated deeply with pet
-                      owners.
-                      <br />
-                      <br />
-                      As the project unfolded, we meticulously carved a
-                      narrative that went beyond entertainment. It was a tale
-                      that tugged at heartstrings while imparting a crucial
-                      lesson: true love for one&apos;s pet extends to
-                      prioritizing regular visits to the vet.
-                      <br />
-                      <br />
-                      &quot;Ben en Biko vs. Da 3 Marites&quot; wasn&apos;t just
-                      a short film; it was a vehicle for dispelling myths.
-                      Through a blend of wit and charm, it artfully dismantled
-                      misconceptions that lingered in the minds of pet owners.
-                      The storyline was a tapestry woven with care, threading
-                      the importance of professional veterinary care into every
-                      scene.
-                    </p>
-                  </MotionFade>
+                  <p>
+                    In addition, my involvement in crafting a compelling short
+                    film, &quot;Ben en Biko vs. Da 3 Marites,&quot; became a
+                    pivotal endeavor in our mission to tackle widespread
+                    misconceptions in pet healthcare. This cinematic venture
+                    aimed to deliver a potent message wrapped in humor and
+                    relatability, a story that resonated deeply with pet owners.
+                    <br />
+                    <br />
+                    As the project unfolded, we meticulously carved a narrative
+                    that went beyond entertainment. It was a tale that tugged at
+                    heartstrings while imparting a crucial lesson: true love for
+                    one&apos;s pet extends to prioritizing regular visits to the
+                    vet.
+                    <br />
+                    <br />
+                    &quot;Ben en Biko vs. Da 3 Marites&quot; wasn&apos;t just a
+                    short film; it was a vehicle for dispelling myths. Through a
+                    blend of wit and charm, it artfully dismantled
+                    misconceptions that lingered in the minds of pet owners. The
+                    storyline was a tapestry woven with care, threading the
+                    importance of professional veterinary care into every scene.
+                  </p>
                 </div>
                 <div className='w-full md:w-6/12'>
-                  <MotionFade image>
-                    <Image
-                      src={vid_moockup}
-                      alt=''
-                      placeholder='blur'
-                      className='w-full'
-                    />
-                  </MotionFade>
+                  <Image
+                    src={vid_moockup}
+                    alt=''
+                    placeholder='blur'
+                    className='w-full'
+                  />
                 </div>
               </div>
-            </div>
+            </ScrollFadeIn>
           </div>
         </div>
       </section>
