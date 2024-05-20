@@ -1,10 +1,11 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Player from '@vimeo/player';
 
 const VimeoVideo = (props) => {
   const iframeRef = useRef(null);
   const playerRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const iframe = iframeRef.current;
@@ -29,6 +30,10 @@ const VimeoVideo = (props) => {
 
     observer.observe(iframe);
 
+    player.on('loaded', () => {
+      setIsLoading(false);
+    });
+
     return () => {
       observer.unobserve(iframe);
       playerRef.current = null;
@@ -45,9 +50,14 @@ const VimeoVideo = (props) => {
       }&dnt=1&muted=1&player_id=0&app_id=58479`}
       loading='lazy'
       allow='autoplay; fullscreen;'
-      title={props.title}
-      className={`w-full 
-      ${props.whiteBG ? 'bg-neutral-200/75' : 'bg-white/75'}
+      className={`w-full
+      ${
+        isLoading
+          ? props.whiteBG
+            ? 'bg-neutral-200/75 animate-pulse'
+            : 'bg-white/75 animate-pulse'
+          : ''
+      }
       ${props.aspectRatio ? props.aspectRatio : 'aspect-video'}`}
     ></iframe>
   );
