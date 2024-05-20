@@ -10,7 +10,7 @@ import mockup2 from '../../../../public/works/nutrichunks/MOCK-UP-WEBSITE_2.png'
 import mockup3 from '../../../../public/works/nutrichunks/MOCK-UP-WEBSITE-3.png';
 import chunkyMotor from '../../../../public/works/nutrichunks/CHUNKY_MOTOR.png';
 import mockupAd1 from '../../../../public/works/nutrichunks/MOCK-UP-PHONE_1.png';
-import mockupAd2 from '../../../../public/works/nutrichunks/MOCK-UP-FB_AD.png';
+import mockupAd2 from '../../../../public/works/nutrichunks/MOCK-UP-IG_AD.png';
 
 const NutriChunks = () => {
   return (

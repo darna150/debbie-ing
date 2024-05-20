@@ -5,7 +5,7 @@ import { ScrollFadeIn } from '../../animation/motion';
 
 import logo from '../../../../public/works/boehringer/BI_LOGO.png';
 import header from '../../../../public/works/boehringer/BI_HEADER.png';
-import fb_ad from '../../../../public//works/boehringer/BI_FB_AD.png';
+import ig_ad from '../../../../public//works/boehringer/BI_IG_AD.png';
 import tick from '../../../../public//works/boehringer/BI_TICK.png';
 import debbie_thinking from '../../../../public//debbie/debbie-thinking.png';
 import vid_moockup from '../../../../public//works/boehringer/BI_VID_MockUp.jpg';
@@ -64,10 +64,10 @@ const BI = () => {
               <div className='grid md:grid-cols-3 md:grid-rows-2 gap-y-16 gap-x-8 md:max-w-[75%] m-auto'>
                 <div className='md:row-span-2'>
                   <Image
-                    src={fb_ad}
+                    src={ig_ad}
                     alt=''
                     placeholder='blur'
-                    className='w-full md:w-auto md:h-full object-contain'
+                    className='max-w-[300px] w-full md:max-w-none mx-auto md:h-full object-contain'
                   />
                 </div>
                 <div className='md:col-span-2 md:row-span-2'>
