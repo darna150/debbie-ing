@@ -61,7 +61,6 @@ const Kemin = () => {
               </ScrollFadeIn>
               <div className='flex flex-col sm:flex-row gap-8 sm:w-3/4 mx-auto mt-16'>
                 <div className='sm:w-1/2'>
-                  {/* <VideoLocal src='/works/kemin/KEMIN_PANEL1.mp4' /> */}
                   <VimeoVideo
                     videoID='947281801'
                     title='SIDEPANEL LEFT'
@@ -70,7 +69,6 @@ const Kemin = () => {
                   />
                 </div>
                 <div className='sm:w-1/2'>
-                  {/* <VideoLocal src='/works/kemin/KEMIN_PANEL2.mp4' /> */}
                   <VimeoVideo
                     videoID='947281776'
                     title='SIDEPANEL RIGHT'
