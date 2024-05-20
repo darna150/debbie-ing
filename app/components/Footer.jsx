@@ -44,7 +44,7 @@ const Footer = () => {
     <footer
       className='h-screen flex items-center justify-center'
       ref={scope}
-      id='footer'
+      id='contact'
     >
       <div className='flex flex-col items-center gap-6 sm:gap-8 opacity-0 startAnim'>
         <h2
