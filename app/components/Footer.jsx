@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useAnimate, useInView, stagger } from 'framer-motion';
+import SplitText from './ui/SplitText';
 
 const Footer = () => {
   const [scope, animate] = useAnimate();
@@ -50,16 +51,7 @@ const Footer = () => {
           className='text-center text-[2rem] sm:text-5xl md:text-6xl font-bold tracking-tighter leading-none overflow-hidden'
           aria-label='Ready when you are'
         >
-          {splitText.map((char, index) => (
-            <span
-              key={index}
-              className='inline-block overflow-hidden pb-4 -mb-4 pr-1 -mr-1'
-            >
-              <span className='inline-block splitSpan'>
-                {char === ' ' ? '\u00A0' : char}
-              </span>
-            </span>
-          ))}
+          <SplitText animateOnce={false}>Ready when you are. </SplitText>
           <span className='inline-block overflow-hidden pb-4 -mb-4 pr-1 -mr-1 fadeIn-span'>
             💪
           </span>

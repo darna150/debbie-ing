@@ -11,7 +11,7 @@ const goUp = {
   },
 };
 
-const SplitText = ({ children }) => {
+const SplitText = ({ children, animateOnce = true }) => {
   const splitText = children.split('');
 
   return (
@@ -26,6 +26,7 @@ const SplitText = ({ children }) => {
             variants={goUp}
             initial='initial'
             whileInView='animate'
+            viewport={{ once: animateOnce }}
             transition={{ duration: 0.6, delay: index * 0.02, ease: 'circOut' }}
           >
             {char === ' ' ? '\u00A0' : char}

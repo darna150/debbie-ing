@@ -45,7 +45,7 @@ const WorkHistory = () => {
             key={work.id}
             variants={fadeUp}
             initial='initial'
-            whileInView='animate'
+            animate='animate'
           >
             <Link href={`${work.link}`} className={`${workColors[index]}`}>
               {index !== works.length - 1 ? `${work.work},` : `& ${work.work}`}

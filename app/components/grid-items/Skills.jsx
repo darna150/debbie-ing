@@ -22,7 +22,7 @@ const Skills = () => {
             key={index}
             variants={fadeUp}
             initial='initial'
-            whileInView='animate'
+            animate='animate'
           >
             {index !== skills.length - 1
               ? `${skill.skill},`
