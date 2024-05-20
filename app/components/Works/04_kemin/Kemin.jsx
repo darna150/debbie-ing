@@ -24,6 +24,7 @@ const Kemin = () => {
           <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 fix-3d'>
             <div className='col-span-full'>
               <VimeoVideo
+                whiteBG={true}
                 videoID='947281816'
                 title='SIDEPANEL FULL'
                 background={true}
@@ -48,7 +49,11 @@ const Kemin = () => {
             </ScrollFadeIn>
 
             <div className='col-span-full'>
-              <VimeoVideo videoID='925741081' title='Kemin Enterosure Launch' />
+              <VimeoVideo
+                whiteBG={true}
+                videoID='925741081'
+                title='Kemin Enterosure Launch'
+              />
             </div>
 
             <div className='col-span-full'>
@@ -62,6 +67,7 @@ const Kemin = () => {
               <div className='flex flex-col sm:flex-row gap-8 sm:w-3/4 mx-auto mt-16'>
                 <div className='sm:w-1/2'>
                   <VimeoVideo
+                    whiteBG={true}
                     videoID='947281801'
                     title='SIDEPANEL LEFT'
                     background={true}
@@ -70,6 +76,7 @@ const Kemin = () => {
                 </div>
                 <div className='sm:w-1/2'>
                   <VimeoVideo
+                    whiteBG={true}
                     videoID='947281776'
                     title='SIDEPANEL RIGHT'
                     background={true}
@@ -95,7 +102,11 @@ const Kemin = () => {
             </div>
 
             <div className='col-span-full'>
-              <VimeoVideo videoID='947284511' title='Kemin Short 1' />
+              <VimeoVideo
+                whiteBG={true}
+                videoID='947284511'
+                title='Kemin Short 1'
+              />
             </div>
           </div>
         </div>

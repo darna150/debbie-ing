@@ -43,9 +43,11 @@ const VimeoVideo = (props) => {
       }?autoplay=0&loop=1&badge=0&autopause=0&${
         props?.background ? 'background=1' : null
       }&dnt=1&muted=1&player_id=0&app_id=58479`}
+      loading='lazy'
       allow='autoplay; fullscreen;'
       title={props.title}
-      className={`w-full
+      className={`w-full 
+      ${props.whiteBG ? 'bg-neutral-200/75' : 'bg-white/75'}
       ${props.aspectRatio ? props.aspectRatio : 'aspect-video'}`}
     ></iframe>
   );

@@ -127,6 +127,7 @@ const ChickenEssentials = () => {
 
             <div className='col-span-full'>
               <VimeoVideo
+                whiteBG={true}
                 videoID='925739533'
                 title='Alagang Mapagmahal - Chicken Essentials Highlights'
               />
