@@ -5,7 +5,6 @@ import { useAnimate, useInView, stagger } from 'framer-motion';
 const Footer = () => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, {
-    once: true,
     margin: '0px 0px -40% 0px',
   });
   useEffect(() => {

@@ -26,7 +26,6 @@ const SplitText = ({ children }) => {
             variants={goUp}
             initial='initial'
             whileInView='animate'
-            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.02, ease: 'circOut' }}
           >
             {char === ' ' ? '\u00A0' : char}

@@ -18,7 +18,7 @@ const Email = () => {
         <motion.span
           variants={fadeUp}
           initial='initial'
-          animate='animate'
+          whileInView='animate'
           className='inline-block'
         >
           hol@justdebbie.ing

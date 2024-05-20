@@ -3,7 +3,7 @@ import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
 
 import logo from '../../../../public/works/nutrichunks/smc-logo.svg';
-import header from '../../../../public/works/nutrichunks/chunky.gif';
+import header from '../../../../public/works/nutrichunks/nutrichunks-header.png';
 import mockup1 from '../../../../public/works/nutrichunks/MOCK-UP-WEBSITE_1.png';
 import mockup2 from '../../../../public/works/nutrichunks/MOCK-UP-WEBSITE_2.png';
 import mockup3 from '../../../../public/works/nutrichunks/MOCK-UP-WEBSITE-3.png';
@@ -18,24 +18,30 @@ const NutriChunks = () => {
         <div className='container mx-auto pt-20 px-5'>
           {/* HEADER */}
           <div className='sticky top-20 h-fit z-10'>
-            <Image src={logo} alt='' className='w-3/5 max-w-[300px] mx-auto' />
+            <Image
+              src={logo}
+              alt=''
+              width={556}
+              height={501}
+              className='w-3/5 max-w-[300px] mx-auto'
+            />
           </div>
           {/* GRADIENT */}
-          <div className='relative bg-gradient-to-t from-white w-full h-14 col-span-full z-20 fix-3d'></div>
+          <div className='relative bg-gradient-to-t from-white w-full h-32 col-span-full z-20 fix-3d -mb-24'></div>
           {/* IMAGE HEADER */}
-          <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 pb-10 fix-3d'>
-            <div className='col-span-full'>
+          <div className='relative z-20 grid md:grid-cols-6 gap-16 fix-3d'>
+            <div className='col-span-full bg-smc-header md:bg-smc-header-md'>
               <Image
                 src={header}
                 alt=''
-                className='w-full max-w-[500px] m-auto'
+                className='w-full max-w-[1080px] m-auto'
               />
             </div>
           </div>
         </div>
       </div>
-      <section className='bg-[#27449E] text-white relative nutrichunks-container'>
-        <div className='container mx-auto pt-20 px-5'>
+      <section className='bg-[#27449E] text-white relative nutrichunks-container -mt-8 md:-mt-24'>
+        <div className='container mx-auto pt-12 md:pt-32 px-5'>
           {/* CONTENT */}
           <div className='relative bg-[#27449E] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* TEXT LEFT IMAGE RIGHT  */}

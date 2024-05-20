@@ -2,7 +2,8 @@ import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
 
-import debbiePumped from '../../../../public//debbie/debbie-pumped.png';
+import header from '../../../../public/works/jfc/jfc-header.png';
+import debbiePumped from '../../../../public/debbie/debbie-pumped.png';
 
 const JFC = () => {
   return (
@@ -14,29 +15,27 @@ const JFC = () => {
             <Image
               src={'/works/jfc/jfc-logo.svg'}
               alt=''
-              width={556}
-              height={501}
-              className='md:w-3/5 mx-auto'
+              width={500}
+              height={87}
+              className='w-3/4 max-w-[600px] mx-auto'
             />
           </div>
           {/* GRADIENT */}
-          <div className='relative bg-gradient-to-t from-white w-full h-14 col-span-full z-20 fix-3d'></div>
+          <div className='relative bg-gradient-to-t from-white w-full h-32 col-span-full z-20 fix-3d -mb-24'></div>
           {/* IMAGE HEADER */}
-          <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 pb-10 fix-3d'>
-            <div className='col-span-full'>
+          <div className='relative z-20 grid md:grid-cols-6 gap-16 fix-3d'>
+            <div className='col-span-full bg-jfc-header md:bg-jfc-header-md'>
               <Image
-                src={'/works/nutrichunks/chunky.gif'}
+                src={header}
                 alt=''
-                width={760}
-                height={570}
-                className='w-full max-w-[500px] m-auto'
+                className='w-full max-w-[1080px] m-auto'
               />
             </div>
           </div>
         </div>
       </div>
-      <section className='bg-[#EA1B3B] text-white relative jfc-container'>
-        <div className='container mx-auto pt-20 px-5'>
+      <section className='bg-[#EA1B3B] text-white relative jfc-container -mt-8 md:-mt-24'>
+        <div className='container mx-auto pt-12 md:pt-32 px-5'>
           {/* CONTENT */}
           <div className='relative bg-[#EA1B3B] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* Intro  */}

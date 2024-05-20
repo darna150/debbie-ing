@@ -10,72 +10,61 @@ body {
     @apply text-neutral-950 bg-white box-border
 }
 
-p + p {
+p+p {
     @apply mt-4
 }
 
 /* SAFARI BUGS */
 
 .fix-3d {
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
 }
 
-.boehringer-container p
- {
+.boehringer-container p {
     @apply text-xl md:text-2xl font-medium text-[#BDCCE9]
 }
 
-.nutrichunks-container p
- {
+.nutrichunks-container p {
     @apply text-xl md:text-2xl font-medium text-[#D4DAEC]
 }
 
-.jfc-container p
- {
+.jfc-container p {
     @apply text-xl md:text-2xl font-medium text-[#FDE8EB]
 }
 
-.kemin-container p
- {
+.kemin-container p {
     @apply text-xl md:text-2xl font-medium text-black
 }
 
-.dost-container p
- {
+.dost-container p {
     @apply text-xl md:text-2xl font-medium text-white/90
 }
 
-.dost-pcaard-container p
- {
+.dost-pcaard-container p {
     @apply text-xl md:text-2xl font-medium text-white/90
 }
 
-.giz-container p
- {
+.giz-container p {
     @apply text-xl md:text-2xl font-medium text-white/90
 }
 
-.searca-container p
- {
+.searca-container p {
     @apply text-xl md:text-2xl font-medium text-white/90
 }
 
-.chicken-essentials-container p
- {
+.chicken-essentials-container p {
     @apply text-xl md:text-2xl font-medium text-black/90
 }
 
-.boehringer-container p + p,
-.nutrichunks-container p + p {
+.boehringer-container p+p,
+.nutrichunks-container p+p {
     @apply mt-12
 }
 
 :focus-visible {
-    @apply 
-    focus-visible:outline-none focus-visible:ring-offset-purple-300
-    focus-visible:ring 
+    @apply focus-visible:outline-none focus-visible:ring-offset-purple-300 focus-visible:ring
     /* focus-visible:ring-purple-300  */
-  }
+}
 
 .tooltiptext::after {
     content: "";
@@ -86,4 +75,4 @@ p + p {
     border-width: 8px;
     border-style: solid;
     border-color: white transparent transparent transparent;
-  }
+}
