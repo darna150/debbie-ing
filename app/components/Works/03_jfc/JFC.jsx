@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
+import { ScrollFadeIn } from '../../animation/motion';
 
 import header from '../../../../public/works/jfc/jfc-header.png';
 import debbiePumped from '../../../../public/debbie/debbie-pumped.png';
@@ -41,10 +42,12 @@ const JFC = () => {
             {/* Intro  */}
             <div className='col-span-full md:max-w-[85%] m-auto'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20 items-center'>
-                <p className='w-full md:w-8/12'>
-                  I led a team of creative minds and tech wizards to build an
-                  awesome 3D website for Jollibee Foods Corporation.
-                </p>
+                <ScrollFadeIn className='w-full md:w-8/12'>
+                  <p>
+                    I led a team of creative minds and tech wizards to build an
+                    awesome 3D website for Jollibee Foods Corporation.
+                  </p>
+                </ScrollFadeIn>
                 <div className='w-full md:w-4/12'>
                   <Image
                     src={debbiePumped}
@@ -59,7 +62,7 @@ const JFC = () => {
             {/* Website */}
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold'>
                   <span className='text-2xl md:text-3xl font-medium block mb-4'>
                     Picture a digital world bursting with joy and unity,
@@ -67,18 +70,20 @@ const JFC = () => {
                   </span>
                   This website wasn&apos;t just a site—it was an adventure.
                 </h2>
-              </div>
+              </ScrollFadeIn>
               <div className='mt-16'>
                 <VimeoVideo videoID='925740654' title='JFC Universe' />
               </div>
             </div>
 
             <div className='col-span-full'>
-              <p>
-                It invited people to explore JFC&apos;s history in a fun,
-                interactive way. We designed it like a universe with different
-                Jollibee brands as floating islands.
-              </p>
+              <ScrollFadeIn>
+                <p>
+                  It invited people to explore JFC&apos;s history in a fun,
+                  interactive way. We designed it like a universe with different
+                  Jollibee brands as floating islands.
+                </p>
+              </ScrollFadeIn>
               <div className='grid md:grid-cols-2 gap-4 mt-16'>
                 <div>
                   <VimeoVideo
@@ -114,7 +119,7 @@ const JFC = () => {
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
               <div className='flex flex-col md:flex-row gap-y-12 mt-12'>
-                <div className='w-full md:w-6/12'>
+                <ScrollFadeIn className='w-full md:w-6/12'>
                   <h2 className='text-4xl md:text-5xl font-bold mb-8'>
                     Our goal was simple:
                   </h2>
@@ -123,7 +128,7 @@ const JFC = () => {
                     We wanted people to connect with the moments that shaped the
                     company.
                   </p>
-                </div>
+                </ScrollFadeIn>
                 <div className='w-full md:w-6/12'>
                   <Image
                     src={'/works/jfc/joy-waving.gif'}

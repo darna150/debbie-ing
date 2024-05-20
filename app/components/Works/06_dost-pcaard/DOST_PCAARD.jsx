@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
+import { ScrollFadeIn } from '../../animation/motion';
 
 import header from '../../../../public/works/dost-pcaard/dost-pcaard-header.png';
 import content from '../../../../public/works/dost-pcaard/content.png';
@@ -46,7 +47,7 @@ const DOST_PCAARD = () => {
             {/* GOAL */}
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
                   Summoned by the esteemed DOST-PCAARRD, a formidable task
                   awaited my stewardship: the creation of an animated opus
@@ -58,7 +59,7 @@ const DOST_PCAARD = () => {
                   of comprehension, tailored expressly for mid-level managers in
                   the fertile fields of agriculture.
                 </p>
-              </div>
+              </ScrollFadeIn>
             </div>
 
             {/* VIDEO */}
@@ -70,7 +71,7 @@ const DOST_PCAARD = () => {
                 />
               </div>
               <ThickLine color='bg-white' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <p className=''>
                   The mission was resolute: arm these guardians of the harvest
                   with the treasury of knowledge and skills, forging a path
@@ -82,7 +83,7 @@ const DOST_PCAARD = () => {
                   to dismantle complexity and fashion it into an accessible
                   mosaic of enlightenment.
                 </h2>
-              </div>
+              </ScrollFadeIn>
             </div>
 
             {/* CONTENT */}
@@ -137,11 +138,13 @@ const DOST_PCAARD = () => {
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
               <div className='md:max-w-[85%] mx-auto mt-12 flex flex-col-reverse md:flex-row gap-y-12 gap-x-20 items-center'>
-                <p className='w-full md:w-8/12'>
-                  With each stroke of creativity, I orchestrated the symphony of
-                  visuals, rendering even the most cryptic concepts into a
-                  vibrant and comprehensible spectacle.
-                </p>
+                <ScrollFadeIn className='w-full md:w-8/12'>
+                  <p>
+                    With each stroke of creativity, I orchestrated the symphony
+                    of visuals, rendering even the most cryptic concepts into a
+                    vibrant and comprehensible spectacle.
+                  </p>
+                </ScrollFadeIn>
                 <div className='w-full md:w-4/12'>
                   <Image
                     src={debbieYes}

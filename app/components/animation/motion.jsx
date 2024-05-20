@@ -9,6 +9,8 @@ export const ScrollFadeIn = ({ children, className }) => {
     offset: ['0 1', '50vh 1'],
   });
 
+  // const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.98, 1]);
+
   return (
     <motion.div
       ref={ref}

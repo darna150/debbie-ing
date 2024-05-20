@@ -110,13 +110,16 @@ const BI = () => {
             </div>
             <div className='col-span-full'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20 items-center'>
-                <p className='w-full md:w-8/12'>
-                  With determination, we set out to create a new narrative. It
-                  wasn&apos;t just about selling products; it was about
-                  empowering and educating pet owners. These live broadcasts
-                  became our canvas, where experts unpacked complex medical
-                  jargon, offering a digestible version for the curious public.
-                </p>
+                <ScrollFadeIn className='w-full md:w-8/12'>
+                  <p>
+                    With determination, we set out to create a new narrative. It
+                    wasn&apos;t just about selling products; it was about
+                    empowering and educating pet owners. These live broadcasts
+                    became our canvas, where experts unpacked complex medical
+                    jargon, offering a digestible version for the curious
+                    public.
+                  </p>
+                </ScrollFadeIn>
                 <div className='w-full md:w-4/12'>
                   <Image
                     src={debbie_thinking}

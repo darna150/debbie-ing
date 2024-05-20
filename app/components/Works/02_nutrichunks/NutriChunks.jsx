@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
+import { ScrollFadeIn } from '../../animation/motion';
 
 import logo from '../../../../public/works/nutrichunks/smc-logo.svg';
 import header from '../../../../public/works/nutrichunks/nutrichunks-header.png';
@@ -45,7 +46,7 @@ const NutriChunks = () => {
           {/* CONTENT */}
           <div className='relative bg-[#27449E] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* TEXT LEFT IMAGE RIGHT  */}
-            <div className='col-span-full'>
+            <ScrollFadeIn className='col-span-full'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20'>
                 <p className='w-full md:w-6/12'>
                   Our journey began with an intricate process of unraveling the
@@ -64,12 +65,12 @@ const NutriChunks = () => {
                   />
                 </div>
               </div>
-            </div>
+            </ScrollFadeIn>
 
             {/* E-commerce */}
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold'>
                   <span className='text-2xl md:text-3xl font-medium block mb-4'>
                     Yet, it wasn&apos;t solely about crafting the perfect
@@ -85,7 +86,7 @@ const NutriChunks = () => {
                   embracing the essence of convenience our customers yearned
                   for.
                 </p>
-              </div>
+              </ScrollFadeIn>
             </div>
             <div className='col-span-full'>
               <div className='flex flex-col gap-4 md:gap-12'>
@@ -122,7 +123,7 @@ const NutriChunks = () => {
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
               <div className='flex flex-col md:flex-row gap-y-12 gap-x-20 mt-12'>
-                <div className='w-full md:w-6/12'>
+                <ScrollFadeIn className='w-full md:w-6/12'>
                   <h2 className='text-4xl md:text-5xl font-bold mb-8'>
                     But our efforts didn&apos;t cease there.
                   </h2>
@@ -133,7 +134,7 @@ const NutriChunks = () => {
                     tethered them to the Nutri Chunks brand, fostering a bond
                     beyond mere transactions.
                   </p>
-                </div>
+                </ScrollFadeIn>
                 <div className='w-full md:w-6/12'>
                   <Image
                     src={mockupAd1}
@@ -146,11 +147,13 @@ const NutriChunks = () => {
             </div>
 
             <div className='col-span-full'>
-              <p>
-                United, these strategic endeavors weren&apos;t just pieces of a
-                puzzle—they were the building blocks that fortified Nutri Chunks
-                as the go-to choice for pet owners.
-              </p>
+              <ScrollFadeIn>
+                <p>
+                  United, these strategic endeavors weren&apos;t just pieces of
+                  a puzzle—they were the building blocks that fortified Nutri
+                  Chunks as the go-to choice for pet owners.
+                </p>
+              </ScrollFadeIn>
               <div className='w-full my-16'>
                 <Image
                   src={mockupAd2}
@@ -159,11 +162,13 @@ const NutriChunks = () => {
                   placeholder='blur'
                 />
               </div>
-              <p>
-                We didn&apos;t just offer a product; we crafted an experience—a
-                seamless, gratifying journey that resonated deeply with the
-                hearts of our customers.
-              </p>
+              <ScrollFadeIn>
+                <p>
+                  We didn&apos;t just offer a product; we crafted an
+                  experience—a seamless, gratifying journey that resonated
+                  deeply with the hearts of our customers.
+                </p>
+              </ScrollFadeIn>
               <div className='w-full my-16'>
                 <VimeoVideo
                   videoID='925741617'

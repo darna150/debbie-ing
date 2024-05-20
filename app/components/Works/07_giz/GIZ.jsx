@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
+import { ScrollFadeIn } from '../../animation/motion';
 
 import header from '../../../../public/works/giz/giz-header.png';
 import collection from '../../../../public/works/giz/collection.png';
@@ -39,14 +40,14 @@ const GIZ = () => {
           <div className='relative bg-[#D40E14] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* GOAL */}
             <div className='col-span-full'>
-              <div>
+              <ScrollFadeIn>
                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
                   I embarked on a mission to craft an advocacy video for GIZ, a
                   commendable organization backed by the German government,
                   dedicated to tackling environmental and climate change
                   concerns.
                 </h2>
-              </div>
+              </ScrollFadeIn>
               <ThickLine color='bg-white' />
             </div>
 
@@ -59,7 +60,7 @@ const GIZ = () => {
 
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
                   Our central focus was to shed light on the challenges faced by
                   women and to champion gender equality.
@@ -71,7 +72,7 @@ const GIZ = () => {
                   as a poignant testament to the significance of empowering
                   women in these vital fields.
                 </p>
-              </div>
+              </ScrollFadeIn>
             </div>
 
             <div className='col-span-full'>
@@ -83,13 +84,13 @@ const GIZ = () => {
               />
             </div>
 
-            <div className='col-span-full'>
+            <ScrollFadeIn className='col-span-full'>
               <p>
                 It became a canvas that artfully showcased GIZ&apos;s unwavering
                 commitment to forging a future that embraces inclusivity and
                 sustainability.
               </p>
-            </div>
+            </ScrollFadeIn>
 
             <div className='col-span-full'>
               <VimeoVideo videoID='925740071' title='GIZ Highlights' />

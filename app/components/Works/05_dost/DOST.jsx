@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
+import { ScrollFadeIn } from '../../animation/motion';
 
 import header from '../../../../public/works/dost/dost-header.png';
 import snap1 from '../../../../public/works/dost/DOST-SNAP-1.png';
@@ -44,19 +45,19 @@ const DOST = () => {
           {/* CONTENT */}
           <div className='relative bg-[#48C4D3] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* Intro  */}
-            <div className='col-span-full m-auto'>
+            <ScrollFadeIn className='col-span-full m-auto'>
               <p className='w-full'>
                 The Department of Science and Technology (DOST) ignited a bold
                 movement, a commitment to drive Science, Technology, and
                 Innovation in the country through the groundbreaking Science for
                 Change Program.
               </p>
-            </div>
+            </ScrollFadeIn>
 
             {/* GOAL */}
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
                   As fate would have it, I found myself leading a team of
                   dynamic multimedia specialists entrusted with the pivotal task
@@ -68,7 +69,7 @@ const DOST = () => {
                   anticipation for the event themed &quot;Science for the
                   People.&quot;
                 </p>
-              </div>
+              </ScrollFadeIn>
             </div>
 
             <div className='col-span-full'>
@@ -78,17 +79,20 @@ const DOST = () => {
               />
             </div>
 
-            <div className='col-span-full'>
-              <div className='flex flex-col md:flex-row gap-y-12 gap-x-20'>
-                <p className='w-full md:w-7/12'>
-                  The stage was set for an unprecedented gathering—a convergence
-                  of minds, expertise, and unwavering passion.
-                  <br />
-                  <br />
-                  The event wasn&apos;t just a milestone; it was a testament—an
-                  embodiment of the Science for Change Program&apos;s unwavering
-                  pledge to uplift lives through transformative innovation.
-                </p>
+            <div className='relative col-span-full'>
+              <div className='relative flex flex-col md:flex-row gap-y-12 gap-x-20'>
+                <ScrollFadeIn className='w-full md:w-7/12 md:sticky md:top-0'>
+                  <p>
+                    The stage was set for an unprecedented gathering—a
+                    convergence of minds, expertise, and unwavering passion.
+                    <br />
+                    <br />
+                    The event wasn&apos;t just a milestone; it was a
+                    testament—an embodiment of the Science for Change
+                    Program&apos;s unwavering pledge to uplift lives through
+                    transformative innovation.
+                  </p>
+                </ScrollFadeIn>
                 <div className='w-full md:w-5/12 flex flex-col gap-4 md:gap-8'>
                   <Image
                     src={snap1}

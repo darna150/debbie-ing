@@ -72,7 +72,7 @@ const Footer = () => {
           <div className='text-neutral-500 font-medium'>hol@justdebbie.ing</div>
 
           <span
-            className={`tooltiptext 
+            className={`tooltiptext transform-gpu
             absolute z-10 bg-white drop-shadow-md rounded-md bottom-[140%] md:bottom-[120%] left-1/2 -translate-x-1/2 
             text-sm font-medium 
             px-2.5 py-1.5

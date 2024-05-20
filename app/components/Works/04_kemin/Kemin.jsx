@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
-import VideoLocal from '../../ui/VideoLocal';
+import { ScrollFadeIn } from '../../animation/motion';
 
 const Kemin = () => {
   return (
@@ -38,25 +38,27 @@ const Kemin = () => {
           {/* CONTENT */}
           <div className='relative bg-white z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
             {/* Intro  */}
-            <div className='col-span-full m-auto'>
+            <ScrollFadeIn className='col-span-full m-auto'>
               <p className='w-full md:text-4xl !font-bold'>
                 Amidst the glitz and glamor of Dubai&apos;s bustling landscape,
                 I found myself at the heart of a pivotal moment in the global
                 launch of Kemin Industries&apos; revolutionary product,
                 Enterosure.
               </p>
-            </div>
+            </ScrollFadeIn>
 
             <div className='col-span-full'>
               <VimeoVideo videoID='925741081' title='Kemin Enterosure Launch' />
             </div>
 
             <div className='col-span-full'>
-              <p>
-                The battlefield for this endeavor was expansive, spanning from
-                animated bumpers that set the tone to captivating titles that
-                drew the audience in.
-              </p>
+              <ScrollFadeIn>
+                <p>
+                  The battlefield for this endeavor was expansive, spanning from
+                  animated bumpers that set the tone to captivating titles that
+                  drew the audience in.
+                </p>
+              </ScrollFadeIn>
               <div className='flex flex-col sm:flex-row gap-8 sm:w-3/4 mx-auto mt-16'>
                 <div className='sm:w-1/2'>
                   {/* <VideoLocal src='/works/kemin/KEMIN_PANEL1.mp4' /> */}
@@ -80,7 +82,7 @@ const Kemin = () => {
             </div>
             <div className='col-span-full'>
               <ThickLine color='bg-black' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-[#D43020]'>
                   Each design element was meticulously crafted to encapsulate
                   the essence of Enterosure.
@@ -91,7 +93,7 @@ const Kemin = () => {
                   The culmination of our work wasn&apos;t just a display of
                   creativity but a strategic fusion of artistry and purpose.
                 </p>
-              </div>
+              </ScrollFadeIn>
             </div>
 
             <div className='col-span-full'>

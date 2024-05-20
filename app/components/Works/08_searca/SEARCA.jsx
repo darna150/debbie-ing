@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
+import { ScrollFadeIn } from '../../animation/motion';
 
 import header from '../../../../public/works/searca/searca-header.png';
 import greenScreen1 from '../../../../public/works/searca/greenscreen-1.png';
@@ -43,17 +44,17 @@ const SEARCA = () => {
         <div className='container mx-auto pt-12 md:pt-32 px-5'>
           {/* CONTENT */}
           <div className='relative bg-[#096936] z-20 grid md:grid-cols-6 gap-16 pb-20 fix-3d'>
-            <div className='col-span-full'>
+            <ScrollFadeIn className='col-span-full'>
               <p className='text-white !font-bold'>
                 In the bustling world of virtual production, I found myself at
                 the forefront of the Youth in Agri Talk show&apos;s pilot
                 episode for SEARCA.
               </p>
-            </div>
+            </ScrollFadeIn>
 
             <div className='col-span-full'>
               <ThickLine color='bg-white' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold'>
                   Embracing the challenge with enthusiasm, my mission was clear:
                 </h2>
@@ -62,7 +63,7 @@ const SEARCA = () => {
                   come alive for basic education students, sparking their
                   curiosity and enthusiasm for the agricultural realm.
                 </p>
-              </div>
+              </ScrollFadeIn>
             </div>
 
             {/* Video Highlight */}
@@ -71,13 +72,15 @@ const SEARCA = () => {
             </div>
 
             <div className='col-span-full'>
-              <p>
-                Within the confines of Blink Creative Studio&apos;s green screen
-                studio, I took on the role of a visual storyteller. With
-                meticulous attention to detail, I helped weave together
-                captivating backgrounds, seamlessly integrated bumpers, and
-                carefully curated visual elements.
-              </p>
+              <ScrollFadeIn>
+                <p>
+                  Within the confines of Blink Creative Studio&apos;s green
+                  screen studio, I took on the role of a visual storyteller.
+                  With meticulous attention to detail, I helped weave together
+                  captivating backgrounds, seamlessly integrated bumpers, and
+                  carefully curated visual elements.
+                </p>
+              </ScrollFadeIn>
               <div className='w-full flex flex-col sm:flex-row my-16 gap-4'>
                 <div className='sm:w-1/2'>
                   <Image
@@ -108,13 +111,13 @@ const SEARCA = () => {
               />
             </div>
 
-            <div className='col-span-full'>
+            <ScrollFadeIn className='col-span-full'>
               <p>
                 The result was a tapestry that not only elevated the overall
                 production value of the talk show but also transformed it into
                 an immersive platform.
               </p>
-            </div>
+            </ScrollFadeIn>
           </div>
         </div>
       </section>

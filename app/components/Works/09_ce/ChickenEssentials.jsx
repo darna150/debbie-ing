@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ThickLine } from '../../ui/Lines';
 import VimeoVideo from '../../ui/VimeoVideo';
+import { ScrollFadeIn } from '../../animation/motion';
 
 import header from '../../../../public/works/chicken-essentials/header.png';
 import debbieDirector from '../../../../public/debbie/debbie-director.png';
@@ -35,16 +36,18 @@ const ChickenEssentials = () => {
                 placeholder='blur'
                 className='w-full'
               />
-              <p className='text-black !font-bold mt-6'>
-                Amidst the bustling aspirations of Chicken Essentials Phils.,
-                Inc. to broaden their business horizons, an intriguing task
-                landed on my desk.
-              </p>
+              <ScrollFadeIn>
+                <p className='text-black !font-bold mt-6'>
+                  Amidst the bustling aspirations of Chicken Essentials Phils.,
+                  Inc. to broaden their business horizons, an intriguing task
+                  landed on my desk.
+                </p>
+              </ScrollFadeIn>
             </div>
 
             <div className='col-span-full'>
               <ThickLine color='bg-black' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-[#D00200]'>
                   <span className='text-2xl md:text-3xl font-medium block mb-4 text-black/90'>
                     It was no ordinary assignment but a grand opportunity:
@@ -52,17 +55,20 @@ const ChickenEssentials = () => {
                   to craft an audiovisual masterpiece that would illuminate the
                   company&apos;s prowess to potential investors.
                 </h2>
-              </div>
+              </ScrollFadeIn>
             </div>
 
             <div className='col-span-full'>
               <ThickLine color='bg-black' />
               <div className='md:max-w-[85%] mx-auto mt-12 flex flex-col-reverse md:flex-row gap-y-12 gap-x-20 items-center'>
-                <p className='w-full md:w-8/12'>
-                  Entrusted with this vital mission, I, together with a skillful
-                  production team embarked on a journey to encapsulate the very
-                  essence of Chicken Essentials Phils., Inc.
-                </p>
+                <ScrollFadeIn className='w-full md:w-8/12'>
+                  <p>
+                    Entrusted with this vital mission, I, together with a
+                    skillful production team embarked on a journey to
+                    encapsulate the very essence of Chicken Essentials Phils.,
+                    Inc.
+                  </p>
+                </ScrollFadeIn>
                 <div className='w-full md:w-4/12'>
                   <Image
                     src={debbieDirector}
@@ -76,7 +82,7 @@ const ChickenEssentials = () => {
 
             <div className='col-span-full'>
               <ThickLine color='bg-black' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-[#D00200]'>
                   <span className='text-2xl md:text-3xl font-medium block mb-4 text-black/90'>
                     What made this company stand out wasn&apos;t just their
@@ -87,7 +93,7 @@ const ChickenEssentials = () => {
                   This wasn&apos;t just a feature; it was their greatest
                   strength, and it begged to be unveiled to the world.
                 </h2>
-              </div>
+              </ScrollFadeIn>
             </div>
 
             <div className='col-span-full'>
@@ -99,24 +105,24 @@ const ChickenEssentials = () => {
               />
             </div>
 
-            <div className='col-span-full'>
+            <ScrollFadeIn className='col-span-full'>
               <p>
                 With each frame meticulously crafted, the audiovisual
                 presentation began to take shape. It wasn&apos;t merely a
                 sequence of images and words; it was a narrative, a story that
                 resonated with warmth and sincerity.
               </p>
-            </div>
+            </ScrollFadeIn>
 
             <div className='col-span-full'>
               <ThickLine color='bg-black' />
-              <div className='mt-12'>
+              <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-[#D00200]'>
                   Through carefully chosen visuals and evocative storytelling,
                   the video came alive, breathing the very spirit of Chicken
                   Essentials Phils., Inc.
                 </h2>
-              </div>
+              </ScrollFadeIn>
             </div>
 
             <div className='col-span-full'>
