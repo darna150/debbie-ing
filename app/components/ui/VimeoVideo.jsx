@@ -38,10 +38,9 @@ const VimeoVideo = (props) => {
   return (
     <iframe
       ref={iframeRef}
-      loading='lazy'
       src={`https://player.vimeo.com/video/${
         props.videoID
-      }?autoplay=1&loop=1&badge=0&autopause=0&${
+      }?autoplay=0&loop=1&badge=0&autopause=0&${
         props?.background ? 'background=1' : null
       }&dnt=1&muted=1&player_id=0&app_id=58479`}
       allow='autoplay; fullscreen;'
