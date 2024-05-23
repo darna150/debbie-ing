@@ -15,17 +15,17 @@ import Footer from "./components/Footer"
 
 export const metadata = {
   metadataBase: new URL('https://www.justdebbie.ing/'),
-  title: 'Just Debbie',
-  description: "Hey, I'm Debbie, here to sprinkle some creativity and fun in your day— all while just debbie-ing!",
-  authors: [{ name: 'Just Debbie', url: '/' }],
-  creator: 'Just Debbie',
-  publisher: 'Just Debbie',
+  title: 'Debbie Melgarejo - Creative Director',
+  description: "Meet Debbie, a Creative Director from the Philippines. Passionate about creativity, startups, and the latest tech, driving innovative projects with extensive experience. Off the clock, she enjoys the whimsical world of Animal Crossing. 🏝️",
+  authors: [{ name: 'Debbie Melgarejo - Creative Director', url: '/' }],
+  creator: 'Debbie Melgarejo - Creative Director',
+  publisher: 'Debbie Melgarejo - Creative Director',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Just Debbie',
-    description: "Hey, I'm Debbie, here to sprinkle some creativity and fun in your day— all while just debbie-ing!",
+    title: 'Debbie Melgarejo - Creative Director',
+    description: "Meet Debbie, a Creative Director from the Philippines. Passionate about creativity, startups, and the latest tech, driving innovative projects with extensive experience. Off the clock, she enjoys the whimsical world of Animal Crossing. 🏝️",
     type: 'website',
     url: '/',
     locale: 'en_us',

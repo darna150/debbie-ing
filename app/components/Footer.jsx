@@ -28,10 +28,6 @@ const Footer = () => {
     }
   }, [isInView, animate]);
 
-  // Split text
-  const copy = 'Ready when you are. ';
-  const splitText = copy.split('');
-
   // Copy email button
   const [isCopied, setIsCopied] = useState(false);
 
@@ -51,7 +47,7 @@ const Footer = () => {
           className='text-center text-[2rem] sm:text-5xl md:text-6xl font-bold tracking-tighter leading-none overflow-hidden'
           aria-label='Ready when you are'
         >
-          <SplitText animateOnce={false}>Ready when you are. </SplitText>
+          <SplitText animateOnce={false}>Ready, when you are. </SplitText>
           <span className='inline-block overflow-hidden pb-4 -mb-4 pr-1 -mr-1 fadeIn-span'>
             💪
           </span>
