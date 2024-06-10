@@ -55,7 +55,7 @@ export default function Home() {
         <BI />
         <NutriChunks />
         <JFC />
-        <Kemin />
+        {/* <Kemin /> */}
         <DOST />
         <DOST_PCAARD />
         <GIZ />

@@ -34,10 +34,10 @@ const dock = {
       image: jfc,
       href: '#jfc',
     },
-    {
-      image: kemin,
-      href: '#kemin',
-    },
+    // {
+    //   image: kemin,
+    //   href: '#kemin',
+    // },
     {
       image: dost,
       href: '#dost',
@@ -93,7 +93,7 @@ export const Dock = () => {
           offsetTop: document.getElementById('sanmiguelcorp').offsetTop,
         },
         { id: 'jfc', offsetTop: document.getElementById('jfc').offsetTop },
-        { id: 'kemin', offsetTop: document.getElementById('kemin').offsetTop },
+        // { id: 'kemin', offsetTop: document.getElementById('kemin').offsetTop },
         { id: 'dost', offsetTop: document.getElementById('dost').offsetTop },
         {
           id: 'dost-pcaard',
@@ -145,7 +145,7 @@ export const Dock = () => {
   }, []);
 
   // Define the indices where you want the separators
-  const separatorIndices = [0, 9];
+  const separatorIndices = [0, 8];
 
   return (
     <motion.div
