@@ -450,14 +450,16 @@ const getStageTheme = (project) => stageThemes[project.id] || {
 
 /* ── Media type icons ── */
 const PlayIcon = ({ color }) => (
-  <svg width='40' height='40' viewBox='0 0 40 40' fill='none'>
+  <svg width='40' height='40' viewBox='0 0 40 40' fill='none' aria-hidden='true' focusable='false'>
+    <title>Video</title>
     <circle cx='20' cy='20' r='19' stroke={color} strokeWidth='1.5' />
     <polygon points='16,13 29,20 16,27' fill={color} />
   </svg>
 );
 
 const ImageIcon = ({ color }) => (
-  <svg width='40' height='40' viewBox='0 0 40 40' fill='none'>
+  <svg width='40' height='40' viewBox='0 0 40 40' fill='none' aria-hidden='true' focusable='false'>
+    <title>Image</title>
     <rect x='6' y='9' width='28' height='22' rx='3' stroke={color} strokeWidth='1.5' />
     <circle cx='14' cy='17' r='3' stroke={color} strokeWidth='1.5' />
     <path d='M6 26l9-7 6 5 4-3 9 7' stroke={color} strokeWidth='1.5' strokeLinejoin='round' />
@@ -552,7 +554,12 @@ const MediaAsset = ({ asset, className }) => {
     );
   }
 
-  return <img src={asset.src} alt={asset.alt} className={className} loading="lazy" />;
+  return (
+    <>
+      <img src={asset.src} alt={asset.alt} className={className} loading='lazy' />
+      {asset.label ? <figcaption className='sr-only'>{asset.label}</figcaption> : null}
+    </>
+  );
 };
 
 const StillPlaceholder = ({ asset, project, index, className }) => (
@@ -647,7 +654,14 @@ const ProjectLogo = ({ project, className = '' }) => {
 };
 
 const MobileSectionProgress = ({ progress, color, track }) => (
-  <div className='sticky top-[52px] z-20 h-[2px] md:hidden' style={{ backgroundColor: track }}>
+  <div
+    className='sticky top-[52px] z-20 h-[2px] md:hidden'
+    style={{ backgroundColor: track }}
+    role='progressbar'
+    aria-label='Section reading progress'
+    aria-valuemin={0}
+    aria-valuemax={100}
+  >
     <motion.div
       className='h-full origin-left'
       style={{ scaleX: progress, backgroundColor: color }}
