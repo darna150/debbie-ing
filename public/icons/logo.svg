@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 32" fill="none">
+  <!--
+    justdebbie.ing wordmark
+    "justdebbie" → near-black   #0A0A0A
+    ".ing"        → teal        #00AA9F
+    Font: Inter 700, ~20px, tracking -0.02em
+    Adjust viewBox width if text overflows on your system.
+  -->
+  <text
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-weight="700"
+    font-size="20"
+    letter-spacing="-0.4"
+    y="23"
+  >
+    <tspan fill="#0A0A0A">justdebbie</tspan><tspan fill="#00AA9F">.ing</tspan>
+  </text>
+</svg>
