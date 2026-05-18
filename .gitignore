@@ -35,8 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# large media (over GitHub 100MB limit — host on CDN or Vercel Blob)
-public/works/dost/1MIN_TEASER.mp4
-
 # claude session data
 .claude/
