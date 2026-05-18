@@ -10,6 +10,22 @@ export const metadata = {
   title: 'justdebbie.ing',
   description: 'Creative direction for brands that need less "what now?" and more "watch this." Based in Manila, available remote.',
   metadataBase: new URL('https://justdebbie.ing'),
+  alternates: {
+    canonical: 'https://justdebbie.ing',
+  },
+  authors: [{ name: 'Debbie Melgarejo', url: 'https://justdebbie.ing' }],
+  creator: 'Debbie Melgarejo',
+  keywords: [
+    'creative direction',
+    'brand strategy',
+    'content systems',
+    'campaign direction',
+    'film',
+    'digital experience',
+    'Manila',
+    'remote',
+    'Debbie Melgarejo',
+  ],
   openGraph: {
     title: 'justdebbie.ing',
     description: 'Creative direction for brands that need less "what now?" and more "watch this."',
@@ -22,6 +38,17 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'justdebbie.ing',
     description: 'Creative direction for brands that need less "what now?" and more "watch this."',
+    creator: '@justdebbying',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   icons: {
     icon: [
