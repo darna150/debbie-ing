@@ -38,7 +38,6 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'justdebbie.ing',
     description: 'Creative direction for brands that need less "what now?" and more "watch this."',
-    creator: '@justdebbying',
   },
   robots: {
     index: true,
