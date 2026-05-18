@@ -509,22 +509,50 @@ const MediaPlaceholder = ({ project }) => {
 
 const MediaAsset = ({ asset, className }) => {
   const isVideo = asset.type === 'video' || /\.(mp4|webm)$/i.test(asset.src);
+  const videoRef = useRef(null);
+  const [videoSrc, setVideoSrc] = useState(null);
+
+  useEffect(() => {
+    if (!isVideo) return;
+    const el = videoRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVideoSrc(asset.src);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '300px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [isVideo, asset.src]);
+
+  useEffect(() => {
+    if (videoSrc && videoRef.current) {
+      videoRef.current.load();
+      videoRef.current.play().catch(() => {});
+    }
+  }, [videoSrc]);
 
   if (isVideo) {
     return (
       <video
-        src={asset.src}
+        ref={videoRef}
+        src={videoSrc || undefined}
         aria-label={asset.alt}
         className={className}
         autoPlay
         muted
         loop
         playsInline
+        preload="none"
       />
     );
   }
 
-  return <img src={asset.src} alt={asset.alt} className={className} />;
+  return <img src={asset.src} alt={asset.alt} className={className} loading="lazy" />;
 };
 
 const StillPlaceholder = ({ asset, project, index, className }) => (
