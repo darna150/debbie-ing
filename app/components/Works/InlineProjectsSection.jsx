@@ -523,7 +523,7 @@ const MediaAsset = ({ asset, className }) => {
           observer.disconnect();
         }
       },
-      { rootMargin: '300px' }
+      { rootMargin: '800px' }
     );
     observer.observe(el);
     return () => observer.disconnect();
