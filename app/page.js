@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { InlineProjectsSection } from './components/Works/InlineProjectsSection';
 
 /* ─── Services ─── */
@@ -34,31 +34,42 @@ const services = [
 ];
 
 /* ─── Reveal ─── */
-const Reveal = ({ children, delay = 0, y = 28 }) => (
-  <motion.div
-    initial={{ opacity: 0, y }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: '-12%' }}
-    transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-  >
-    {children}
-  </motion.div>
-);
+const Reveal = ({ children, delay = 0, y = 28 }) => {
+  const reduced = useReducedMotion();
+  return (
+    <motion.div
+      initial={{ opacity: reduced ? 1 : 0, y: reduced ? 0 : y }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-12%' }}
+      transition={{ duration: reduced ? 0 : 0.8, delay: reduced ? 0 : delay, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 /* ─── Nav ─── */
 const Nav = () => (
-  <nav className='fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-3 border-b border-neutral-200/70 bg-white/80 px-4 py-4 backdrop-blur-md sm:px-6 md:px-10'>
-    <a href='#' className='shrink-0 text-[13px] font-bold tracking-[-0.02em] text-neutral-950 sm:text-sm'>
-      justdebbie.ing
+  <>
+    <a
+      href='#main'
+      className='sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-neutral-950 focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-white'
+    >
+      Skip to main content
     </a>
-    <div className='flex min-w-0 items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-neutral-500 sm:gap-7 sm:text-xs sm:tracking-[0.18em]'>
-      <a href='#work' className='transition-colors hover:text-neutral-950'>Work</a>
-      <a href='#about' className='transition-colors hover:text-neutral-950'>About</a>
-      <a href='mailto:hol@justdebbie.ing' className='transition-colors hover:text-neutral-950'>
-        Contact
+    <nav className='fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-3 border-b border-neutral-200/70 bg-white/80 px-4 py-4 backdrop-blur-md sm:px-6 md:px-10'>
+      <a href='#' className='shrink-0 text-[13px] font-bold tracking-[-0.02em] text-neutral-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 sm:text-sm'>
+        justdebbie.ing
       </a>
-    </div>
-  </nav>
+      <div className='flex min-w-0 items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-neutral-500 sm:gap-7 sm:text-xs sm:tracking-[0.18em]'>
+        <a href='#work' className='transition-colors hover:text-neutral-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 rounded-sm'>Work</a>
+        <a href='#about' className='transition-colors hover:text-neutral-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 rounded-sm'>About</a>
+        <a href='mailto:hol@justdebbie.ing' className='transition-colors hover:text-neutral-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 rounded-sm'>
+          Contact
+        </a>
+      </div>
+    </nav>
+  </>
 );
 
 /* ─── Hero ─── */
@@ -113,7 +124,8 @@ const Hero = () => {
           </div>
           <a
             href='#work'
-            className='hidden self-end text-right text-sm font-bold uppercase tracking-[0.18em] text-[#00AA9F] transition-opacity hover:opacity-70 md:block'
+            aria-label='See the work — scroll to portfolio'
+            className='hidden self-end text-right text-sm font-bold uppercase tracking-[0.18em] text-[#00AA9F] transition-opacity hover:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 rounded-sm md:block'
           >
             See the work ↓
           </a>
@@ -189,7 +201,7 @@ const AboutSection = () => (
       <Reveal>
         <img
           src='/debbie/debbie_blink.gif'
-          alt='Debbie'
+          alt='Debbie Melgarejo, creative director'
           className='mx-auto w-full max-w-[260px] md:max-w-none'
           onError={(e) => {
             e.currentTarget.style.display = 'none';
@@ -306,7 +318,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main>
+      <main id='main'>
         <Hero />
         <TaglineSection />
         <InlineProjectsSection />

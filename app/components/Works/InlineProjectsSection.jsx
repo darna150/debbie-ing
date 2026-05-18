@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { useRef, useCallback, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring, useReducedMotion } from 'framer-motion';
 
 /*
   mediaType options: 'image' | 'video' | 'gif'
@@ -1191,16 +1191,19 @@ const ProjectMediaScene = ({ project, progress }) => {
 };
 
 /* ── Reveal ── */
-const Reveal = ({ children, delay = 0, y = 28 }) => (
-  <motion.div
-    initial={{ opacity: 0, y }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: '-8%' }}
-    transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-  >
-    {children}
-  </motion.div>
-);
+const Reveal = ({ children, delay = 0, y = 28 }) => {
+  const reduced = useReducedMotion();
+  return (
+    <motion.div
+      initial={{ opacity: reduced ? 1 : 0, y: reduced ? 0 : y }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-8%' }}
+      transition={{ duration: reduced ? 0 : 0.8, delay: reduced ? 0 : delay, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 /* ── Sticky media column ── */
 const StickyMedia = ({ project, sectionRef }) => {
