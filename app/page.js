@@ -49,28 +49,90 @@ const Reveal = ({ children, delay = 0, y = 28 }) => {
 };
 
 /* ─── Nav ─── */
-const Nav = () => (
-  <>
-    <a
-      href='#main'
-      className='sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-neutral-950 focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-white'
-    >
-      Skip to main content
-    </a>
-    <nav className='fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-3 border-b border-neutral-200/70 bg-white/80 px-4 py-4 backdrop-blur-md sm:px-6 md:px-10'>
-      <a href='#' className='shrink-0 text-[13px] font-bold tracking-[-0.02em] text-neutral-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 sm:text-sm'>
-        justdebbie.ing
+const NAV_LINKS = [
+  { href: '#work', label: 'Work', sectionId: 'work' },
+  { href: '#about', label: 'About', sectionId: 'about' },
+  { href: 'mailto:hol@justdebbie.ing', label: 'Contact', sectionId: 'contact' },
+];
+
+const Nav = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+  const reduced = useReducedMotion();
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24);
+
+      const pos = window.scrollY + 72;
+      const ids = ['contact', 'about', 'work'];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && pos >= el.offsetTop) {
+          setActiveSection(id);
+          return;
+        }
+      }
+      setActiveSection('');
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <>
+      <a
+        href='#main'
+        className='sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-neutral-950 focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-white'
+      >
+        Skip to main content
       </a>
-      <div className='flex min-w-0 items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-neutral-500 sm:gap-7 sm:text-xs sm:tracking-[0.18em]'>
-        <a href='#work' className='transition-colors hover:text-neutral-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 rounded-sm'>Work</a>
-        <a href='#about' className='transition-colors hover:text-neutral-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 rounded-sm'>About</a>
-        <a href='mailto:hol@justdebbie.ing' className='transition-colors hover:text-neutral-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 rounded-sm'>
-          Contact
+      <nav
+        className={`fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-3 px-4 sm:px-6 md:px-10 ${
+          reduced ? '' : 'transition-[background-color,border-color,padding,box-shadow,backdrop-filter] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]'
+        } ${
+          scrolled
+            ? 'border-b border-neutral-200/70 bg-[rgba(255,255,255,0.88)] py-3 shadow-[0_1px_12px_rgba(0,0,0,0.06)] [backdrop-filter:blur(40px)_saturate(180%)]'
+            : 'border-b border-transparent bg-transparent py-5 [backdrop-filter:none]'
+        }`}
+      >
+        {/* Logo */}
+        <a
+          href='#'
+          className={`shrink-0 text-[13px] font-bold tracking-[-0.02em] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 sm:text-sm ${
+            reduced ? '' : 'transition-colors duration-200'
+          } ${scrolled ? 'text-neutral-950' : 'text-neutral-950/80 hover:text-neutral-950'}`}
+        >
+          justdebbie.ing
         </a>
-      </div>
-    </nav>
-  </>
-);
+
+        {/* Links */}
+        <div className='flex min-w-0 items-center gap-5 sm:gap-7'>
+          {NAV_LINKS.map(({ href, label, sectionId }) => {
+            const isActive = activeSection === sectionId;
+            return (
+              <a
+                key={href}
+                href={href}
+                className={`relative text-[10px] font-semibold uppercase tracking-[0.14em] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 rounded-sm sm:text-xs sm:tracking-[0.18em] ${
+                  reduced ? '' : 'transition-colors duration-200'
+                } ${isActive ? 'text-neutral-950' : 'text-neutral-500 hover:text-neutral-950'}`}
+              >
+                {label}
+                {/* Active dot */}
+                {isActive && (
+                  <span className='absolute -bottom-[7px] left-1/2 -translate-x-1/2 size-[3px] rounded-full bg-[#00AA9F]' />
+                )}
+              </a>
+            );
+          })}
+        </div>
+      </nav>
+    </>
+  );
+};
 
 /* ─── Hero ─── */
 const Hero = () => {
