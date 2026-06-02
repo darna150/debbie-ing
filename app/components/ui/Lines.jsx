@@ -15,7 +15,7 @@ export const ThinLine = (props) => {
     <div
       className={`${
         props.color ? props.color : 'bg-black'
-      } w-full mb-6 h-[2px]`}
+      } w-full mb-3 h-[2px]`}
     >
       {/* LINE */}
     </div>

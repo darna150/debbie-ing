@@ -12,8 +12,8 @@ const Email = () => {
       <ThinLine />
       <IconText icon={'email'}>Email</IconText>
       <Link
-        href={'mailto:hol@justdebbie.ing'}
-        className='text-2xl md:text-4xl font-bold tracking-tight hover:text-purple-500'
+        href={'mailto:hello@justdebbie.ing'}
+        className='text-2xl md:text-4xl font-bold tracking-tight hover:text-purple-500 transition-colors'
       >
         <motion.span
           variants={fadeUp}
@@ -21,7 +21,7 @@ const Email = () => {
           animate='animate'
           className='inline-block'
         >
-          hol@justdebbie.ing
+          hello@justdebbie.ing
         </motion.span>
       </Link>
     </>

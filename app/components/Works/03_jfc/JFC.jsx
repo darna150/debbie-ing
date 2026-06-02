@@ -44,8 +44,7 @@ const JFC = () => {
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20 items-center'>
                 <ScrollFadeIn className='w-full md:w-8/12'>
                   <p>
-                    I led a team of creative minds and tech wizards to build an
-                    awesome 3D website for Jollibee Foods Corporation.
+                    Most brand websites inform. Few create memory.
                   </p>
                 </ScrollFadeIn>
                 <div className='w-full md:w-4/12'>
@@ -64,11 +63,11 @@ const JFC = () => {
               <ThickLine color='bg-white' />
               <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold'>
-                  <span className='text-2xl md:text-3xl font-medium block mb-4'>
-                    Picture a digital world bursting with joy and unity,
-                    showcasing JFC&apos;s journey.
+                  This immersive 3D experience invited exploration and play.
+                  <span className='text-2xl md:text-3xl font-medium block mt-4'>
+                    Digital became a destination, closer to entertainment than
+                    advertising.
                   </span>
-                  This website wasn&apos;t just a site—it was an adventure.
                 </h2>
               </ScrollFadeIn>
               <div className='mt-16'>
@@ -79,9 +78,7 @@ const JFC = () => {
             <div className='col-span-full'>
               <ScrollFadeIn>
                 <p>
-                  It invited people to explore JFC&apos;s history in a fun,
-                  interactive way. We designed it like a universe with different
-                  Jollibee brands as floating islands.
+                  Most brand websites inform. Few create memory.
                 </p>
               </ScrollFadeIn>
               <div className='grid md:grid-cols-2 gap-4 mt-16'>
@@ -121,12 +118,12 @@ const JFC = () => {
               <div className='flex flex-col md:flex-row gap-y-12 mt-12'>
                 <ScrollFadeIn className='w-full md:w-6/12'>
                   <h2 className='text-4xl md:text-5xl font-bold mb-8'>
-                    Our goal was simple:
+                    Enjoyment creates recall.
                   </h2>
                   <p>
-                    make learning about Jollibee&apos;s past engaging and fun.
-                    We wanted people to connect with the moments that shaped the
-                    company.
+                    This immersive 3D experience invited exploration and play.
+                    Digital became a destination, closer to entertainment than
+                    advertising.
                   </p>
                 </ScrollFadeIn>
                 <div className='w-full md:w-6/12'>

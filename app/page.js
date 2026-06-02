@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { InlineProjectsSection } from './components/Works/InlineProjectsSection';
 
 /* ─── Services ─── */
@@ -20,7 +20,7 @@ const services = [
     desc: 'Editorial plans, formats, and workflows teams can keep using.',
   },
   {
-    name: 'Design',
+    name: 'Digital experience',
     desc: 'Digital experiences shaped around how people actually move and decide.',
   },
   {
@@ -28,7 +28,7 @@ const services = [
     desc: 'Films, AVPs, and live moments with a clear story underneath.',
   },
   {
-    name: 'AI generation',
+    name: 'AI-assisted production',
     desc: 'Fast visual exploration, guided by taste, context, and restraint.',
   },
 ];
@@ -135,11 +135,26 @@ const Nav = () => {
 };
 
 /* ─── Hero ─── */
+const HERO_PHRASES = [
+  'debbie-ing ideas into shape',
+  'debbie-ing teams into motion',
+  'debbie-ing stories into systems',
+  'debbie-ing chaos into something shippable',
+];
+
 const Hero = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
   const y = useTransform(scrollYProgress, [0, 1], [0, 80]);
   const opacity = useTransform(scrollYProgress, [0, 0.55], [1, 0]);
+  const reduced = useReducedMotion();
+  const [phraseIdx, setPhraseIdx] = useState(0);
+
+  useEffect(() => {
+    if (reduced) return;
+    const id = setInterval(() => setPhraseIdx((i) => (i + 1) % HERO_PHRASES.length), 2500);
+    return () => clearInterval(id);
+  }, [reduced]);
 
   return (
     <header
@@ -149,7 +164,7 @@ const Hero = () => {
       <motion.div style={{ y, opacity }} className='flex flex-col'>
         <Reveal>
           <p className='mb-8 text-xs font-bold uppercase tracking-[0.28em] text-neutral-400'>
-            Creative direction — Manila / remote
+            Debbie Melgarejo · Creative director · Brand, agency + nonprofit · Manila / remote
           </p>
         </Reveal>
 
@@ -169,13 +184,9 @@ const Hero = () => {
       {/* Bottom row */}
       <Reveal delay={0.22}>
         <div className='grid gap-6 md:grid-cols-[1fr_400px] md:items-end'>
-          <div className='flex flex-wrap gap-2'>
-            {[
-              'debbie-ing ideas into shape',
-              'debbie-ing teams into motion',
-              'debbie-ing stories into systems',
-              'debbie-ing chaos into something shippable',
-            ].map((line) => (
+          {/* Desktop: pills */}
+          <div className='hidden flex-wrap gap-2 md:flex'>
+            {HERO_PHRASES.map((line) => (
               <span
                 key={line}
                 className='rounded-full border border-neutral-300 px-3 py-1 text-sm font-medium text-neutral-600 transition-colors hover:border-[#00AA9F] hover:text-[#00AA9F]'
@@ -184,10 +195,25 @@ const Hero = () => {
               </span>
             ))}
           </div>
+          {/* Mobile: single cycling phrase */}
+          <div className='flex h-6 items-center overflow-hidden md:hidden'>
+            <AnimatePresence mode='wait'>
+              <motion.span
+                key={phraseIdx}
+                className='text-sm font-medium text-neutral-500'
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              >
+                {HERO_PHRASES[phraseIdx]}
+              </motion.span>
+            </AnimatePresence>
+          </div>
           <a
             href='#work'
             aria-label='See the work — scroll to portfolio'
-            className='hidden self-end text-right text-sm font-bold uppercase tracking-[0.18em] text-[#00AA9F] transition-opacity hover:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 rounded-sm md:block'
+            className='self-end text-right text-sm font-bold uppercase tracking-[0.18em] text-[#00AA9F] transition-opacity hover:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-2 rounded-sm'
           >
             See the work ↓
           </a>
@@ -285,12 +311,12 @@ const AboutSection = () => (
         <div className='grid gap-7 text-lg font-medium leading-[1.5] text-neutral-500 sm:text-xl sm:leading-[1.45] md:grid-cols-2'>
           <Reveal delay={0.1}>
             <p>
-              I work where strategy, content, film, design, and production start overlapping. That is usually where the interesting problems are.
+              I&apos;m a creative director working primarily on the brand side, with agency and nonprofit work in the mix. Past work includes campaigns, content systems, and digital experiences for Boehringer Ingelheim, Jollibee Foods Corporation, San Miguel Corporation, GIZ, and DOST.
             </p>
           </Reveal>
           <Reveal delay={0.16}>
             <p>
-              My job is to find the throughline, sharpen the story, and turn it into work that can ship without losing the idea.
+              My job is to find the throughline. Between the messy brief and the clear idea. Between a strategy and something that actually ships without losing what made it worth making. I work across strategy, content, film, and digital, which usually means I end up at the intersection of all of them.
             </p>
           </Reveal>
         </div>
@@ -304,9 +330,18 @@ const Footer = () => (
   <footer id='contact' className='bg-neutral-950 px-6 pb-14 pt-20 text-white md:px-16 md:pt-36'>
     <div className='mx-auto max-w-[1100px]'>
       <Reveal>
-        <p className='mb-5 text-xs font-bold uppercase tracking-[0.26em] text-white/35'>
-          Contact
-        </p>
+        <div className='mb-5 flex items-center gap-4'>
+          <p className='text-xs font-bold uppercase tracking-[0.26em] text-white/35'>
+            Contact
+          </p>
+          <span className='flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-emerald-400'>
+            <span className='relative flex h-[6px] w-[6px]'>
+              <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60' />
+              <span className='relative inline-flex h-[6px] w-[6px] rounded-full bg-emerald-400' />
+            </span>
+            Open to work
+          </span>
+        </div>
       </Reveal>
       <Reveal delay={0.06}>
         <p className='mb-16 max-w-[400px] text-lg font-medium leading-snug text-white/40'>
@@ -361,13 +396,17 @@ export default function Home() {
 
       window.requestAnimationFrame(() => {
         window.scrollTo({
-          top: Math.max(target.offsetTop - 52, 0),
+          top: Math.max(target.offsetTop - 72, 0),
           behavior: 'smooth',
         });
       });
     };
 
-    const timeout = window.setTimeout(scrollToHash, 0);
+    const timeout = window.setTimeout(() => {
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(scrollToHash);
+      });
+    }, 120);
 
     window.addEventListener('hashchange', scrollToHash);
 

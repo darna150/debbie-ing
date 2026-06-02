@@ -9,6 +9,7 @@ const skills = [
   { id: 1, skill: 'Creative Direction' },
   { id: 2, skill: 'Content Development' },
   { id: 3, skill: 'Strategic Execution' },
+  { id: 4, skill: 'Digital Strategy' },
 ];
 
 const Skills = () => {

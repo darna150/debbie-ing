@@ -21,7 +21,7 @@ const projectData = [
     headline: 'In the middle\nof everything.',
     subhead: 'Estate sales, downsizing, inherited homes. Always more emotional than anyone expects.',
     situation: 'Families navigating estate transitions are not in shopping mode. They are in grief mode, logistics mode, and uncertainty mode, all at once. The old messaging missed all of that.',
-    result: 'Reframed the brand story, then carried it through campaign concepts, paid social, CRM, content planning, and everyday messaging. Strategy became a system the team could actually use.',
+    result: 'I reframed the brand story and carried it through campaign concepts, paid social, CRM, content planning, and everyday messaging. Strategy became a system the team could actually use.',
     outcome: 'Make the next step feel clear.',
     skills: ['Storytelling', 'Paid media', 'Social strategy', 'CRM', 'Brand voice'],
   },
@@ -36,7 +36,7 @@ const projectData = [
     headline: 'Great mission.\nChaotic content.',
     subhead: 'Powerful story, limited structure. One of those is fixable.',
     situation: 'The mission was clear. The machinery to communicate it was not. Content went out reactively. Voice drifted post to post. Nothing compounded into anything.',
-    result: 'Built social media workflows, content systems, and a strategy that balances creativity with consistency. Now the work builds on itself, week after week.',
+    result: 'I built the social media workflows, content systems, and editorial strategy. Now the work builds on itself, week after week.',
     outcome: 'Good systems make consistency easier.',
     skills: ['Content systems', 'Social workflows', 'Editorial strategy', 'Visual direction'],
   },
@@ -51,7 +51,7 @@ const projectData = [
     headline: 'Presence\nover polish.',
     subhead: 'Misinformation moves fast. Credibility has to move faster.',
     situation: 'People were overwhelmed and skeptical. Polished messaging felt distant from their reality. The problem was not information. It was trust.',
-    result: 'Shaped expert-led content, live conversations, and social response into one trust-building system. Less distance. More useful presence.',
+    result: 'I shaped expert-led content, live conversations, and social response into one trust-building system. Less distance. More useful presence.',
     outcome: 'Presence builds trust.',
     skills: ['Real-time social', 'Live broadcast', 'Expert content', 'Community response'],
   },
@@ -66,7 +66,7 @@ const projectData = [
     headline: 'From product\nto community.',
     subhead: 'Pet owners are not buying nutrition. They are caring for a relationship.',
     situation: 'Pet food is a deeply emotional category. The brand was showing up like a commodity. Nice packaging, no real connection to the people buying it.',
-    result: 'Shifted toward participation. Everyday routines, shared experiences, and long-term connection over single transactions. When people feel recognized, loyalty follows.',
+    result: 'I shifted the brand toward participation — everyday routines, shared experiences, and long-term connection over single transactions. When people feel recognized, loyalty follows.',
     outcome: 'Recognition builds loyalty.',
     skills: ['Community building', 'Social content', 'Brand participation', 'Loyalty design'],
   },
@@ -81,7 +81,7 @@ const projectData = [
     headline: 'Digital as\na destination.',
     subhead: 'Most brand websites inform. Few create memories.',
     situation: 'Jollibee had decades of genuine story. The challenge was delivering it without making anyone feel like they were reading a company archive.',
-    result: 'Shaped the experience flow, story beats, and digital touchpoints for an interactive brand world. History became something people could explore.',
+    result: 'I shaped the experience flow, story beats, and digital touchpoints for an interactive brand world. History became something people could explore.',
     outcome: 'Make the story playable.',
     skills: ['Interactive design', 'Experience direction', '3D web', 'Creative tech'],
   },
@@ -96,7 +96,7 @@ const projectData = [
     headline: 'People before\npolicy.',
     subhead: 'Advocacy lands better when it starts with real life.',
     situation: 'The subject was bigger than any institution. If the film led with policy, it would feel distant. The story needed people, place, and stakes.',
-    result: 'Worked on narrative direction and pacing so the interviews, visuals, and institution all served the human story.',
+    result: 'I directed the narrative and pacing so the interviews, visuals, and institution all served the human story.',
     outcome: 'Lead with people.',
     skills: ['Narrative direction', 'Documentary story', 'Interview pacing', 'Advocacy film'],
   },
@@ -111,13 +111,13 @@ const projectData = [
     headline: 'Science that\nfeels human.',
     subhead: 'Science communication has an accessibility problem. We made it personal.',
     situation: 'DOST was doing genuinely important work. The challenge was making it feel that way to people outside the institution. Complexity was getting in the way of connection.',
-    result: 'Translated complexity into real stories, real applications, and tangible impact. Science stopped being something that happened to people and started being something for them.',
+    result: 'I translated complexity into real stories, real applications, and tangible impact. Science stopped being something that happened to people and started being something for them.',
     outcome: 'Make science feel close.',
     skills: ['Science storytelling', 'AV direction', 'Public communication', 'Motion assets'],
   },
   {
     id: 'azazel',
-    category: 'Short film',
+    category: 'Director of photography',
     year: '2024',
     color: '#8F1D1D',
     tint: '#F2EDEE',
@@ -125,7 +125,7 @@ const projectData = [
     mediaHint: 'Six widescreen cinematography stills from Azazel. Drop replacements into /public/works/azazel.',
     headline: 'Love as\na locked room.',
     subhead: 'Cinematography for a psychological horror short about care, resentment, shame, and the terror of not knowing who is family.',
-    situation: 'The film lives inside a decrepit house and a volatile mother-son standoff. The cinematography needed to make the domestic space feel unstable: intimate enough to feel trapped, dark enough to let memory and suspicion distort the room.',
+    situation: 'As director of photography, I was brought in to build the visual language for a psychological horror short. The brief: a domestic space that feels unstable. Intimate enough to feel trapped, dark enough to let memory distort the room.',
     result: 'I approached the image language around pressure, shadow, and withheld information. Performance close-ups, negative space, and decaying interiors turn the house into a witness, so the horror comes less from spectacle and more from what the frame refuses to fully explain.',
     outcome: 'Let the frame hold the tension.',
     skills: ['Cinematography', 'Psychological horror', 'Lighting', 'Shot language', 'Performance tension'],
@@ -712,6 +712,10 @@ const ProjectMediaScene = ({ project, progress }) => {
   const sweepX = useTransform(progress, [0, 1], ['-36%', '36%']);
   const portalRotate = useTransform(progress, [0, 0.8], [-5, 4]);
   const filmX = useTransform(progress, [0, 1], ['0%', '-20%']);
+  // Credential card back-card reveal
+  const credBackX = useTransform(progress, [0.2, 0.62], ['0%', '12%']);
+  const credBackY = useTransform(progress, [0.2, 0.62], ['0%', '10%']);
+  const credBackRotate = useTransform(progress, [0.2, 0.62], [0, 3]);
   const phoneY = useTransform(progress, [0.2, 0.72], [34, -10]);
   const phoneRotate = useTransform(progress, [0.2, 0.72], [8, -4]);
   const horrorDoorWidth = useTransform(progress, [0.12, 0.64], ['5%', '22%']);
@@ -723,7 +727,7 @@ const ProjectMediaScene = ({ project, progress }) => {
   const portraitWallY = useTransform(progress, [0.12, 0.58], [34, -8]);
   const portraitWallOpacity = useTransform(progress, [0.08, 0.26], [0, 1]);
   const portraitWallScale = useTransform(progress, [0.12, 0.48, 1], [0.96, 1, 0.985]);
-  const firstBeatOpacity = useTransform(progress, [0.08, 0.18, 0.48, 0.6], [0, 1, 1, 0.28]);
+  const firstBeatOpacity = useTransform(progress, [0.08, 0.18], [0, 1]);
   const firstBeatY = useTransform(progress, [0.08, 0.28, 0.6], [8, 0, -6]);
   const firstBeatScale = useTransform(progress, [0.08, 0.32, 0.62], [0.94, 1, 0.94]);
   const secondBeatOpacity = useTransform(progress, [0.48, 0.62, 0.94], [0, 1, 1]);
@@ -740,12 +744,16 @@ const ProjectMediaScene = ({ project, progress }) => {
   const communityBeat2Y = useTransform(progress, [0.34, 0.52, 0.84], [18, 0, -10]);
   const communityBeat3Opacity = useTransform(progress, [0.68, 0.82], [0, 1]);
   const communityBeat3Y = useTransform(progress, [0.68, 0.86], [18, 0]);
-  const ch1Opacity = useTransform(progress, [0, 0.08, 0.30, 0.42], [0, 1, 1, 0]);
-  const ch2Opacity = useTransform(progress, [0.26, 0.40, 0.58, 0.68], [0, 1, 1, 0]);
-  const ch3Opacity = useTransform(progress, [0.54, 0.66, 0.80, 0.88], [0, 1, 1, 0]);
-  const ch4Opacity = useTransform(progress, [0.76, 0.88], [0, 1]);
-  const joyFloatOpacity = useTransform(progress, [0.38, 0.52, 0.92], [0, 1, 0.88]);
-  const joyFloatY = useTransform(progress, [0.38, 0.56], [32, 0]);
+  const ch1Opacity = useTransform(progress, [0.04, 0.16], [0, 1]);
+  const ch2Opacity = useTransform(progress, [0.24, 0.36], [0, 1]);
+  const ch3Opacity = useTransform(progress, [0.44, 0.56], [0, 1]);
+  const ch4Opacity = useTransform(progress, [0.64, 0.76], [0, 1]);
+  const ch1Scale = useTransform(progress, [0.04, 0.18], [0.88, 1]);
+  const ch2Scale = useTransform(progress, [0.24, 0.38], [0.88, 1]);
+  const ch3Scale = useTransform(progress, [0.44, 0.58], [0.88, 1]);
+  const ch4Scale = useTransform(progress, [0.64, 0.78], [0.88, 1]);
+  const joyFloatOpacity = useTransform(progress, [0.48, 0.62], [0, 1]);
+  const joyFloatY = useTransform(progress, [0.48, 0.62], [16, 0]);
 
   if (media?.layout === 'horror') {
     const stills = media.assets.slice(0, 6);
@@ -850,29 +858,44 @@ const ProjectMediaScene = ({ project, progress }) => {
     const videos = media.assets.filter((asset) => asset.type === 'video' || /\.(mp4|webm)$/i.test(asset.src));
     const [primaryVideo, secondaryVideo] = videos;
 
+    // Stacked full-width — both videos full container width, playing simultaneously
     return (
-      <div
-        className='mx-auto flex w-full flex-col gap-2'
-        style={{ maxWidth: 'calc((100vh - 168px) * 8 / 9)', color: project.color }}
+      <motion.div
+        className='flex w-full flex-col gap-2'
+        style={{ opacity: firstBeatOpacity, scale: firstBeatScale, y: firstBeatY }}
       >
-        <motion.div
-          className='aspect-video w-full overflow-hidden rounded-[18px] bg-black shadow-[0_24px_70px_rgba(17,54,97,0.18)]'
-          style={{ opacity: firstBeatOpacity, scale: firstBeatScale, y: firstBeatY }}
-        >
-          {secondaryVideo ? (
-            <MediaAsset asset={secondaryVideo} className='h-full w-full object-cover opacity-95' />
-          ) : null}
-        </motion.div>
-
-        <motion.div
-          className='aspect-video w-full overflow-hidden rounded-[18px] bg-black shadow-[0_24px_70px_rgba(17,54,97,0.18)]'
-          style={{ opacity: secondBeatOpacity, scale: secondBeatScale, y: secondBeatY }}
-        >
+        {/* Video 1: Xpert Series */}
+        <div className='relative aspect-video w-full max-h-[calc(50vh-56px)] overflow-hidden rounded-[18px] bg-black shadow-[0_16px_48px_rgba(17,54,97,0.28)]'>
           {primaryVideo ? (
-            <MediaAsset asset={primaryVideo} className='h-full w-full object-cover opacity-95' />
+            <MediaAsset asset={primaryVideo} className='h-full w-full object-cover' />
           ) : null}
-        </motion.div>
-      </div>
+          <div className='absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent px-4 pb-3 pt-12'>
+            <div className='flex items-center gap-2'>
+              <span className='relative flex h-[5px] w-[5px]'>
+                <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-60' />
+                <span className='relative inline-flex h-[5px] w-[5px] rounded-full bg-red-500' />
+              </span>
+              <p className='text-[8px] font-bold uppercase tracking-[.18em] text-white/55'>Xpert Series</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Video 2: Community Response */}
+        <div className='relative aspect-video w-full max-h-[calc(50vh-56px)] overflow-hidden rounded-[18px] bg-black shadow-[0_16px_48px_rgba(17,54,97,0.28)]'>
+          {secondaryVideo ? (
+            <MediaAsset asset={secondaryVideo} className='h-full w-full object-cover' />
+          ) : null}
+          <div className='absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent px-4 pb-3 pt-12'>
+            <div className='flex items-center gap-2'>
+              <span className='relative flex h-[5px] w-[5px]'>
+                <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-60' />
+                <span className='relative inline-flex h-[5px] w-[5px] rounded-full bg-red-500' />
+              </span>
+              <p className='text-[8px] font-bold uppercase tracking-[.18em] text-white/55'>Community Response</p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     );
   }
 
@@ -1106,35 +1129,43 @@ const ProjectMediaScene = ({ project, progress }) => {
 
   if (media.layout === 'jollibee') {
     const [ch1, ch2, ch3, ch4, joy] = media.assets;
-    const chOpacities = [ch1Opacity, ch2Opacity, ch3Opacity, ch4Opacity];
+    const cells = [
+      { asset: ch1, opacity: ch1Opacity, scale: ch1Scale },
+      { asset: ch2, opacity: ch2Opacity, scale: ch2Scale },
+      { asset: ch3, opacity: ch3Opacity, scale: ch3Scale },
+      { asset: ch4, opacity: ch4Opacity, scale: ch4Scale },
+    ];
 
     return (
-      <SceneShell project={project}>
-        {/* Chapter video frame */}
-        <motion.div
-          className='absolute left-0 right-0 top-10 overflow-hidden rounded-2xl shadow-[0_18px_56px_rgba(234,27,59,0.10)] md:top-14'
-          style={{ scale: mainScale, y: mainY }}
-        >
-          <div className='relative w-full' style={{ aspectRatio: '16/9' }}>
-            {[ch1, ch2, ch3, ch4].map((ch, i) =>
-              ch ? (
-                <motion.figure key={i} className='absolute inset-0' style={{ opacity: chOpacities[i] }}>
-                  <MediaAsset asset={ch} className='h-full w-full object-cover' />
-                </motion.figure>
-              ) : null
-            )}
-          </div>
-        </motion.div>
-        {/* Joy character — multiply removes white bg on light section bg */}
+      <div className='relative grid grid-cols-2 gap-2 md:gap-3'>
+        {/* 2×2 bento cells */}
+        {cells.map(({ asset, opacity, scale }, i) =>
+          asset ? (
+            <motion.figure
+              key={i}
+              className='relative overflow-hidden rounded-[14px] bg-[#1C0508]'
+              style={{ aspectRatio: '16/9', opacity, scale }}
+            >
+              <MediaAsset asset={asset} className='h-full w-full object-cover' />
+              <div className='pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 to-transparent' />
+            </motion.figure>
+          ) : (
+            <div key={i} className='rounded-[14px] bg-[#1C0508]/30' style={{ aspectRatio: '16/9' }} />
+          )
+        )}
+
+        {/* Joy — flex overlay centered exactly at grid intersection, no transform conflict */}
         {joy ? (
-          <motion.figure
-            className='absolute -bottom-5 right-0 z-30 w-[32%]'
-            style={{ opacity: joyFloatOpacity, y: joyFloatY, mixBlendMode: 'multiply' }}
-          >
-            <MediaAsset asset={joy} className='aspect-square w-full object-contain' />
-          </motion.figure>
+          <div className='pointer-events-none absolute inset-0 z-20 flex items-center justify-center'>
+            <motion.figure
+              className='w-[42%] md:w-[36%]'
+              style={{ opacity: joyFloatOpacity, y: joyFloatY }}
+            >
+              <MediaAsset asset={joy} className='aspect-square w-full object-contain drop-shadow-[0_16px_40px_rgba(0,0,0,0.7)]' />
+            </motion.figure>
+          </div>
         ) : null}
-      </SceneShell>
+      </div>
     );
   }
 
@@ -1274,23 +1305,39 @@ const MobileMedia = ({ project }) => (
 );
 
 /* ── Outcome statement ── */
-const OutcomeStatement = ({ outcome, color, bg }) => (
-  <section
-    className='flex min-h-[24vh] items-center justify-center px-6 py-10 text-center md:min-h-[50vh] md:py-20'
-    style={{ backgroundColor: bg }}
-  >
-    <motion.p
-      className='text-[clamp(26px,8.5vw,36px)] font-bold leading-[1.0] tracking-[-0.045em] md:text-[clamp(48px,7vw,96px)]'
-      style={{ color }}
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-12%' }}
-      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+const OutcomeStatement = ({ outcome, color, bg }) => {
+  const reduced = useReducedMotion();
+  const words = outcome.split(' ');
+  return (
+    <section
+      className='flex min-h-[8vh] items-center justify-center px-6 py-6 text-center md:min-h-[14vh] md:py-10'
+      style={{ backgroundColor: bg }}
     >
-      {outcome}
-    </motion.p>
-  </section>
-);
+      <p
+        className='text-[clamp(20px,6vw,28px)] font-bold leading-[1.0] tracking-[-0.045em] md:text-[clamp(36px,5.5vw,72px)]'
+        style={{ color }}
+      >
+        {words.map((word, i) => (
+          <motion.span
+            key={i}
+            className='inline-block'
+            style={{ marginRight: '0.22em' }}
+            initial={{ opacity: reduced ? 1 : 0, y: reduced ? 0 : 36, filter: reduced ? 'none' : 'blur(6px)' }}
+            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            viewport={{ once: true, margin: '-10%' }}
+            transition={{
+              duration: reduced ? 0 : 0.75,
+              delay: reduced ? 0 : i * 0.09,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+          >
+            {word}
+          </motion.span>
+        ))}
+      </p>
+    </section>
+  );
+};
 
 const TrueLegacyMobileCase = ({ project, index, stage }) => {
   const media = projectMedia[project.id];
@@ -1813,6 +1860,70 @@ const BoehringerMobileCase = ({ project, index, stage }) => {
   );
 };
 
+/* ── JFC jollibee carousel with dot indicators ── */
+const JollibeeMobileScene = ({ project }) => {
+  const media = projectMedia[project.id];
+  const chapters = media?.assets?.slice(0, 4).filter(Boolean) ?? [];
+  const joy = media?.assets?.[4];
+  const scrollRef = useRef(null);
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const idx = Math.round(el.scrollLeft / el.offsetWidth);
+      setActiveIdx(Math.min(idx, chapters.length - 1));
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, [chapters.length]);
+
+  return (
+    <div className='flex flex-col gap-3'>
+      <div
+        ref={scrollRef}
+        className='flex gap-3 overflow-x-auto pb-1'
+        style={{ scrollSnapType: 'x mandatory', scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}
+      >
+        {chapters.map((ch, i) => (
+          <MobileMediaBeat
+            key={i}
+            delay={i * 0.04}
+            className='w-[82vw] shrink-0 overflow-hidden rounded-xl bg-black'
+            style={{ scrollSnapAlign: 'center' }}
+          >
+            <MediaAsset asset={ch} className='aspect-video w-full object-cover' />
+          </MobileMediaBeat>
+        ))}
+      </div>
+
+      {/* Dot indicators */}
+      <div className='flex items-center justify-center gap-2' aria-hidden='true'>
+        {chapters.map((_, i) => (
+          <motion.span
+            key={i}
+            className='block rounded-full'
+            animate={{
+              width: i === activeIdx ? 16 : 6,
+              height: 6,
+              backgroundColor: i === activeIdx ? project.color : '#d4d4d4',
+              opacity: i === activeIdx ? 1 : 0.5,
+            }}
+            transition={{ duration: 0.2 }}
+          />
+        ))}
+      </div>
+
+      {joy ? (
+        <MobileMediaBeat delay={0.1} className='mx-auto w-[64%]' style={{ mixBlendMode: 'multiply' }}>
+          <MediaAsset asset={joy} className='aspect-square w-full object-contain' />
+        </MobileMediaBeat>
+      ) : null}
+    </div>
+  );
+};
+
 /* ── Inline mobile media (no absolute positioning) ── */
 const MobileMediaScene = ({ project }) => {
   const media = projectMedia[project.id];
@@ -1894,32 +2005,7 @@ const MobileMediaScene = ({ project }) => {
   }
 
   if (media.layout === 'jollibee') {
-    const chapters = media.assets.slice(0, 4).filter(Boolean);
-    const joy = media.assets[4];
-    return (
-      <div className='flex flex-col gap-3'>
-        <div
-          className='flex gap-3 overflow-x-auto pb-1'
-          style={{ scrollSnapType: 'x mandatory', scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}
-        >
-          {chapters.map((ch, i) => (
-            <MobileMediaBeat
-              key={i}
-              delay={i * 0.04}
-              className='w-[82vw] shrink-0 overflow-hidden rounded-xl bg-black'
-              style={{ scrollSnapAlign: 'center' }}
-            >
-              <MediaAsset asset={ch} className='aspect-video w-full object-cover' />
-            </MobileMediaBeat>
-          ))}
-        </div>
-        {joy ? (
-          <MobileMediaBeat delay={0.1} className='mx-auto w-[64%]' style={{ mixBlendMode: 'multiply' }}>
-            <MediaAsset asset={joy} className='aspect-square w-full object-contain' />
-          </MobileMediaBeat>
-        ) : null}
-      </div>
-    );
+    return <JollibeeMobileScene project={project} />;
   }
 
   if (media.layout === 'community') {
@@ -2166,7 +2252,7 @@ const PinnedProjectSection = ({ project, index }) => {
         >
         {/* Sticky viewport */}
         <div
-          className='sticky top-[52px] h-[calc(100vh-52px)] overflow-hidden border-b md:top-[72px] md:h-[calc(100vh-72px)]'
+          className='sticky top-[52px] h-[calc(100vh-52px)] overflow-hidden md:top-[72px] md:h-[calc(100vh-72px)]'
           style={{ backgroundColor: stage.bg, borderColor: stage.rule }}
         >
 
@@ -2275,14 +2361,18 @@ const PinnedProjectSection = ({ project, index }) => {
 
               {/* Skills */}
               <motion.div className={`${compactMobile ? 'mt-3 hidden' : 'mt-8 flex'} flex-wrap gap-2 ${tightDesktop ? 'md:mt-5' : 'md:mt-8'} md:flex`} style={{ opacity: skillsOpacity }}>
-                {project.skills.map((s) => (
-                  <span
+                {project.skills.map((s, si) => (
+                  <motion.span
                     key={s}
                     className='rounded-full border px-3 py-1 text-xs font-semibold'
                     style={{ borderColor: `${project.color}50`, color: project.color }}
+                    initial={{ opacity: 0, scale: 0.88, y: 8 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.45, delay: si * 0.07, ease: [0.16, 1, 0.3, 1] }}
                   >
                     {s}
-                  </span>
+                  </motion.span>
                 ))}
               </motion.div>
             </div>
@@ -2299,7 +2389,7 @@ const PinnedProjectSection = ({ project, index }) => {
         </div>
       </div>
 
-      <OutcomeStatement outcome={project.outcome} color={project.color} bg='#f5f5f7' />
+      <OutcomeStatement outcome={project.outcome} color={project.color} bg={project.tint} />
     </>
   );
 };
@@ -2392,13 +2482,111 @@ const ProjectSection = ({ project, index }) => {
         </div>
       </section>
 
-      <OutcomeStatement outcome={project.outcome} color={project.color} bg={statementBg} />
+      <OutcomeStatement outcome={project.outcome} color={project.color} bg={project.tint} />
     </>
+  );
+};
+
+/* ── Work section dot nav ── */
+const WorkDotNav = () => {
+  const [activeId, setActiveId] = useState(null);
+  const [visible, setVisible] = useState(false);
+  const [hoveredId, setHoveredId] = useState(null);
+  const reduced = useReducedMotion();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const workEl = document.getElementById('work');
+      if (!workEl) return;
+
+      const scrollY = window.scrollY;
+      const vh = window.innerHeight;
+      const workTop = workEl.offsetTop;
+      const workBottom = workTop + workEl.offsetHeight;
+
+      setVisible(scrollY + vh * 0.3 >= workTop && scrollY < workBottom - vh * 0.1);
+
+      const scrollMid = scrollY + vh * 0.4;
+      for (let i = projectData.length - 1; i >= 0; i--) {
+        const el = document.getElementById(projectData[i].id);
+        if (el && el.offsetTop <= scrollMid) {
+          setActiveId(projectData[i].id);
+          return;
+        }
+      }
+      setActiveId(null);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleClick = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    window.scrollTo({ top: Math.max(el.offsetTop - 72, 0), behavior: 'smooth' });
+  };
+
+  return (
+    <motion.nav
+      aria-label='Jump to project'
+      className='fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-[10px] md:flex'
+      initial={false}
+      animate={reduced ? { opacity: visible ? 1 : 0 } : { opacity: visible ? 1 : 0, x: visible ? 0 : 10 }}
+      transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {projectData.map((project, i) => {
+        const isActive = activeId === project.id;
+        const isHovered = hoveredId === project.id;
+
+        return (
+          <div
+            key={project.id}
+            className='relative flex items-center justify-end'
+            onMouseEnter={() => setHoveredId(project.id)}
+            onMouseLeave={() => setHoveredId(null)}
+          >
+            {/* Tooltip */}
+            <motion.span
+              className='pointer-events-none absolute right-6 whitespace-nowrap rounded bg-neutral-950/90 px-2 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-white/80 [backdrop-filter:blur(8px)]'
+              initial={false}
+              animate={reduced ? { opacity: isHovered ? 1 : 0 } : { opacity: isHovered ? 1 : 0, x: isHovered ? 0 : 4 }}
+              transition={{ duration: 0.12 }}
+              aria-hidden='true'
+            >
+              <span className='mr-1.5 opacity-40'>{String(i + 1).padStart(2, '0')}</span>
+              {project.headline.split('\n')[0]}
+            </motion.span>
+
+            {/* Dot button */}
+            <button
+              onClick={() => handleClick(project.id)}
+              aria-label={`Jump to project ${i + 1}: ${project.headline.replace('\n', ' ')}`}
+              className='flex h-5 w-5 cursor-pointer items-center justify-center rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00AA9F] focus-visible:ring-offset-1'
+            >
+              <motion.span
+                className='block rounded-full'
+                initial={false}
+                animate={{
+                  width: isActive ? 8 : 5,
+                  height: isActive ? 8 : 5,
+                  backgroundColor: isActive ? project.color : '#d4d4d4',
+                  opacity: isActive ? 1 : isHovered ? 0.75 : 0.45,
+                }}
+                transition={{ duration: reduced ? 0 : 0.18 }}
+              />
+            </button>
+          </div>
+        );
+      })}
+    </motion.nav>
   );
 };
 
 export const InlineProjectsSection = () => (
   <div id='work'>
+    <WorkDotNav />
     {projectData.map((project, index) => (
       <PinnedProjectSection key={project.id} project={project} index={index} />
     ))}

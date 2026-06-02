@@ -25,24 +25,20 @@ const About = () => {
             </h2>
             <div className='text-xl md:text-2xl font-medium text-white/75 mt-6'>
               <p>
-                In a world where innovation reigns supreme, there&apos;s a
-                development communicator with a knack for sparking change.
-                She&apos;s all about creativity, startups, and the latest in
-                tech, armed with a degree and a boatload of experience in
-                shaping ideas and spreading messages.
+                I&apos;ve spent my career working with organizations trying to do something
+                meaningful. Sometimes that means launching products. Sometimes shifting
+                behavior. Sometimes rebuilding trust.
               </p>
               <p>
-                This hero isn&apos;t just words and ideas—she&apos;s a wizard
-                with software like Adobe Creative Suite, crafting visions that
-                come to life. But what sets them apart isn&apos;t just their
-                skills; it&apos;s their laser focus on perfection and their
-                knack for bringing together people from different sectors,
-                making amazing things happen.
+                I&apos;ve collaborated with startups, global brands, public institutions,
+                and mission‑driven teams across Southeast Asia and the US. The common
+                thread is always the same: understanding people first, then designing
+                around how they actually think, scroll, and decide.
               </p>
               <p>
-                Her goal isn&apos;t just a job—it&apos;s a mission to make the
-                world better, bit by bit, leaving behind a trail of awesome
-                projects that bring big changes to people&apos;s lives.
+                I&apos;m drawn to projects where creativity and structure meet. Where
+                storytelling is backed by insight. Where design is paired with data.
+                Where strategy still leaves room for instinct.
               </p>
             </div>
           </ScrollFadeIn>
