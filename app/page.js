@@ -245,7 +245,7 @@ const TaglineSection = () => (
         </p>
       </Reveal>
       <Reveal delay={0.08}>
-        <h2 className='mb-10 text-[clamp(30px,9.5vw,40px)] font-bold leading-[0.95] tracking-[-0.055em] text-neutral-950 md:text-[clamp(56px,8vw,112px)]'>
+        <h2 className='mb-10 text-[clamp(44px,13vw,60px)] font-bold leading-[0.95] tracking-[-0.055em] text-neutral-950 md:text-[clamp(56px,8vw,112px)]'>
           <span className='block'>Find the idea.</span>
           <span className='block'>Build the system.</span>
           <span className='block'>Make it felt.</span>
