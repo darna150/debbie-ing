@@ -42,10 +42,7 @@ const GIZ = () => {
             <div className='col-span-full'>
               <ScrollFadeIn>
                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
-                  I embarked on a mission to craft an advocacy video for GIZ, a
-                  commendable organization backed by the German government,
-                  dedicated to tackling environmental and climate change
-                  concerns.
+                  Advocacy can be loud and still fail to connect.
                 </h2>
               </ScrollFadeIn>
               <ThickLine color='bg-white' />
@@ -62,15 +59,10 @@ const GIZ = () => {
               <ThickLine color='bg-white' />
               <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
-                  Our central focus was to shed light on the challenges faced by
-                  women and to champion gender equality.
+                  Human stories led. Institutional voice stepped back.
                 </h2>
                 <p className='mt-2 md:mt-4'>
-                  The aim was clear: to stir consciousness and spark positive
-                  transformations within our society. Employing a blend of
-                  captivating narratives and powerful imagery, the video served
-                  as a poignant testament to the significance of empowering
-                  women in these vital fields.
+                  Advocacy can be loud and still fail to connect.
                 </p>
               </ScrollFadeIn>
             </div>
@@ -86,9 +78,7 @@ const GIZ = () => {
 
             <ScrollFadeIn className='col-span-full'>
               <p>
-                It became a canvas that artfully showcased GIZ&apos;s unwavering
-                commitment to forging a future that embraces inclusivity and
-                sustainability.
+                Empathy creates attention.
               </p>
             </ScrollFadeIn>
 

@@ -28,11 +28,10 @@ const Footer = () => {
     }
   }, [isInView, animate]);
 
-  // Copy email button
   const [isCopied, setIsCopied] = useState(false);
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('hol@justdebbie.ing');
+    navigator.clipboard.writeText('hello@justdebbie.ing');
     setIsCopied(true);
   };
 
@@ -65,12 +64,12 @@ const Footer = () => {
           onBlur={() => setIsCopied(false)}
         >
           <div>Email</div>
-          <div className='text-neutral-500 font-medium'>hol@justdebbie.ing</div>
+          <div className='text-neutral-500 font-medium'>hello@justdebbie.ing</div>
 
           <span
             className={`tooltiptext transform-gpu
-            absolute z-10 bg-white drop-shadow-md rounded-md bottom-[140%] md:bottom-[120%] left-1/2 -translate-x-1/2 
-            text-sm font-medium 
+            absolute z-10 bg-white drop-shadow-md rounded-md bottom-[140%] md:bottom-[120%] left-1/2 -translate-x-1/2
+            text-sm font-medium
             px-2.5 py-1.5
             invisible group-hover:visible group-focus-visible:visible
             ${isCopied ? 'text-green-600' : 'text-neutral-500'}

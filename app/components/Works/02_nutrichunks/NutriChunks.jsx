@@ -49,12 +49,8 @@ const NutriChunks = () => {
             <ScrollFadeIn className='col-span-full'>
               <div className='flex flex-col-reverse md:flex-row gap-y-12 gap-x-20'>
                 <p className='w-full md:w-6/12'>
-                  Our journey began with an intricate process of unraveling the
-                  desires and habits of our potential buyers, sculpting a vivid
-                  persona that mirrored our target market. This pivotal step
-                  paved the way for a tailored approach, using social media as
-                  our canvas to weave messages finely tuned to meet their unique
-                  needs.
+                  Pet food sits in a deeply emotional category. Owners are not
+                  only buying nutrition. They are caring for a relationship.
                 </p>
                 <div className='w-full md:w-6/12'>
                   <Image
@@ -72,19 +68,11 @@ const NutriChunks = () => {
               <ThickLine color='bg-white' />
               <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold'>
-                  <span className='text-2xl md:text-3xl font-medium block mb-4'>
-                    Yet, it wasn&apos;t solely about crafting the perfect
-                    message
-                  </span>
-                  —it was about ensuring it reached the right eyes at the right
-                  time.
+                  We shifted the brand toward participation.
                 </h2>
                 <p className='mt-2 md:mt-12'>
-                  With this in mind, we orchestrated the implementation of a
-                  seamless e-commerce infrastructure. This streamlined system
-                  guaranteed swift product deliveries within a mere 1 to 2 days,
-                  embracing the essence of convenience our customers yearned
-                  for.
+                  Everyday routines, shared experiences, and long‑term
+                  connection.
                 </p>
               </ScrollFadeIn>
             </div>
@@ -125,14 +113,12 @@ const NutriChunks = () => {
               <div className='flex flex-col md:flex-row gap-y-12 gap-x-20 mt-12'>
                 <ScrollFadeIn className='w-full md:w-6/12'>
                   <h2 className='text-4xl md:text-5xl font-bold mb-8'>
-                    But our efforts didn&apos;t cease there.
+                    When people feel recognized, loyalty becomes natural.
                   </h2>
                   <p>
-                    Understanding the vitality of loyalty in fostering enduring
-                    relationships, we unveiled an enchanting rewards program.
-                    This initiative not only gratified our customers but also
-                    tethered them to the Nutri Chunks brand, fostering a bond
-                    beyond mere transactions.
+                    Pet food sits in a deeply emotional category. Owners are
+                    not only buying nutrition. They are caring for a
+                    relationship.
                   </p>
                 </ScrollFadeIn>
                 <div className='w-full md:w-6/12'>
@@ -149,9 +135,7 @@ const NutriChunks = () => {
             <div className='col-span-full'>
               <ScrollFadeIn>
                 <p>
-                  United, these strategic endeavors weren&apos;t just pieces of
-                  a puzzle—they were the building blocks that fortified Nutri
-                  Chunks as the go-to choice for pet owners.
+                  When people feel recognized, loyalty becomes natural.
                 </p>
               </ScrollFadeIn>
               <div className='w-full my-16'>
@@ -162,13 +146,6 @@ const NutriChunks = () => {
                   placeholder='blur'
                 />
               </div>
-              <ScrollFadeIn>
-                <p>
-                  We didn&apos;t just offer a product; we crafted an
-                  experience—a seamless, gratifying journey that resonated
-                  deeply with the hearts of our customers.
-                </p>
-              </ScrollFadeIn>
               <div className='w-full my-16'>
                 <VimeoVideo
                   videoID='925741617'

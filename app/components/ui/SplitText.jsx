@@ -19,7 +19,7 @@ const SplitText = ({ children, animateOnce = true }) => {
       {splitText.map((char, index) => (
         <span
           key={index}
-          className='inline-block overflow-hidden pb-4 -mb-4 pr-1 -mr-1'
+          className='inline-block overflow-hidden pb-[0.12em] -mb-[0.12em] pr-1 -mr-1'
         >
           <motion.span
             className='inline-block'

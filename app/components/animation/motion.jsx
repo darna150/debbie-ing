@@ -2,21 +2,26 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-export const ScrollFadeIn = ({ children, className }) => {
+export const ScrollFadeIn = ({
+  children,
+  className,
+  minOpacity = 0,
+  offset = ['0 1', '50vh 1'],
+  yFrom = 0,
+}) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['0 1', '50vh 1'],
+    offset,
   });
 
-  // const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.98, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [minOpacity, 1]);
+  const y = useTransform(scrollYProgress, [0, 1], [yFrom, 0]);
 
   return (
     <motion.div
       ref={ref}
-      style={{
-        opacity: scrollYProgress,
-      }}
+      style={{ opacity, ...(yFrom !== 0 ? { y } : {}) }}
       className={className}
     >
       {children}

@@ -38,9 +38,9 @@ const ChickenEssentials = () => {
               />
               <ScrollFadeIn>
                 <p className='text-black !font-bold mt-6'>
-                  Amidst the bustling aspirations of Chicken Essentials Phils.,
-                  Inc. to broaden their business horizons, an intriguing task
-                  landed on my desk.
+                  Protein, nutrition, and poultry are often discussed in
+                  technical language. The opportunity was to translate these
+                  ideas into everyday relevance.
                 </p>
               </ScrollFadeIn>
             </div>
@@ -49,11 +49,9 @@ const ChickenEssentials = () => {
               <ThickLine color='bg-black' />
               <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-[#D00200]'>
-                  <span className='text-2xl md:text-3xl font-medium block mb-4 text-black/90'>
-                    It was no ordinary assignment but a grand opportunity:
-                  </span>
-                  to craft an audiovisual masterpiece that would illuminate the
-                  company&apos;s prowess to potential investors.
+                  We built content systems that helped farmers, distributors,
+                  and consumers understand quality, health, and value in
+                  practical ways.
                 </h2>
               </ScrollFadeIn>
             </div>
@@ -63,10 +61,9 @@ const ChickenEssentials = () => {
               <div className='md:max-w-[85%] mx-auto mt-12 flex flex-col-reverse md:flex-row gap-y-12 gap-x-20 items-center'>
                 <ScrollFadeIn className='w-full md:w-8/12'>
                   <p>
-                    Entrusted with this vital mission, I, together with a
-                    skillful production team embarked on a journey to
-                    encapsulate the very essence of Chicken Essentials Phils.,
-                    Inc.
+                    Education became the foundation of trust. When people
+                    understand what they are buying and why it matters, they
+                    stay loyal.
                   </p>
                 </ScrollFadeIn>
                 <div className='w-full md:w-4/12'>
@@ -84,14 +81,7 @@ const ChickenEssentials = () => {
               <ThickLine color='bg-black' />
               <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-[#D00200]'>
-                  <span className='text-2xl md:text-3xl font-medium block mb-4 text-black/90'>
-                    What made this company stand out wasn&apos;t just their
-                    products but something deeper
-                  </span>
-                  <span className='text-black'>—</span>a genuine, empathetic
-                  approach towards customers, employees, and Filipino families.
-                  This wasn&apos;t just a feature; it was their greatest
-                  strength, and it begged to be unveiled to the world.
+                  Education became the foundation of trust.
                 </h2>
               </ScrollFadeIn>
             </div>
@@ -107,10 +97,8 @@ const ChickenEssentials = () => {
 
             <ScrollFadeIn className='col-span-full'>
               <p>
-                With each frame meticulously crafted, the audiovisual
-                presentation began to take shape. It wasn&apos;t merely a
-                sequence of images and words; it was a narrative, a story that
-                resonated with warmth and sincerity.
+                When people understand what they are buying and why it matters,
+                they stay loyal.
               </p>
             </ScrollFadeIn>
 
@@ -118,9 +106,7 @@ const ChickenEssentials = () => {
               <ThickLine color='bg-black' />
               <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-[#D00200]'>
-                  Through carefully chosen visuals and evocative storytelling,
-                  the video came alive, breathing the very spirit of Chicken
-                  Essentials Phils., Inc.
+                  Chicken Essentials: Building a Category Through Education
                 </h2>
               </ScrollFadeIn>
             </div>

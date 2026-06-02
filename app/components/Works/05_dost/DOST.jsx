@@ -47,10 +47,7 @@ const DOST = () => {
             {/* Intro  */}
             <ScrollFadeIn className='col-span-full m-auto'>
               <p className='w-full'>
-                The Department of Science and Technology (DOST) ignited a bold
-                movement, a commitment to drive Science, Technology, and
-                Innovation in the country through the groundbreaking Science for
-                Change Program.
+                Science communication often struggles with accessibility.
               </p>
             </ScrollFadeIn>
 
@@ -59,15 +56,11 @@ const DOST = () => {
               <ThickLine color='bg-white' />
               <ScrollFadeIn className='mt-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
-                  As fate would have it, I found myself leading a team of
-                  dynamic multimedia specialists entrusted with the pivotal task
-                  of bringing the program&apos;s essence to life.
+                  We translated complexity into real stories, real applications,
+                  and tangible impact.
                 </h2>
                 <p className='mt-2 md:mt-4'>
-                  Our canvas? The prestigious Grand Ballroom of the Crimson
-                  Hotel in Muntinlupa City, where the air buzzed with
-                  anticipation for the event themed &quot;Science for the
-                  People.&quot;
+                  Science communication often struggles with accessibility.
                 </p>
               </ScrollFadeIn>
             </div>
@@ -83,14 +76,7 @@ const DOST = () => {
               <div className='relative flex flex-col md:flex-row gap-y-12 gap-x-20'>
                 <ScrollFadeIn className='w-full md:w-7/12 md:sticky md:top-0'>
                   <p>
-                    The stage was set for an unprecedented gathering—a
-                    convergence of minds, expertise, and unwavering passion.
-                    <br />
-                    <br />
-                    The event wasn&apos;t just a milestone; it was a
-                    testament—an embodiment of the Science for Change
-                    Program&apos;s unwavering pledge to uplift lives through
-                    transformative innovation.
+                    Curiosity expands when science feels relatable.
                   </p>
                 </ScrollFadeIn>
                 <div className='w-full md:w-5/12 flex flex-col gap-4 md:gap-8'>
