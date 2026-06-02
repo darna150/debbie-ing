@@ -2600,11 +2600,29 @@ const WorkDotNav = () => {
   );
 };
 
-export const InlineProjectsSection = () => (
-  <div id='work'>
-    <WorkDotNav />
-    {projectData.map((project, index) => (
-      <PinnedProjectSection key={project.id} project={project} index={index} />
-    ))}
-  </div>
-);
+export const InlineProjectsSection = () => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+
+  return (
+    <div id='work'>
+      {mounted ? (
+        <>
+          <WorkDotNav />
+          {projectData.map((project, index) => (
+            <PinnedProjectSection key={project.id} project={project} index={index} />
+          ))}
+        </>
+      ) : (
+        /* SSR placeholder — matches each section's bg color to prevent layout shift */
+        projectData.map((project) => (
+          <div
+            key={project.id}
+            id={project.id}
+            style={{ minHeight: '300vh', backgroundColor: stageThemes[project.id]?.bg ?? '#f5f5f7' }}
+          />
+        ))
+      )}
+    </div>
+  );
+};

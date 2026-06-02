@@ -38,6 +38,7 @@ const Reveal = ({ children, delay = 0, y = 28 }) => {
   const reduced = useReducedMotion();
   return (
     <motion.div
+      suppressHydrationWarning
       initial={{ opacity: reduced ? 1 : 0, y: reduced ? 0 : y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-12%' }}
@@ -164,7 +165,7 @@ const Hero = () => {
       ref={ref}
       className='relative flex min-h-screen flex-col justify-between overflow-hidden bg-[#f5f5f7] px-6 pb-14 pt-28 md:px-16 md:pb-20 md:pt-36'
     >
-      <motion.div style={{ y, opacity }} className='flex flex-col'>
+      <motion.div style={{ y, opacity }} className='flex flex-col' suppressHydrationWarning>
         <Reveal>
           <p className='mb-8 text-xs font-bold uppercase tracking-[0.28em] text-neutral-400'>
             Debbie Melgarejo · Creative director · Brand, agency + nonprofit · Manila / remote
