@@ -149,6 +149,9 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.55], [1, 0]);
   const reduced = useReducedMotion();
   const [phraseIdx, setPhraseIdx] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     if (reduced) return;
@@ -195,20 +198,24 @@ const Hero = () => {
               </span>
             ))}
           </div>
-          {/* Mobile: single cycling phrase */}
+          {/* Mobile: single cycling phrase — client-only to avoid SSR hydration mismatch */}
           <div className='flex h-6 items-center overflow-hidden md:hidden'>
-            <AnimatePresence mode='wait'>
-              <motion.span
-                key={phraseIdx}
-                className='text-sm font-medium text-neutral-500'
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              >
-                {HERO_PHRASES[phraseIdx]}
-              </motion.span>
-            </AnimatePresence>
+            {mounted ? (
+              <AnimatePresence mode='wait'>
+                <motion.span
+                  key={phraseIdx}
+                  className='text-sm font-medium text-neutral-500'
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  {HERO_PHRASES[phraseIdx]}
+                </motion.span>
+              </AnimatePresence>
+            ) : (
+              <span className='text-sm font-medium text-neutral-500'>{HERO_PHRASES[0]}</span>
+            )}
           </div>
           <a
             href='#work'

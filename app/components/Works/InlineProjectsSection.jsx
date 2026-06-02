@@ -1867,6 +1867,9 @@ const JollibeeMobileScene = ({ project }) => {
   const joy = media?.assets?.[4];
   const scrollRef = useRef(null);
   const [activeIdx, setActiveIdx] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -1898,21 +1901,29 @@ const JollibeeMobileScene = ({ project }) => {
         ))}
       </div>
 
-      {/* Dot indicators */}
+      {/* Dot indicators — client-only to avoid hydration mismatch */}
       <div className='flex items-center justify-center gap-2' aria-hidden='true'>
-        {chapters.map((_, i) => (
-          <motion.span
-            key={i}
-            className='block rounded-full'
-            animate={{
-              width: i === activeIdx ? 16 : 6,
-              height: 6,
-              backgroundColor: i === activeIdx ? project.color : '#d4d4d4',
-              opacity: i === activeIdx ? 1 : 0.5,
-            }}
-            transition={{ duration: 0.2 }}
-          />
-        ))}
+        {chapters.map((_, i) =>
+          mounted ? (
+            <motion.span
+              key={i}
+              className='block rounded-full'
+              animate={{
+                width: i === activeIdx ? 16 : 6,
+                height: 6,
+                backgroundColor: i === activeIdx ? project.color : '#d4d4d4',
+                opacity: i === activeIdx ? 1 : 0.5,
+              }}
+              transition={{ duration: 0.2 }}
+            />
+          ) : (
+            <span
+              key={i}
+              className='block rounded-full'
+              style={{ width: 6, height: 6, backgroundColor: '#d4d4d4', opacity: 0.5 }}
+            />
+          )
+        )}
       </div>
 
       {joy ? (
@@ -2489,10 +2500,13 @@ const ProjectSection = ({ project, index }) => {
 
 /* ── Work section dot nav ── */
 const WorkDotNav = () => {
+  const [mounted, setMounted] = useState(false);
   const [activeId, setActiveId] = useState(null);
   const [visible, setVisible] = useState(false);
   const [hoveredId, setHoveredId] = useState(null);
   const reduced = useReducedMotion();
+
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -2527,6 +2541,8 @@ const WorkDotNav = () => {
     if (!el) return;
     window.scrollTo({ top: Math.max(el.offsetTop - 72, 0), behavior: 'smooth' });
   };
+
+  if (!mounted) return null;
 
   return (
     <motion.nav
