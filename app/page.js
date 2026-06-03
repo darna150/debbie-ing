@@ -371,7 +371,7 @@ const Footer = () => (
 
       <div className='border-t border-white/10 pt-14'>
         <Reveal delay={0.1}>
-          <h2 className='mb-10 text-[clamp(36px,11vw,52px)] font-bold leading-[0.9] tracking-[-0.06em] md:text-[clamp(72px,11vw,160px)]'>
+          <h2 className='mb-10 text-[clamp(36px,11vw,52px)] font-bold leading-[0.9] tracking-[-0.06em] md:text-[clamp(56px,6vw,88px)]'>
             Tell me<br />what you&apos;re making.
           </h2>
         </Reveal>
