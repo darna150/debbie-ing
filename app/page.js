@@ -172,7 +172,13 @@ const Hero = () => {
       <motion.div style={mounted ? { y, opacity } : {}} className='flex flex-col'>
         <Reveal>
           <p className='mb-8 text-xs font-bold uppercase tracking-[0.28em] text-neutral-400'>
-            Debbie Melgarejo · Creative director · Brand, agency + nonprofit · Manila / remote
+            <span className='block md:inline'>Debbie Melgarejo</span>
+            <span className='hidden md:inline'> · </span>
+            <span className='block md:inline'>Creative director</span>
+            <span className='hidden md:inline'> · </span>
+            <span className='block md:inline'>Brand, agency + nonprofit</span>
+            <span className='hidden md:inline'> · </span>
+            <span className='block md:inline'>Manila / remote</span>
           </p>
         </Reveal>
 
