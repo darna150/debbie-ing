@@ -183,7 +183,7 @@ const Hero = () => {
         </Reveal>
 
         <Reveal delay={0.06}>
-          <h1 className='mb-7 text-[clamp(58px,19vw,76px)] font-bold leading-[0.88] tracking-[-0.075em] text-neutral-950 md:text-[clamp(108px,14vw,196px)]'>
+          <h1 className='mb-7 whitespace-nowrap text-[clamp(58px,19vw,76px)] font-bold leading-[0.88] tracking-[-0.075em] text-neutral-950 md:text-[clamp(108px,14vw,196px)]'>
             debbie-ing.
           </h1>
         </Reveal>
@@ -251,7 +251,7 @@ const TaglineSection = () => (
         </p>
       </Reveal>
       <Reveal delay={0.08}>
-        <h2 className='mb-10 text-[clamp(44px,13vw,60px)] font-bold leading-[0.95] tracking-[-0.055em] text-neutral-950 md:text-[clamp(56px,8vw,112px)]'>
+        <h2 className='mb-10 text-[clamp(36px,10vw,52px)] font-bold leading-[0.95] tracking-[-0.055em] text-neutral-950 md:text-[clamp(56px,8vw,112px)]'>
           <span className='block'>Find the idea.</span>
           <span className='block'>Build the system.</span>
           <span className='block'>Make it felt.</span>
