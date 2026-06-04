@@ -264,7 +264,7 @@ const projectMedia = {
       { src: '/works/jfc/jfc_universe chapter2.mp4', type: 'video', alt: 'JFC Universe Chapter 2' },
       { src: '/works/jfc/jfc_universe chapter3.mp4', type: 'video', alt: 'JFC Universe Chapter 3' },
       { src: '/works/jfc/jfc_universe chapter4.mp4', type: 'video', alt: 'JFC Universe Chapter 4' },
-      { src: '/works/jfc/joy-waving.mp4', alt: 'Joy character waving', type: 'video' },
+      { src: '/works/jfc/joy-waving.webm', fallbackSrc: '/works/jfc/joy-waving.mp4', alt: 'Joy character waving', type: 'video' },
     ],
   },
   dost: {
@@ -553,10 +553,11 @@ const MediaAsset = ({ asset, className }) => {
   }, [videoSrc]);
 
   if (isVideo) {
+    const hasMultiSource = asset.fallbackSrc && videoSrc;
     return (
       <video
         ref={videoRef}
-        src={videoSrc || undefined}
+        src={hasMultiSource ? undefined : (videoSrc || undefined)}
         aria-label={asset.alt}
         className={className}
         autoPlay
@@ -564,7 +565,10 @@ const MediaAsset = ({ asset, className }) => {
         loop
         playsInline
         preload="none"
-      />
+      >
+        {hasMultiSource && <source src={videoSrc} type="video/webm" />}
+        {hasMultiSource && <source src={asset.fallbackSrc} type="video/mp4" />}
+      </video>
     );
   }
 
