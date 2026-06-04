@@ -1,6 +1,6 @@
 'use client';
 
-/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
 import { useRef, useCallback, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring, useReducedMotion } from 'framer-motion';
 
@@ -153,7 +153,7 @@ const projectMedia = {
         ratio: '1:1',
       },
       {
-        src: '/works/true-legacy/Trust%3Aproof%20social%20image.png',
+        src: '/works/true-legacy/trust-proof-social-image.png',
         alt: 'True Legacy Homes social content',
         label: 'Trust proof',
         ratio: '1:1',
@@ -264,7 +264,7 @@ const projectMedia = {
       { src: '/works/jfc/jfc_universe chapter2.mp4', type: 'video', alt: 'JFC Universe Chapter 2' },
       { src: '/works/jfc/jfc_universe chapter3.mp4', type: 'video', alt: 'JFC Universe Chapter 3' },
       { src: '/works/jfc/jfc_universe chapter4.mp4', type: 'video', alt: 'JFC Universe Chapter 4' },
-      { src: '/works/jfc/joy-waving.gif', alt: 'Joy character waving' },
+      { src: '/works/jfc/joy-waving.mp4', alt: 'Joy character waving', type: 'video' },
     ],
   },
   dost: {
@@ -281,29 +281,34 @@ const projectMedia = {
         type: 'video',
       },
       {
-        src: '/works/dost/dost animated 1.gif',
+        src: '/works/dost/dost-animated-1.mp4',
         alt: 'DOST science moment',
         label: 'Human moment',
+        type: 'video',
       },
       {
-        src: '/works/dost/dost animated 2.gif',
+        src: '/works/dost/dost-animated-2.mp4',
         alt: 'DOST broadcast moment',
         label: 'Science story',
+        type: 'video',
       },
       {
-        src: '/works/dost/dost animated 3.gif',
+        src: '/works/dost/dost-animated-3.mp4',
         alt: 'DOST animated science story moment',
         label: 'Science story',
+        type: 'video',
       },
       {
-        src: '/works/dost/dost animated 4.gif',
+        src: '/works/dost/dost-animated-4.mp4',
         alt: 'DOST animated research application moment',
         label: 'Research application',
+        type: 'video',
       },
       {
-        src: '/works/dost/dost animated 5.gif',
+        src: '/works/dost/dost-animated-5.mp4',
         alt: 'DOST animated public science moment',
         label: 'Public science',
+        type: 'video',
       },
     ],
   },
@@ -509,8 +514,17 @@ const MediaPlaceholder = ({ project }) => {
   );
 };
 
+/* Split className: object-* and opacity-* apply to the image; everything else sizes the wrapper. */
+function splitImgClass(className) {
+  const parts = (className || '').split(' ').filter(Boolean);
+  const img = parts.filter((c) => c.startsWith('object-') || c.startsWith('opacity-') || c.startsWith('brightness-'));
+  const wrap = parts.filter((c) => !img.includes(c));
+  return { imgClass: img.join(' '), wrapClass: wrap.join(' ') };
+}
+
 const MediaAsset = ({ asset, className }) => {
   const isVideo = asset.type === 'video' || /\.(mp4|webm)$/i.test(asset.src);
+  const isGif = /\.gif$/i.test(asset.src);
   const videoRef = useRef(null);
   const [videoSrc, setVideoSrc] = useState(null);
 
@@ -554,9 +568,20 @@ const MediaAsset = ({ asset, className }) => {
     );
   }
 
+  const { imgClass, wrapClass } = splitImgClass(className);
+
   return (
     <>
-      <img src={asset.src} alt={asset.alt} className={className} loading='lazy' />
+      <span className={`relative block ${wrapClass}`}>
+        <Image
+          src={asset.src}
+          alt={asset.alt}
+          fill
+          unoptimized={isGif}
+          className={imgClass || 'object-cover'}
+          sizes="(max-width: 640px) 100vw, 50vw"
+        />
+      </span>
       {asset.label ? <figcaption className='sr-only'>{asset.label}</figcaption> : null}
     </>
   );
@@ -587,11 +612,6 @@ const StillPlaceholder = ({ asset, project, index, className }) => (
 
 const AzazelStill = ({ asset, project, index, className }) => {
   const [loaded, setLoaded] = useState(false);
-  const handleImageRef = useCallback((node) => {
-    if (node?.complete && node.naturalWidth > 0) {
-      setLoaded(true);
-    }
-  }, []);
 
   return (
     <div className={`relative overflow-hidden bg-black ${className}`} style={{ aspectRatio: '16 / 9' }}>
@@ -603,20 +623,19 @@ const AzazelStill = ({ asset, project, index, className }) => {
           className='absolute inset-0'
         />
       ) : null}
-      <img
-        ref={handleImageRef}
+      <Image
         src={asset.src}
         alt={asset.alt}
-        className='absolute inset-0 h-full w-full object-cover opacity-90 transition-opacity duration-500'
+        fill
+        className='object-cover opacity-90 transition-opacity duration-500'
+        sizes="(max-width: 768px) 50vw, 33vw"
         onLoad={() => setLoaded(true)}
         onError={(e) => {
           e.currentTarget.style.display = 'none';
         }}
       />
       {loaded ? (
-        <>
-          <div className='absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/20' />
-        </>
+        <div className='absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/20' />
       ) : null}
     </div>
   );
@@ -643,11 +662,13 @@ const ProjectLogo = ({ project, className = '' }) => {
   }
 
   return (
-    <div className={`flex h-9 w-24 items-center ${className}`}>
-      <img
+    <div className={`relative flex h-9 w-24 items-center ${className}`}>
+      <Image
         src={logo.src}
         alt={logo.alt}
-        className='max-h-full max-w-full object-contain'
+        fill
+        className='object-contain'
+        sizes="96px"
       />
     </div>
   );
