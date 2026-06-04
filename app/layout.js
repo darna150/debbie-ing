@@ -60,6 +60,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Warm up connections for analytics scripts before they're requested */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://cdn.seline.so" />
+      </head>
       <body className={inter.className}>
         <Script strategy="lazyOnLoad" src="https://cdn.seline.so/seline.js" />
         {children}

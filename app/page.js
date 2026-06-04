@@ -309,17 +309,19 @@ const AboutSection = () => (
   >
     <div className='mx-auto grid max-w-[1100px] items-start gap-14 md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr]'>
 
-      {/* Portrait placeholder */}
+      {/* Portrait — aspect-square reserves the 600×600 space before the GIF loads, preventing CLS */}
       <Reveal>
-        <img
-          src='/debbie/debbie_blink.gif'
-          alt='Debbie Melgarejo, creative director'
-          className='mx-auto w-full max-w-[260px] md:max-w-none'
-          loading='lazy'
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
+        <div className='mx-auto aspect-square w-full max-w-[260px] md:max-w-none'>
+          <img
+            src='/debbie/debbie_blink.gif'
+            alt='Debbie Melgarejo, creative director'
+            className='h-full w-full object-contain'
+            loading='lazy'
+            onError={(e) => {
+              e.currentTarget.parentElement.style.display = 'none';
+            }}
+          />
+        </div>
       </Reveal>
 
       <div>
