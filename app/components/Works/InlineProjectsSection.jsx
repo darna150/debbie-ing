@@ -264,7 +264,7 @@ const projectMedia = {
       { src: '/works/jfc/jfc_universe chapter2.mp4', type: 'video', alt: 'JFC Universe Chapter 2' },
       { src: '/works/jfc/jfc_universe chapter3.mp4', type: 'video', alt: 'JFC Universe Chapter 3' },
       { src: '/works/jfc/jfc_universe chapter4.mp4', type: 'video', alt: 'JFC Universe Chapter 4' },
-      { src: '/works/jfc/joy-waving.mp4', alt: 'Joy character waving', type: 'video' },
+      { src: '/works/jfc/joy-waving.webm', fallbackSrc: '/works/jfc/joy-waving.mp4', alt: 'Joy character waving', type: 'video' },
     ],
   },
   dost: {
@@ -553,10 +553,11 @@ const MediaAsset = ({ asset, className }) => {
   }, [videoSrc]);
 
   if (isVideo) {
+    const hasMultiSource = asset.fallbackSrc && videoSrc;
     return (
       <video
         ref={videoRef}
-        src={videoSrc || undefined}
+        src={hasMultiSource ? undefined : (videoSrc || undefined)}
         aria-label={asset.alt}
         className={className}
         autoPlay
@@ -564,7 +565,10 @@ const MediaAsset = ({ asset, className }) => {
         loop
         playsInline
         preload="none"
-      />
+      >
+        {hasMultiSource && <source src={videoSrc} type="video/webm" />}
+        {hasMultiSource && <source src={asset.fallbackSrc} type="video/mp4" />}
+      </video>
     );
   }
 
@@ -1328,34 +1332,21 @@ const MobileMedia = ({ project }) => (
 /* ── Outcome statement ── */
 const OutcomeStatement = ({ outcome, color, bg }) => {
   const reduced = useReducedMotion();
-  const words = outcome.split(' ');
   return (
     <section
       className='flex min-h-[8vh] items-center justify-center px-6 py-6 text-center md:min-h-[14vh] md:py-10'
       style={{ backgroundColor: bg }}
     >
-      <p
+      <motion.p
         className='text-[clamp(20px,6vw,28px)] font-bold leading-[1.0] tracking-[-0.045em] md:text-[clamp(36px,5.5vw,72px)]'
         style={{ color }}
+        initial={{ opacity: reduced ? 1 : 0, y: reduced ? 0 : 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-10%' }}
+        transition={{ duration: reduced ? 0 : 0.65, ease: [0.16, 1, 0.3, 1] }}
       >
-        {words.map((word, i) => (
-          <motion.span
-            key={i}
-            className='inline-block'
-            style={{ marginRight: '0.22em' }}
-            initial={{ opacity: reduced ? 1 : 0, y: reduced ? 0 : 36, filter: reduced ? 'none' : 'blur(6px)' }}
-            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            viewport={{ once: true, margin: '-10%' }}
-            transition={{
-              duration: reduced ? 0 : 0.75,
-              delay: reduced ? 0 : i * 0.09,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-          >
-            {word}
-          </motion.span>
-        ))}
-      </p>
+        {outcome}
+      </motion.p>
     </section>
   );
 };
