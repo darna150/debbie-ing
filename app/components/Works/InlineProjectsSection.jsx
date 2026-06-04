@@ -522,7 +522,7 @@ function splitImgClass(className) {
   return { imgClass: img.join(' '), wrapClass: wrap.join(' ') };
 }
 
-const MediaAsset = ({ asset, className }) => {
+const MediaAsset = ({ asset, className, sizes = '(max-width: 640px) 85vw, 50vw' }) => {
   const isVideo = asset.type === 'video' || /\.(mp4|webm)$/i.test(asset.src);
   const isGif = /\.gif$/i.test(asset.src);
   const videoRef = useRef(null);
@@ -583,7 +583,7 @@ const MediaAsset = ({ asset, className }) => {
           fill
           unoptimized={isGif}
           className={imgClass || 'object-cover'}
-          sizes="(max-width: 640px) 100vw, 50vw"
+          sizes={sizes}
         />
       </span>
       {asset.label ? <figcaption className='sr-only'>{asset.label}</figcaption> : null}
@@ -857,6 +857,7 @@ const ProjectMediaScene = ({ project, progress }) => {
               <MediaAsset
                 asset={featuredPortrait}
                 className='aspect-[4/5] w-full object-contain drop-shadow-[0_12px_28px_rgba(0,0,0,0.14)]'
+                sizes='(max-width: 768px) 70vw, 300px'
               />
             </figure>
           ) : null}
@@ -870,6 +871,7 @@ const ProjectMediaScene = ({ project, progress }) => {
                 <MediaAsset
                   asset={asset}
                   className='aspect-[4/5] w-full object-contain drop-shadow-[0_10px_22px_rgba(0,0,0,0.12)]'
+                  sizes='(max-width: 768px) 22vw, 150px'
                 />
               </figure>
             ))}
@@ -974,7 +976,7 @@ const ProjectMediaScene = ({ project, progress }) => {
                 key={asset.src}
                 className='overflow-visible'
               >
-                <MediaAsset asset={asset} className='aspect-square w-full object-contain drop-shadow-[0_12px_28px_rgba(0,0,0,0.14)]' />
+                <MediaAsset asset={asset} className='aspect-square w-full object-contain drop-shadow-[0_12px_28px_rgba(0,0,0,0.14)]' sizes='(max-width: 768px) 30vw, 16vw' />
               </figure>
             ))}
           </motion.div>
@@ -1208,7 +1210,7 @@ const ProjectMediaScene = ({ project, progress }) => {
               key={`${asset.src}-${i}`}
               className='w-[42%] shrink-0 overflow-hidden rounded-2xl bg-neutral-950 shadow-[0_20px_60px_rgba(0,0,0,0.2)]'
             >
-              <MediaAsset asset={asset} className='h-[210px] w-full object-cover opacity-95 md:h-[340px]' />
+              <MediaAsset asset={asset} className='h-[210px] w-full object-cover opacity-95 md:h-[340px]' sizes='(max-width: 768px) 80vw, 30vw' />
             </figure>
           ))}
         </motion.div>
