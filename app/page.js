@@ -3,7 +3,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useReducedMotion } from 'framer-motion';
-import { InlineProjectsSection } from './components/Works/InlineProjectsSection';
+import dynamic from 'next/dynamic';
+
+const InlineProjectsSection = dynamic(
+  () => import('./components/Works/InlineProjectsSection').then((m) => ({ default: m.InlineProjectsSection })),
+);
 
 /* ─── Services ─── */
 const services = [
@@ -311,6 +315,7 @@ const AboutSection = () => (
           src='/debbie/debbie_blink.gif'
           alt='Debbie Melgarejo, creative director'
           className='mx-auto w-full max-w-[260px] md:max-w-none'
+          loading='lazy'
           onError={(e) => {
             e.currentTarget.style.display = 'none';
           }}
