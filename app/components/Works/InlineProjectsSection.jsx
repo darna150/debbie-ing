@@ -1887,15 +1887,20 @@ const JollibeeMobileScene = ({ project }) => {
     const el = scrollRef.current;
     if (!el) return;
     const onScroll = () => {
-      // Use per-card width for accurate index — each card is 82vw + 12px gap
-      const firstCard = el.firstElementChild;
-      const cardW = firstCard ? firstCard.offsetWidth + 12 : el.scrollWidth / chapters.length;
-      const idx = Math.min(Math.round(el.scrollLeft / cardW), chapters.length - 1);
-      setActiveIdx(idx);
+      // Find whichever card center is closest to the container's visible center
+      const containerCenter = el.scrollLeft + el.offsetWidth / 2;
+      let closest = 0;
+      let minDist = Infinity;
+      [...el.children].forEach((card, i) => {
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        const dist = Math.abs(cardCenter - containerCenter);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      setActiveIdx(closest);
     };
     el.addEventListener('scroll', onScroll, { passive: true });
     return () => el.removeEventListener('scroll', onScroll);
-  }, [chapters.length]);
+  }, []);
 
   return (
     <div className='flex flex-col gap-3'>
@@ -1922,7 +1927,7 @@ const JollibeeMobileScene = ({ project }) => {
           <motion.span
             key={i}
             className='block rounded-full'
-            initial={false}
+            initial={{ width: 6, height: 6, backgroundColor: '#d4d4d4', opacity: 0.5 }}
             animate={{
               width: i === activeIdx ? 16 : 6,
               height: 6,
