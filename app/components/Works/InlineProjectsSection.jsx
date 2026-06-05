@@ -1941,8 +1941,8 @@ const JollibeeMobileScene = ({ project }) => {
       </div>
 
       {joy ? (
-        <MobileMediaBeat delay={0.1} className='mx-auto w-[64%]' style={{ mixBlendMode: 'multiply' }}>
-          <MediaAsset asset={joy} className='aspect-square w-full object-contain' />
+        <MobileMediaBeat delay={0.1} className='mx-auto w-[64%]'>
+          <MediaAsset asset={joy} className='aspect-square w-full object-contain [mix-blend-mode:multiply]' />
         </MobileMediaBeat>
       ) : null}
     </div>
