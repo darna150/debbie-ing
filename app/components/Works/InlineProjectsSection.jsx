@@ -1881,16 +1881,17 @@ const JollibeeMobileScene = ({ project }) => {
   const joy = media?.assets?.[4];
   const scrollRef = useRef(null);
   const [activeIdx, setActiveIdx] = useState(0);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => { setMounted(true); }, []);
+  const stage = getStageTheme(project);
 
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
     const onScroll = () => {
-      const idx = Math.round(el.scrollLeft / el.offsetWidth);
-      setActiveIdx(Math.min(idx, chapters.length - 1));
+      // Use per-card width for accurate index — each card is 82vw + 12px gap
+      const firstCard = el.firstElementChild;
+      const cardW = firstCard ? firstCard.offsetWidth + 12 : el.scrollWidth / chapters.length;
+      const idx = Math.min(Math.round(el.scrollLeft / cardW), chapters.length - 1);
+      setActiveIdx(idx);
     };
     el.addEventListener('scroll', onScroll, { passive: true });
     return () => el.removeEventListener('scroll', onScroll);
@@ -1915,35 +1916,36 @@ const JollibeeMobileScene = ({ project }) => {
         ))}
       </div>
 
-      {/* Dot indicators — client-only to avoid hydration mismatch */}
+      {/* Dot indicators — initial={false} skips entry animation, avoids hydration flash */}
       <div className='flex items-center justify-center gap-2' aria-hidden='true'>
-        {chapters.map((_, i) =>
-          mounted ? (
-            <motion.span
-              key={i}
-              className='block rounded-full'
-              animate={{
-                width: i === activeIdx ? 16 : 6,
-                height: 6,
-                backgroundColor: i === activeIdx ? project.color : '#d4d4d4',
-                opacity: i === activeIdx ? 1 : 0.5,
-              }}
-              transition={{ duration: 0.2 }}
-            />
-          ) : (
-            <span
-              key={i}
-              className='block rounded-full'
-              style={{ width: 6, height: 6, backgroundColor: '#d4d4d4', opacity: 0.5 }}
-            />
-          )
-        )}
+        {chapters.map((_, i) => (
+          <motion.span
+            key={i}
+            className='block rounded-full'
+            initial={false}
+            animate={{
+              width: i === activeIdx ? 16 : 6,
+              height: 6,
+              backgroundColor: i === activeIdx ? project.color : '#d4d4d4',
+              opacity: i === activeIdx ? 1 : 0.5,
+            }}
+            transition={{ duration: 0.2 }}
+          />
+        ))}
       </div>
 
+      {/* Joy — plain opacity wrapper with explicit bg so multiply blend works on iOS */}
       {joy ? (
-        <MobileMediaBeat delay={0.1} className='mx-auto w-[64%]'>
+        <motion.div
+          className='mx-auto w-[64%]'
+          style={{ backgroundColor: stage.bg }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: '-8%' }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+        >
           <MediaAsset asset={joy} className='aspect-square w-full object-contain [mix-blend-mode:multiply]' />
-        </MobileMediaBeat>
+        </motion.div>
       ) : null}
     </div>
   );
